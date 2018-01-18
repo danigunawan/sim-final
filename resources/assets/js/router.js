@@ -9,6 +9,9 @@ import SatuanEdit from './components/satuan/SatuanEdit.vue';
 import PoliIndex from './components/poli/PoliIndex.vue';
 import PoliCreate from './components/poli/PoliCreate.vue';
 import PoliEdit from './components/poli/PoliEdit.vue';
+import KategoriProdukIndex from './components/kategori-produk/KategoriProdukIndex.vue';
+import KategoriProdukCreate from './components/kategori-produk/KategoriProdukCreate.vue';
+import KategoriProdukEdit from './components/kategori-produk/KategoriProdukEdit.vue';
 
  const routes = [
      {
@@ -24,7 +27,10 @@ import PoliEdit from './components/poli/PoliEdit.vue';
      { path: '/satuan/edit/:id', component: SatuanEdit,name: 'EditSatuan' },
      { path: '/poli', component: PoliIndex,name: 'IndexPoli' },
      { path: '/poli/create', component: PoliCreate,name: 'CreatePoli' },
-     { path: '/poli/edit/:id', component: PoliEdit,name: 'EditPoli' }
+     { path: '/poli/edit/:id', component: PoliEdit,name: 'EditPoli' },
+     { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },
+     { path: '/kategori-produk/create', component: KategoriProdukCreate,name: 'CreateKategoriProduk' },
+     { path: '/kategori-produk/edit/:id', component: KategoriProdukEdit,name: 'EditKategoriProduk' }
  ];
 
  export default routes;

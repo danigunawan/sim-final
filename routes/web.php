@@ -30,3 +30,7 @@ Route::resource('satuan','SatuanController')->middleware('auth');
 Route::get('/poli/view', 'PoliController@index')->middleware('auth');
 Route::get('/poli/search', 'PoliController@search')->middleware('auth');
 Route::resource('poli','PoliController')->middleware('auth');
+
+Route::get('/kategori-produk/view', 'KategoriProdukController@index')->middleware('auth');
+Route::get('/kategori-produk/search', 'KategoriProdukController@search')->middleware('auth');
+Route::resource('kategori-produk','KategoriProdukController')->middleware('auth');
