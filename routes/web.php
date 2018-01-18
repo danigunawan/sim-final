@@ -22,3 +22,7 @@ Route::get('/user/view', 'UserController@index')->middleware('auth');
 Route::get('/user/search', 'UserController@search')->middleware('auth');
 Route::get('/user/{id}/konfirmasi', 'UserController@konfirmasiUser')->middleware('auth');
 Route::resource('user','UserController')->middleware('auth');
+
+Route::get('/satuan/view', 'SatuanController@index')->middleware('auth');
+Route::get('/satuan/search', 'SatuanController@search')->middleware('auth');
+Route::resource('satuan','SatuanController')->middleware('auth');

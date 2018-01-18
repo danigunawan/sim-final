@@ -44,6 +44,7 @@
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><router-link :to="{name: 'IndexUser'}" >User</router-link></li>
+                                <li><router-link :to="{name: 'IndexSatuan'}" >Satuan</router-link></li>
                             </ul>
                         </li>
                         @endif
