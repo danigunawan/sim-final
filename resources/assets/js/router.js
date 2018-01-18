@@ -26,6 +26,9 @@ import PenjaminEdit from './components/penjamin/PenjaminEdit.vue';
 import PenjaminIndex from './components/penjamin/PenjaminIndex.vue';
 import PerusahaanEdit from './components/perusahaan/PerusahaanEdit.vue';
 import PerusahaanIndex from './components/perusahaan/PerusahaanIndex.vue';
+import PasienCreate from './components/pasien/PasienCreate.vue';
+import PasienEdit from './components/pasien/PasienEdit.vue';
+import PasienIndex from './components/pasien/PasienIndex.vue';
 
  const routes = [
      {
@@ -51,6 +54,9 @@ import PerusahaanIndex from './components/perusahaan/PerusahaanIndex.vue';
      { path: '/penjamin', component: PenjaminIndex,name: 'IndexPenjamin' },
      { path: '/penjamin/create', component: PenjaminCreate,name: 'CreatePenjamin' },
      { path: '/penjamin/edit/:id', component: PenjaminEdit,name: 'EditPenjamin' },
+     { path: '/pasien', component: PasienIndex,name: 'IndexPasien' },
+     { path: '/pasien/create', component: PasienCreate,name: 'CreatePasien' },
+     { path: '/pasien/edit/:id', component: PasienEdit,name: 'EditPasien' },
      { path: '/perusahaan', component: PerusahaanIndex,name: 'IndexPerusahaan' },
      { path: '/perusahaan/edit/:id', component: PerusahaanEdit,name: 'EditPerusahaan' },
      { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },

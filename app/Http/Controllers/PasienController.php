@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Penjamin;
+use App\Pasien;
+use App\Perusahaan;
 
-class PenjaminController extends Controller
+class PasienController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +16,8 @@ class PenjaminController extends Controller
     public function index()
     {
         //
-        return Penjamin::paginate(10);
-    }
-
-    public function all(){
-        
-        return Penjamin::all();
+        return Pasien::leftJoin('penjamins','pasiens.penjamin','penjamins.id')
+                       ->select('pasiens.*','penjamins.nama AS nama_penjamin')->paginate(10);
     }
 
     /**
@@ -44,19 +41,34 @@ class PenjaminController extends Controller
         //
 
         $request->validate([
-            'nama' => 'required|unique:penjamins,nama|max:255',
+            'nama' => 'required|max:255',
             'alamat' => 'required|max:255',
-            'no_telp' => 'required|numeric',
-            'level_harga' => 'required|numeric',
+            'tanggal_lahir' => 'required|max:255',
+            'no_telp' => 'required|max:255',
+            'penjamin' => 'required|numeric',
+            'jenis_kelamin' => 'required',
         ]);
-        $penjamin = Penjamin::create($request->all());
+        $noRm = Pasien::noRm();
+        $perusahaan = Perusahaan::find(1);
+        $pasien = Pasien::create(['no_rm' => $noRm,'nama' => $request->nama,
+                                  'alamat' => $request->alamat,'no_telp' => $request->no_telp,
+                                  'penjamin' => $request->penjamin,
+                                  'jenis_kelamin' => $request->jenis_kelamin,
+                                  'kode_perusahaan' => $perusahaan->kode,
+                                  'tanggal_lahir' => $request->tanggal_lahir]);
+        if($pasien) {
+           return response(200);
+        } else {
+           return response(500);
+        }
     }
 
     public function search(Request $request){
-       return Penjamin::where('nama','LIKE',"%$request->q%")
-                        ->orWhere('alamat','LIKE',"%$request->q%")
-                        ->orWhere('no_telp','LIKE',"%$request->q%")
-                        ->paginate(10);
+       return Pasien::where('nama','LIKE',"%$request->q%")
+                     ->orWhere('no_rm',$request->q)
+                     ->orWhere('no_telp',$request->q)
+                     ->orWhere('alamat','LIKE',"%$request->q%")
+                     ->paginate(10);
     }
 
     /**
@@ -79,7 +91,7 @@ class PenjaminController extends Controller
     public function edit($id)
     {
         //
-        return Penjamin::find($id);
+        return Pasien::find($id);
     }
 
     /**
@@ -93,13 +105,14 @@ class PenjaminController extends Controller
     {
         //
         $request->validate([
-            'nama' => 'required|unique:penjamins,nama,'.$id.'|max:255',
+            'nama' => 'required|max:255',
             'alamat' => 'required|max:255',
-            'no_telp' => 'required|numeric',
-            'level_harga' => 'required|numeric',
+            'tanggal_lahir' => 'required|max:255',
+            'no_telp' => 'required|max:255',
+            'penjamin' => 'required|numeric',
         ]);
-        $penjamin = Penjamin::find($id)->update($request->all());
-        if($penjamin) {
+        $pasien = Pasien::find($id)->update($request->all());
+        if($pasien) {
            return response(200);
         } else {
            return response(500);
@@ -115,8 +128,8 @@ class PenjaminController extends Controller
     public function destroy($id)
     {
         //
-        $penjamin = Penjamin::destroy($id);
-        if($penjamin){
+        $pasien = Pasien::destroy($id);
+        if($pasien){
           return response(200);
         } else {
           return response(500);    

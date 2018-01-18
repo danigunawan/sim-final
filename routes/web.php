@@ -48,9 +48,14 @@ Route::get('/kas/search', 'KasController@search')->middleware('auth');
 Route::resource('kas','KasController')->middleware('auth');
 
 Route::get('/penjamin/view', 'PenjaminController@index')->middleware('auth');
+Route::get('/penjamin/all', 'PenjaminController@all')->middleware('auth');
 Route::get('/penjamin/search', 'PenjaminController@search')->middleware('auth');
 Route::resource('penjamin','PenjaminController')->middleware('auth');
 
 Route::get('/perusahaan/view', 'PerusahaanController@index')->middleware('auth');
 Route::get('/perusahaan/search', 'PerusahaanController@search')->middleware('auth');
 Route::resource('perusahaan','PerusahaanController')->middleware('auth');
+
+Route::get('/pasien/view', 'PasienController@index')->middleware('auth');
+Route::get('/pasien/search', 'PasienController@search')->middleware('auth');
+Route::resource('pasien','PasienController')->middleware('auth');
