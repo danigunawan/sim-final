@@ -18,6 +18,9 @@ import KategoriTransaksiEdit from './components/kategori-transaksi/KategoriTrans
 import SupplierIndex from './components/supplier/SupplierIndex.vue';
 import SupplierCreate from './components/supplier/SupplierCreate.vue';
 import SupplierEdit from './components/supplier/SupplierEdit.vue';
+import KasCreate from './components/kas/KasCreate.vue';
+import KasEdit from './components/kas/KasEdit.vue';
+import KasIndex from './components/kas/KasIndex.vue';
 
  const routes = [
      {
@@ -37,6 +40,9 @@ import SupplierEdit from './components/supplier/SupplierEdit.vue';
      { path: '/supplier', component: SupplierIndex,name: 'IndexSupplier' },
      { path: '/supplier/create', component: SupplierCreate,name: 'CreateSupplier' },
      { path: '/supplier/edit/:id', component: SupplierEdit,name: 'EditSupplier' },
+     { path: '/kas', component: KasIndex,name: 'IndexKas' },
+     { path: '/kas/create', component: KasCreate,name: 'CreateKas' },
+     { path: '/kas/edit/:id', component: KasEdit,name: 'EditKas' },
      { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },
      { path: '/kategori-produk/create', component: KategoriProdukCreate,name: 'CreateKategoriProduk' },
      { path: '/kategori-produk/edit/:id', component: KategoriProdukEdit,name: 'EditKategoriProduk' },

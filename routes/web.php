@@ -42,3 +42,7 @@ Route::resource('kategori-transaksi','KategoriTransaksiController')->middleware(
 Route::get('/supplier/view', 'SupplierController@index')->middleware('auth');
 Route::get('/supplier/search', 'SupplierController@search')->middleware('auth');
 Route::resource('supplier','SupplierController')->middleware('auth');
+
+Route::get('/kas/view', 'KasController@index')->middleware('auth');
+Route::get('/kas/search', 'KasController@search')->middleware('auth');
+Route::resource('kas','KasController')->middleware('auth');
