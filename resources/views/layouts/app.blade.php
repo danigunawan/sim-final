@@ -46,6 +46,7 @@
                                 <li><router-link :to="{name: 'IndexUser'}" >User</router-link></li>
                                 <li><router-link :to="{name: 'IndexSatuan'}" >Satuan</router-link></li>
                                 <li><router-link :to="{name: 'IndexKategoriProduk'}" >Kategori Produk</router-link></li>
+                                <li><router-link :to="{name: 'IndexKategoriTransaksi'}" >Kategori Transaksi</router-link></li>
                             </ul>
                         </li>
                         @endif

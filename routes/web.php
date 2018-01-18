@@ -34,3 +34,7 @@ Route::resource('poli','PoliController')->middleware('auth');
 Route::get('/kategori-produk/view', 'KategoriProdukController@index')->middleware('auth');
 Route::get('/kategori-produk/search', 'KategoriProdukController@search')->middleware('auth');
 Route::resource('kategori-produk','KategoriProdukController')->middleware('auth');
+
+Route::get('/kategori-transaksi/view', 'KategoriTransaksiController@index')->middleware('auth');
+Route::get('/kategori-transaksi/search', 'KategoriTransaksiController@search')->middleware('auth');
+Route::resource('kategori-transaksi','KategoriTransaksiController')->middleware('auth');
