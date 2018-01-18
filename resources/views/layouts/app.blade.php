@@ -46,6 +46,7 @@
                                 <li><router-link :to="{name: 'IndexUser'}" >User</router-link></li>
                                 <li><router-link :to="{name: 'IndexSatuan'}" >Satuan</router-link></li>
                                 <li><router-link :to="{name: 'IndexSupplier'}" >Supplier</router-link></li>
+                                <li><router-link :to="{name: 'IndexProduk'}" >Produk</router-link></li>
                                 <li><router-link :to="{name: 'IndexPenjamin'}" >Penjamin</router-link></li>
                                 <li><router-link :to="{name: 'IndexPasien'}" >Pasien</router-link></li>
                                 <li><router-link :to="{name: 'IndexKas'}" >Kas</router-link></li>
