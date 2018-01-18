@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PoliSeeder::class);
         $this->call(KategoriProdukSeeder::class);
         $this->call(KategoriTransaksiSeeder::class);
+        $this->call(SupplierSeeder::class);
     }
 }
