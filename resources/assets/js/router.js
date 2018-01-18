@@ -7,7 +7,7 @@ import UserEdit from './components/user/UserEdit.vue';
      {
         path: '/',
         component: DashboardIndex,
-        name : 'indexDashboard'
+        name : 'IndexDashboard'
      },
      { path: '/user', component: UserIndex,name: 'IndexUser' },
      { path: '/user/create', component: UserCreate,name: 'CreateUser' },

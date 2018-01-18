@@ -45580,7 +45580,7 @@ exports.version = version;
 var routes = [{
    path: '/',
    component: __WEBPACK_IMPORTED_MODULE_0__components_dashboard_DashboardIndex_vue___default.a,
-   name: 'indexDashboard'
+   name: 'IndexDashboard'
 }, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (routes);

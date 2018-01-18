@@ -37,6 +37,16 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
+                           @if(Auth::check())
+                        <li><router-link :to="{name: 'IndexDashboard'}" >Home</router-link></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master Data
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><router-link :to="{name: 'IndexUser'}" >User</router-link></li>
+                            </ul>
+                        </li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
