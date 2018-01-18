@@ -45614,7 +45614,13 @@ exports.version = version;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_penjamin_PenjaminEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23__components_penjamin_PenjaminEdit_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_perusahaan_PerusahaanEdit_vue__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_perusahaan_PerusahaanEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25__components_perusahaan_PerusahaanEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_perusahaan_PerusahaanIndex_vue__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_perusahaan_PerusahaanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26__components_perusahaan_PerusahaanIndex_vue__);
 //DASHBOARD
+
+
 
 
 
@@ -45645,7 +45651,7 @@ var routes = [{
    path: '/',
    component: __WEBPACK_IMPORTED_MODULE_0__components_dashboard_DashboardIndex_vue___default.a,
    name: 'IndexDashboard'
-}, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_4__components_satuan_SatuanIndex_vue___default.a, name: 'IndexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_5__components_satuan_SatuanCreate_vue___default.a, name: 'CreateSatuan' }, { path: '/satuan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_satuan_SatuanEdit_vue___default.a, name: 'EditSatuan' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliIndex_vue___default.a, name: 'IndexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliCreate_vue___default.a, name: 'CreatePoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_poli_PoliEdit_vue___default.a, name: 'EditPoli' }, { path: '/supplier', component: __WEBPACK_IMPORTED_MODULE_16__components_supplier_SupplierIndex_vue___default.a, name: 'IndexSupplier' }, { path: '/supplier/create', component: __WEBPACK_IMPORTED_MODULE_17__components_supplier_SupplierCreate_vue___default.a, name: 'CreateSupplier' }, { path: '/supplier/edit/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_supplier_SupplierEdit_vue___default.a, name: 'EditSupplier' }, { path: '/kas', component: __WEBPACK_IMPORTED_MODULE_21__components_kas_KasIndex_vue___default.a, name: 'IndexKas' }, { path: '/kas/create', component: __WEBPACK_IMPORTED_MODULE_19__components_kas_KasCreate_vue___default.a, name: 'CreateKas' }, { path: '/kas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_20__components_kas_KasEdit_vue___default.a, name: 'EditKas' }, { path: '/penjamin', component: __WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue___default.a, name: 'IndexPenjamin' }, { path: '/penjamin/create', component: __WEBPACK_IMPORTED_MODULE_22__components_penjamin_PenjaminCreate_vue___default.a, name: 'CreatePenjamin' }, { path: '/penjamin/edit/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_penjamin_PenjaminEdit_vue___default.a, name: 'EditPenjamin' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'IndexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'CreateKategoriProduk' }, { path: '/kategori-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'EditKategoriProduk' }, { path: '/kategori-transaksi', component: __WEBPACK_IMPORTED_MODULE_13__components_kategori_transaksi_KategoriTransaksiIndex_vue___default.a, name: 'IndexKategoriTransaksi' }, { path: '/kategori-transaksi/create', component: __WEBPACK_IMPORTED_MODULE_14__components_kategori_transaksi_KategoriTransaksiCreate_vue___default.a, name: 'CreateKategoriTransaksi' }, { path: '/kategori-transaksi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_kategori_transaksi_KategoriTransaksiEdit_vue___default.a, name: 'EditKategoriTransaksi' }];
+}, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_4__components_satuan_SatuanIndex_vue___default.a, name: 'IndexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_5__components_satuan_SatuanCreate_vue___default.a, name: 'CreateSatuan' }, { path: '/satuan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_satuan_SatuanEdit_vue___default.a, name: 'EditSatuan' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliIndex_vue___default.a, name: 'IndexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliCreate_vue___default.a, name: 'CreatePoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_poli_PoliEdit_vue___default.a, name: 'EditPoli' }, { path: '/supplier', component: __WEBPACK_IMPORTED_MODULE_16__components_supplier_SupplierIndex_vue___default.a, name: 'IndexSupplier' }, { path: '/supplier/create', component: __WEBPACK_IMPORTED_MODULE_17__components_supplier_SupplierCreate_vue___default.a, name: 'CreateSupplier' }, { path: '/supplier/edit/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_supplier_SupplierEdit_vue___default.a, name: 'EditSupplier' }, { path: '/kas', component: __WEBPACK_IMPORTED_MODULE_21__components_kas_KasIndex_vue___default.a, name: 'IndexKas' }, { path: '/kas/create', component: __WEBPACK_IMPORTED_MODULE_19__components_kas_KasCreate_vue___default.a, name: 'CreateKas' }, { path: '/kas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_20__components_kas_KasEdit_vue___default.a, name: 'EditKas' }, { path: '/penjamin', component: __WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue___default.a, name: 'IndexPenjamin' }, { path: '/penjamin/create', component: __WEBPACK_IMPORTED_MODULE_22__components_penjamin_PenjaminCreate_vue___default.a, name: 'CreatePenjamin' }, { path: '/penjamin/edit/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_penjamin_PenjaminEdit_vue___default.a, name: 'EditPenjamin' }, { path: '/perusahaan', component: __WEBPACK_IMPORTED_MODULE_26__components_perusahaan_PerusahaanIndex_vue___default.a, name: 'IndexPerusahaan' }, { path: '/perusahaan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_25__components_perusahaan_PerusahaanEdit_vue___default.a, name: 'EditPerusahaan' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'IndexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'CreateKategoriProduk' }, { path: '/kategori-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'EditKategoriProduk' }, { path: '/kategori-transaksi', component: __WEBPACK_IMPORTED_MODULE_13__components_kategori_transaksi_KategoriTransaksiIndex_vue___default.a, name: 'IndexKategoriTransaksi' }, { path: '/kategori-transaksi/create', component: __WEBPACK_IMPORTED_MODULE_14__components_kategori_transaksi_KategoriTransaksiCreate_vue___default.a, name: 'CreateKategoriTransaksi' }, { path: '/kategori-transaksi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_kategori_transaksi_KategoriTransaksiEdit_vue___default.a, name: 'EditKategoriTransaksi' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (routes);
 
@@ -54708,6 +54714,696 @@ if (false) {
   module.hot.accept()
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-5ec9e84c", module.exports)
+  }
+}
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(42)
+/* script */
+var __vue_script__ = __webpack_require__(130)
+/* template */
+var __vue_template__ = __webpack_require__(131)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/perusahaan/PerusahaanEdit.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-35b5a632", Component.options)
+  } else {
+    hotAPI.reload("data-v-35b5a632", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 130 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      perusahaan: {
+        kode: '',
+        nama: '',
+        alamat: '',
+        no_telp: ''
+      },
+      perusahaanId: null,
+      url: window.location.origin + window.location.pathname.replace("home", "perusahaan"),
+      errors: [],
+      message: ''
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var app = this;
+    this.perusahaanId = this.$route.params.id;
+    axios.get(app.url + '/' + this.perusahaanId + '/edit').then(function (resp) {
+      _this.perusahaan = resp.data;
+    }).catch(function (resp) {
+      alert("Something Goes Wrong");
+    });
+  },
+
+  methods: {
+    alert: function alert(pesan) {
+      this.$swal({
+        title: "Berhasil Mengubah Perusahaan",
+        text: pesan,
+        icon: "success"
+      });
+    },
+    saveForm: function saveForm() {
+      var _this2 = this;
+
+      var newPerusahaan = this.perusahaan;
+      axios.patch(this.url + '/' + this.perusahaanId, newPerusahaan).then(function (resp) {
+        _this2.alert('Berhasil Mengubah Perusahaan ' + _this2.perusahaan.nama);
+        _this2.$router.replace('/perusahaan/');
+      }).catch(function (resp) {
+        if (resp.response.status == 500) alert('Something Goes Wrong');
+        _this2.errors = resp.response.data.errors;
+        console.log(resp);
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 131 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+        _c("ul", { staticClass: "breadcrumb" }, [
+          _c("li", [_vm._v("Home")]),
+          _vm._v(" "),
+          _c(
+            "li",
+            [
+              _c(
+                "router-link",
+                { attrs: { to: { name: "IndexPerusahaan" } } },
+                [_vm._v("Kelola Perusahaan")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [_vm._v("Edit  Perusahaan")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Edit  Perusahaan")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c(
+              "form",
+              {
+                staticClass: "form-horizontal",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    _vm.saveForm()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Kode")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.perusahaan.kode,
+                          expression: "perusahaan.kode"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "Kode Perusahaan",
+                        autofocus: ""
+                      },
+                      domProps: { value: _vm.perusahaan.kode },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.perusahaan, "kode", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.kode
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.kode[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Nama")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.perusahaan.nama,
+                          expression: "perusahaan.nama"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "Nama Perusahaan",
+                        autofocus: ""
+                      },
+                      domProps: { value: _vm.perusahaan.nama },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.perusahaan, "nama", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.nama
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.nama[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Alamat")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.perusahaan.alamat,
+                          expression: "perusahaan.alamat"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "Alamat Perusahaan",
+                        autofocus: ""
+                      },
+                      domProps: { value: _vm.perusahaan.alamat },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.perusahaan,
+                            "alamat",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.alamat
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.alamat[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("No Telp")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.perusahaan.no_telp,
+                          expression: "perusahaan.no_telp"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "No Telp Perusahaan",
+                        autofocus: ""
+                      },
+                      domProps: { value: _vm.perusahaan.no_telp },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.perusahaan,
+                            "no_telp",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.no_telp
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.no_telp[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(0)
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("div", { staticClass: "col-md-4 col-md-offset-2" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          [_vm._v("Submit")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-35b5a632", module.exports)
+  }
+}
+
+/***/ }),
+/* 132 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(42)
+/* script */
+var __vue_script__ = __webpack_require__(133)
+/* template */
+var __vue_template__ = __webpack_require__(134)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/perusahaan/PerusahaanIndex.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7a924c4c", Component.options)
+  } else {
+    hotAPI.reload("data-v-7a924c4c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 133 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      perusahaans: [],
+      url: window.location.origin + window.location.pathname.replace("home", "perusahaan"),
+      pencarian: '',
+      loading: true
+    };
+  },
+  mounted: function mounted() {
+    var app = this;
+    app.getResults();
+  },
+
+  methods: {
+    getResults: function getResults(page) {
+      var app = this;
+      if (typeof page == 'undefined') {
+        page = 1;
+      }
+      axios.get(app.url + '/view?page=' + page).then(function (resp) {
+        app.perusahaans = resp.data.data;
+        app.suppliersData = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        console.log(resp);
+        app.loading = false;
+      });
+    },
+    alert: function alert(title, pesan) {
+      this.$swal({
+        title: title,
+        text: pesan,
+        icon: "success"
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 134 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+        _c("ul", { staticClass: "breadcrumb" }, [
+          _c(
+            "li",
+            [
+              _c("router-link", { attrs: { to: { name: "IndexDashboard" } } }, [
+                _vm._v("Home")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [_vm._v("Kelola Perusahaan")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Kelola Perusahaan")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "table-responsive" }, [
+              _c("table", { staticClass: "table table-bordered" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _vm.perusahaans.length
+                  ? _c(
+                      "tbody",
+                      _vm._l(_vm.perusahaans, function(perusahaan, index) {
+                        return _c("tr", [
+                          _c("td", [_vm._v(_vm._s(perusahaan.kode))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(perusahaan.nama))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(perusahaan.alamat))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(perusahaan.no_telp))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "btn btn-xs btn-default",
+                                  attrs: {
+                                    to: {
+                                      name: "EditPerusahaan",
+                                      params: { id: perusahaan.id }
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                          Edit\n                       "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ])
+                      })
+                    )
+                  : _vm._e()
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("th", [_vm._v("Kode")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Nama")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Alamat")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("No Telp")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Aksi")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7a924c4c", module.exports)
   }
 }
 
