@@ -6,6 +6,9 @@ import UserEdit from './components/user/UserEdit.vue';
 import SatuanIndex from './components/satuan/SatuanIndex.vue';
 import SatuanCreate from './components/satuan/SatuanCreate.vue';
 import SatuanEdit from './components/satuan/SatuanEdit.vue';
+import PoliIndex from './components/poli/PoliIndex.vue';
+import PoliCreate from './components/poli/PoliCreate.vue';
+import PoliEdit from './components/poli/PoliEdit.vue';
 
  const routes = [
      {
@@ -18,7 +21,10 @@ import SatuanEdit from './components/satuan/SatuanEdit.vue';
      { path: '/user/edit/:id', component: UserEdit,name: 'EditUser' },
      { path: '/satuan', component: SatuanIndex,name: 'IndexSatuan' },
      { path: '/satuan/create', component: SatuanCreate,name: 'CreateSatuan' },
-     { path: '/satuan/edit/:id', component: SatuanEdit,name: 'EditSatuan' }
+     { path: '/satuan/edit/:id', component: SatuanEdit,name: 'EditSatuan' },
+     { path: '/poli', component: PoliIndex,name: 'IndexPoli' },
+     { path: '/poli/create', component: PoliCreate,name: 'CreatePoli' },
+     { path: '/poli/edit/:id', component: PoliEdit,name: 'EditPoli' }
  ];
 
  export default routes;

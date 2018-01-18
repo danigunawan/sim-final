@@ -26,3 +26,7 @@ Route::resource('user','UserController')->middleware('auth');
 Route::get('/satuan/view', 'SatuanController@index')->middleware('auth');
 Route::get('/satuan/search', 'SatuanController@search')->middleware('auth');
 Route::resource('satuan','SatuanController')->middleware('auth');
+
+Route::get('/poli/view', 'PoliController@index')->middleware('auth');
+Route::get('/poli/search', 'PoliController@search')->middleware('auth');
+Route::resource('poli','PoliController')->middleware('auth');
