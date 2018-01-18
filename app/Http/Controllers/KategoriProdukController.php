@@ -17,6 +17,11 @@ class KategoriProdukController extends Controller
         //
         return KategoriProduk::paginate(10);
     }
+    public function all()
+    {
+        //
+        return KategoriProduk::all();
+    }
 
     /**
      * Show the form for creating a new resource.

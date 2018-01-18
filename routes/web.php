@@ -24,6 +24,7 @@ Route::get('/user/{id}/konfirmasi', 'UserController@konfirmasiUser')->middleware
 Route::resource('user','UserController')->middleware('auth');
 
 Route::get('/satuan/view', 'SatuanController@index')->middleware('auth');
+Route::get('/satuan/all', 'SatuanController@all')->middleware('auth');
 Route::get('/satuan/search', 'SatuanController@search')->middleware('auth');
 Route::resource('satuan','SatuanController')->middleware('auth');
 
@@ -32,6 +33,7 @@ Route::get('/poli/search', 'PoliController@search')->middleware('auth');
 Route::resource('poli','PoliController')->middleware('auth');
 
 Route::get('/kategori-produk/view', 'KategoriProdukController@index')->middleware('auth');
+Route::get('/kategori-produk/all', 'KategoriProdukController@all')->middleware('auth');
 Route::get('/kategori-produk/search', 'KategoriProdukController@search')->middleware('auth');
 Route::resource('kategori-produk','KategoriProdukController')->middleware('auth');
 
@@ -59,3 +61,7 @@ Route::resource('perusahaan','PerusahaanController')->middleware('auth');
 Route::get('/pasien/view', 'PasienController@index')->middleware('auth');
 Route::get('/pasien/search', 'PasienController@search')->middleware('auth');
 Route::resource('pasien','PasienController')->middleware('auth');
+
+Route::get('/produk/view', 'ProdukController@index')->middleware('auth');
+Route::get('/produk/search', 'ProdukController@search')->middleware('auth');
+Route::resource('produk','ProdukController')->middleware('auth');

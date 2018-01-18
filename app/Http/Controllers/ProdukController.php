@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Satuan;
+use App\Produk;
 
-class SatuanController extends Controller
+class ProdukController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +15,7 @@ class SatuanController extends Controller
     public function index()
     {
         //
-        return Satuan::paginate(10);
-    }
-    public function all()
-    {
-        //
-        return Satuan::all();
+        return Produk::paginate(10);
     }
 
     /**
@@ -44,13 +39,23 @@ class SatuanController extends Controller
         //
 
         $request->validate([
-            'nama' => 'required|unique:satuans,nama|max:255',
+            'kode' => 'required|unique:produks,kode|max:255',
+            'nama' => 'required|unique:produks,nama|max:255',
+            'kategori_produk' => 'required|numeric',
+            'satuan' => 'required|numeric',
+            'tipe_produk' => 'required|max:255',
+            'harga_beli' => 'required|numeric',
+            'harga_jual_1' => 'required|numeric',
+            'harga_jual_2' => 'nullable|numeric',
+            'harga_jual_3' => 'nullable|numeric',
         ]);
-        $satuan = Satuan::create($request->all());
+        $supplier = Produk::create($request->all());
     }
 
     public function search(Request $request){
-       return Satuan::Where('nama','LIKE',"%$request->q%")->paginate(10);
+       return Produk::where('nama','LIKE',"%$request->q%")
+                        ->orWhere('kode',$request->q)
+                        ->paginate(10);
     }
 
     /**
@@ -73,7 +78,7 @@ class SatuanController extends Controller
     public function edit($id)
     {
         //
-        return Satuan::find($id);
+        return Produk::find($id);
     }
 
     /**
@@ -87,10 +92,18 @@ class SatuanController extends Controller
     {
         //
         $request->validate([
-            'nama' => 'required|unique:satuans,nama,'.$id.'|max:255',
+            'kode' => 'required|unique:produks,kode,'.$id.'|max:255',
+            'nama' => 'required|unique:produks,nama,'.$id.'|max:255',
+            'kategori_produk' => 'required|numeric',
+            'satuan' => 'required|numeric',
+            'tipe_produk' => 'required|max:255',
+            'harga_beli' => 'required|numeric',
+            'harga_jual_1' => 'required|numeric',
+            'harga_jual_2' => 'nullable|numeric',
+            'harga_jual_3' => 'nullable|numeric',
         ]);
-        $satuan = Satuan::find($id)->update($request->all());
-        if($satuan) {
+        $supplier = Produk::find($id)->update($request->all());
+        if($supplier) {
            return response(200);
         } else {
            return response(500);
@@ -106,8 +119,8 @@ class SatuanController extends Controller
     public function destroy($id)
     {
         //
-        $satuan = Satuan::destroy($id);
-        if($satuan){
+        $supplier = Produk::destroy($id);
+        if($supplier){
           return response(200);
         } else {
           return response(500);    

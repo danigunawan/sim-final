@@ -29,6 +29,9 @@ import PerusahaanIndex from './components/perusahaan/PerusahaanIndex.vue';
 import PasienCreate from './components/pasien/PasienCreate.vue';
 import PasienEdit from './components/pasien/PasienEdit.vue';
 import PasienIndex from './components/pasien/PasienIndex.vue';
+import ProdukCreate from './components/produk/ProdukCreate.vue';
+import ProdukEdit from './components/produk/ProdukEdit.vue';
+import ProdukIndex from './components/produk/ProdukIndex.vue';
 
  const routes = [
      {
@@ -57,6 +60,9 @@ import PasienIndex from './components/pasien/PasienIndex.vue';
      { path: '/pasien', component: PasienIndex,name: 'IndexPasien' },
      { path: '/pasien/create', component: PasienCreate,name: 'CreatePasien' },
      { path: '/pasien/edit/:id', component: PasienEdit,name: 'EditPasien' },
+     { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
+     { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
+     { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
      { path: '/perusahaan', component: PerusahaanIndex,name: 'IndexPerusahaan' },
      { path: '/perusahaan/edit/:id', component: PerusahaanEdit,name: 'EditPerusahaan' },
      { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },
