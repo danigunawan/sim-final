@@ -46,3 +46,7 @@ Route::resource('supplier','SupplierController')->middleware('auth');
 Route::get('/kas/view', 'KasController@index')->middleware('auth');
 Route::get('/kas/search', 'KasController@search')->middleware('auth');
 Route::resource('kas','KasController')->middleware('auth');
+
+Route::get('/penjamin/view', 'PenjaminController@index')->middleware('auth');
+Route::get('/penjamin/search', 'PenjaminController@search')->middleware('auth');
+Route::resource('penjamin','PenjaminController')->middleware('auth');

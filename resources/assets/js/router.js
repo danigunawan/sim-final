@@ -21,6 +21,9 @@ import SupplierEdit from './components/supplier/SupplierEdit.vue';
 import KasCreate from './components/kas/KasCreate.vue';
 import KasEdit from './components/kas/KasEdit.vue';
 import KasIndex from './components/kas/KasIndex.vue';
+import PenjaminCreate from './components/penjamin/PenjaminCreate.vue';
+import PenjaminEdit from './components/penjamin/PenjaminEdit.vue';
+import PenjaminIndex from './components/penjamin/PenjaminIndex.vue';
 
  const routes = [
      {
@@ -43,6 +46,9 @@ import KasIndex from './components/kas/KasIndex.vue';
      { path: '/kas', component: KasIndex,name: 'IndexKas' },
      { path: '/kas/create', component: KasCreate,name: 'CreateKas' },
      { path: '/kas/edit/:id', component: KasEdit,name: 'EditKas' },
+     { path: '/penjamin', component: PenjaminIndex,name: 'IndexPenjamin' },
+     { path: '/penjamin/create', component: PenjaminCreate,name: 'CreatePenjamin' },
+     { path: '/penjamin/edit/:id', component: PenjaminEdit,name: 'EditPenjamin' },
      { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },
      { path: '/kategori-produk/create', component: KategoriProdukCreate,name: 'CreateKategoriProduk' },
      { path: '/kategori-produk/edit/:id', component: KategoriProdukEdit,name: 'EditKategoriProduk' },
