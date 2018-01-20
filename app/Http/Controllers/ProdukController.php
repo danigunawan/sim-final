@@ -18,6 +18,12 @@ class ProdukController extends Controller
         return Produk::paginate(10);
     }
 
+    public function all()
+    {
+        //
+        return Produk::all();
+    }
+
     /**
      * Show the form for creating a new resource.
      *

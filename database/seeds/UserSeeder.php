@@ -12,9 +12,31 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::create(['email' => 'admin@gmail.com','name' => 'admin','password' => bcrypt('rahasia'),'konfirmasi_admin' => 1]);
-        User::create(['email' => 'member@gmail.com','name' => 'member', 'password' => bcrypt('rahasia'),'konfirmasi_admin' => 1]);
-        User::create(['email' => 'memberbaru@gmail.com','name' => 'member baru', 'password' => bcrypt('rahasia'),'konfirmasi_admin' => 0]);
+        User::create(['email' => 'admin@gmail.com',
+                      'name' => 'admin',
+                     'jabatan' => 'admin',
+                     'password' => bcrypt('rahasia'),
+                      'konfirmasi_admin' => 1]);
+        User::create(['email' => 'member@gmail.com',
+                      'name' => 'member', 
+                     'jabatan' => 'keuangan',
+                     'password' => bcrypt('rahasia'),
+                      'konfirmasi_admin' => 1]);
+        User::create(['email' => 'perawat@gmail.com',
+                      'name' => 'perawat', 
+                     'jabatan' => 'perawat',
+                     'password' => bcrypt('rahasia'),
+                      'konfirmasi_admin' => 0]);
+        User::create(['email' => 'dokter@gmail.com',
+                      'name' => 'dokter', 
+                     'jabatan' => 'dokter',
+                     'password' => bcrypt('rahasia'),
+                      'konfirmasi_admin' => 0]);
+        User::create(['email' => 'farmasi@gmail.com',
+                      'name' => 'farmasi', 
+                     'jabatan' => 'farmasi',
+                     'password' => bcrypt('rahasia'),
+                      'konfirmasi_admin' => 0]);
         //
     }
 }

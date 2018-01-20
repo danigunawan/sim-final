@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('konfirmasi_admin')->default(0);
+            $table->string('jabatan');
             $table->rememberToken();
             $table->timestamps();
         });

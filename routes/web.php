@@ -19,6 +19,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user/view', 'UserController@index')->middleware('auth');
+Route::get('/user/all', 'UserController@all')->middleware('auth');
 Route::get('/user/search', 'UserController@search')->middleware('auth');
 Route::get('/user/{id}/konfirmasi', 'UserController@konfirmasiUser')->middleware('auth');
 Route::resource('user','UserController')->middleware('auth');
@@ -45,6 +46,10 @@ Route::get('/supplier/view', 'SupplierController@index')->middleware('auth');
 Route::get('/supplier/search', 'SupplierController@search')->middleware('auth');
 Route::resource('supplier','SupplierController')->middleware('auth');
 
+Route::get('/komisi-produk/view', 'KomisiProdukController@index')->middleware('auth');
+Route::get('/komisi-produk/search', 'KomisiProdukController@search')->middleware('auth');
+Route::resource('komisi-produk','KomisiProdukController')->middleware('auth');
+
 Route::get('/kas/view', 'KasController@index')->middleware('auth');
 Route::get('/kas/search', 'KasController@search')->middleware('auth');
 Route::resource('kas','KasController')->middleware('auth');
@@ -63,5 +68,6 @@ Route::get('/pasien/search', 'PasienController@search')->middleware('auth');
 Route::resource('pasien','PasienController')->middleware('auth');
 
 Route::get('/produk/view', 'ProdukController@index')->middleware('auth');
+Route::get('/produk/all', 'ProdukController@all')->middleware('auth');
 Route::get('/produk/search', 'ProdukController@search')->middleware('auth');
 Route::resource('produk','ProdukController')->middleware('auth');

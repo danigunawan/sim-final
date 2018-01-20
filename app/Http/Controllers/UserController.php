@@ -18,6 +18,11 @@ class UserController extends Controller
        return  User::paginate(10);
     }
 
+    public function all()
+    {
+        //
+       return  User::all();
+    }
     /**
      * Show the form for creating a new resource.
      *

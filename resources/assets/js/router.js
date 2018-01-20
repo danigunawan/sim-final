@@ -33,6 +33,10 @@ import ProdukCreate from './components/produk/ProdukCreate.vue';
 import ProdukEdit from './components/produk/ProdukEdit.vue';
 import ProdukIndex from './components/produk/ProdukIndex.vue';
 
+import KomisiProdukCreate from './components/komisi-produk/KomisiProdukCreate.vue';
+import KomisiProdukEdit from './components/komisi-produk/KomisiProdukEdit.vue';
+import KomisiProdukIndex from './components/komisi-produk/KomisiProdukIndex.vue';
+
  const routes = [
      {
         path: '/',
@@ -63,6 +67,12 @@ import ProdukIndex from './components/produk/ProdukIndex.vue';
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
+     { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
+     { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
+     { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
+     { path: '/komisi-produk', component: KomisiProdukIndex,name: 'IndexKomisiProduk' },
+     { path: '/komisi-produk/create', component: KomisiProdukCreate,name: 'CreateKomisiProduk' },
+     { path: '/komisi-produk/edit/:id', component: KomisiProdukEdit,name: 'EditKomisiProduk' },
      { path: '/perusahaan', component: PerusahaanIndex,name: 'IndexPerusahaan' },
      { path: '/perusahaan/edit/:id', component: PerusahaanEdit,name: 'EditPerusahaan' },
      { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },
