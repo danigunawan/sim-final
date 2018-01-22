@@ -12,6 +12,8 @@ import VueRouter from 'vue-router';
 import VueSwal from 'vue-swal';
 import Vue from 'vue';
 import routes from './router.js';
+import Selectize from 'vue2-selectize'
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -20,6 +22,7 @@ import routes from './router.js';
 Vue.component('vue-pagination', require('laravel-vue-pagination'));
 Vue.component('vue-spinner', require('vue-simple-spinner'));
 Vue.component('vue-datepicker', require('vue-simple-datepicker'));
+Vue.component('vue-selectize', Selectize);
 
 Vue.use(VueSwal)
 Vue.use(VueRouter);

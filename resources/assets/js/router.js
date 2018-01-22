@@ -33,9 +33,14 @@ import ProdukCreate from './components/produk/ProdukCreate.vue';
 import ProdukEdit from './components/produk/ProdukEdit.vue';
 import ProdukIndex from './components/produk/ProdukIndex.vue';
 
+import KasMasukCreate from './components/kas-masuk/KasMasukCreate.vue';
+import KasMasukEdit from './components/kas-masuk/KasMasukEdit.vue';
+import KasMasukIndex from './components/kas-masuk/KasMasukIndex.vue';
+
 import KomisiProdukCreate from './components/komisi-produk/KomisiProdukCreate.vue';
 import KomisiProdukEdit from './components/komisi-produk/KomisiProdukEdit.vue';
 import KomisiProdukIndex from './components/komisi-produk/KomisiProdukIndex.vue';
+import Page404 from './components/error/Page404.vue';
 
  const routes = [
      {
@@ -67,9 +72,9 @@ import KomisiProdukIndex from './components/komisi-produk/KomisiProdukIndex.vue'
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
-     { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
-     { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
-     { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
+     { path: '/kas-masuk', component: KasMasukIndex,name: 'IndexKasMasuk' },
+     { path: '/kas-masuk/create', component: KasMasukCreate,name: 'CreateKasMasuk' },
+     { path: '/kas-masuk/edit/:id', component: KasMasukEdit,name: 'EditKasMasuk' },
      { path: '/komisi-produk', component: KomisiProdukIndex,name: 'IndexKomisiProduk' },
      { path: '/komisi-produk/create', component: KomisiProdukCreate,name: 'CreateKomisiProduk' },
      { path: '/komisi-produk/edit/:id', component: KomisiProdukEdit,name: 'EditKomisiProduk' },
@@ -80,7 +85,8 @@ import KomisiProdukIndex from './components/komisi-produk/KomisiProdukIndex.vue'
      { path: '/kategori-produk/edit/:id', component: KategoriProdukEdit,name: 'EditKategoriProduk' },
      { path: '/kategori-transaksi', component: KategoriTransaksiIndex,name: 'IndexKategoriTransaksi' },
      { path: '/kategori-transaksi/create', component: KategoriTransaksiCreate,name: 'CreateKategoriTransaksi' },
-     { path: '/kategori-transaksi/edit/:id', component: KategoriTransaksiEdit,name: 'EditKategoriTransaksi' }
+     { path: '/kategori-transaksi/edit/:id', component: KategoriTransaksiEdit,name: 'EditKategoriTransaksi' },
+     { path: '/*', component:Page404,name: 'Page404' },
  ];
 
  export default routes;

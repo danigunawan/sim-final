@@ -17,6 +17,11 @@ class KasController extends Controller
         //
         return Kas::paginate(10);
     }
+    public function all()
+    {
+        //
+        return Kas::all();
+    }
 
     /**
      * Show the form for creating a new resource.

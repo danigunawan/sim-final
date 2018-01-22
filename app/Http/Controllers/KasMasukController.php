@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\KasMasuk;
+use App\Kas;
 use App\KategoriTransaksi;
 
-class KategoriTransaksiController extends Controller
+class KasMasukController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +17,7 @@ class KategoriTransaksiController extends Controller
     public function index()
     {
         //
-        return KategoriTransaksi::paginate(10);
-    }
-    public function all()
-    {
-        //
-        return KategoriTransaksi::all();
+        return KasMasuk::paginate(10);
     }
 
     /**
@@ -44,13 +41,24 @@ class KategoriTransaksiController extends Controller
         //
 
         $request->validate([
-            'nama' => 'required|unique:kategori_transaksis,nama|max:255',
+            'kas' => 'required|numeric',
+            'kategori_transaksi' => 'required|numeric',
+            'jumlah' => 'required|numeric',
         ]);
-        $kategoriTransaksi = KategoriTransaksi::create($request->all());
+        $kas = Kas::find($request->kas);
+        $kategoriTransaksi = KategoriTransaksi::find($request->kategori_transaksi);
+        $noTrans = KasMasuk::noKasMasuk();
+        $request->request->add(['nama_kas' => $kas->nama]);
+        $request->request->add(['no_trans' => $noTrans]);
+        $request->request->add(['nama_kategori_transaksi' => $kategoriTransaksi->nama]);
+        $kasMasuk = KasMasuk::create($request->all());
     }
 
     public function search(Request $request){
-       return KategoriTransaksi::where('nama','LIKE',"%$request->q%")->paginate(10);
+       return KasMasuk::where('nama','LIKE',"%$request->q%")
+                        ->orWhere('alamat','LIKE',"%$request->q%")
+                        ->orWhere('no_telp','LIKE',"%$request->q%")
+                        ->paginate(10);
     }
 
     /**
@@ -73,7 +81,7 @@ class KategoriTransaksiController extends Controller
     public function edit($id)
     {
         //
-        return KategoriTransaksi::find($id);
+        return KasMasuk::find($id);
     }
 
     /**
@@ -87,10 +95,16 @@ class KategoriTransaksiController extends Controller
     {
         //
         $request->validate([
-            'nama' => 'required|unique:kategori_transaksis,nama,'.$id.'|max:255',
+            'kas' => 'required|numeric',
+            'kategori_transaksi' => 'required|numeric',
+            'jumlah' => 'required|numeric',
         ]);
-        $kategoriTransaksi = KategoriTransaksi::find($id)->update($request->all());
-        if($kategoriTransaksi) {
+        $kas = Kas::find($request->kas);
+        $kategoriTransaksi = KategoriTransaksi::find($request->kategori_transaksi);
+        $request->request->add(['nama_kas' => $kas->nama]);
+        $request->request->add(['nama_kategori_transaksi' => $kategoriTransaksi->nama]);
+        $kasMasuk = KasMasuk::find($id)->update($request->all());
+        if($kasMasuk) {
            return response(200);
         } else {
            return response(500);
@@ -106,8 +120,8 @@ class KategoriTransaksiController extends Controller
     public function destroy($id)
     {
         //
-        $kategoriTransaksi = KategoriTransaksi::destroy($id);
-        if($kategoriTransaksi){
+        $kasMasuk = KasMasuk::destroy($id);
+        if($kasMasuk){
           return response(200);
         } else {
           return response(500);    
