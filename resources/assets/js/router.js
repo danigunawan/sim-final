@@ -37,6 +37,10 @@ import KasMasukCreate from './components/kas-masuk/KasMasukCreate.vue';
 import KasMasukEdit from './components/kas-masuk/KasMasukEdit.vue';
 import KasMasukIndex from './components/kas-masuk/KasMasukIndex.vue';
 
+import KasKeluarCreate from './components/kas-keluar/KasKeluarCreate.vue';
+import KasKeluarEdit from './components/kas-keluar/KasKeluarEdit.vue';
+import KasKeluarIndex from './components/kas-keluar/KasKeluarIndex.vue';
+
 import KomisiProdukCreate from './components/komisi-produk/KomisiProdukCreate.vue';
 import KomisiProdukEdit from './components/komisi-produk/KomisiProdukEdit.vue';
 import KomisiProdukIndex from './components/komisi-produk/KomisiProdukIndex.vue';
@@ -75,6 +79,9 @@ import Page404 from './components/error/Page404.vue';
      { path: '/kas-masuk', component: KasMasukIndex,name: 'IndexKasMasuk' },
      { path: '/kas-masuk/create', component: KasMasukCreate,name: 'CreateKasMasuk' },
      { path: '/kas-masuk/edit/:id', component: KasMasukEdit,name: 'EditKasMasuk' },
+     { path: '/kas-keluar', component: KasKeluarIndex,name: 'IndexKasKeluar' },
+     { path: '/kas-keluar/create', component: KasKeluarCreate,name: 'CreateKasKeluar' },
+     { path: '/kas-keluar/edit/:id', component: KasKeluarEdit,name: 'EditKasKeluar' },
      { path: '/komisi-produk', component: KomisiProdukIndex,name: 'IndexKomisiProduk' },
      { path: '/komisi-produk/create', component: KomisiProdukCreate,name: 'CreateKomisiProduk' },
      { path: '/komisi-produk/edit/:id', component: KomisiProdukEdit,name: 'EditKomisiProduk' },

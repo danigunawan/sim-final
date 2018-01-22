@@ -15,7 +15,16 @@ class CreateKasKeluarsTable extends Migration
     {
         Schema::create('kas_keluars', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('no_trans')->unique();
+            $table->integer('kas')->unsigned();
+            $table->integer('kategori_transaksi')->unsigned();
+            $table->string('nama_kas');
+            $table->string('nama_kategori_transaksi');
+            $table->decimal('jumlah',15,2);
+            $table->string('keterangan')->nullable();
             $table->timestamps();
+            $table->foreign('kas')->references('id')->on('kas');
+            $table->foreign('kategori_transaksi')->references('id')->on('kategori_transaksis');
         });
     }
 

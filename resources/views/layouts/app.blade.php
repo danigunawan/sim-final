@@ -61,6 +61,7 @@
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><router-link :to="{name: 'IndexKasMasuk'}" >Kas Masuk</router-link></li>
+                                <li><router-link :to="{name: 'IndexKasKeluar'}" >Kas Keluar</router-link></li>
                             </ul>
                         </li>
                         @endif

@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use App\KasMasuk;
 use App\Observers\KasMasukObserver;
+use App\KasKeluar;
+use App\Observers\KasKeluarObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
         //
           Schema::defaultStringLength(191);
           KasMasuk::observe(KasMasukObserver::class);
+          KasKeluar::observe(KasKeluarObserver::class);
     }
 
     /**
