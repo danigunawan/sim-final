@@ -15,6 +15,11 @@ class KategoriTransaksiSeeder extends Seeder
         //
         KategoriTransaksi::create(['nama' => 'jajan']);
         KategoriTransaksi::create(['nama' => 'beli gecko']);
+        KategoriTransaksi::create(['nama' => 'Mutasi']);
+        KategoriTransaksi::create(['nama' => 'Biaya']);
+        KategoriTransaksi::create(['nama' => 'Modal']);
+        KategoriTransaksi::create(['nama' => 'Penjualan']);
+        KategoriTransaksi::create(['nama' => 'Pembelian']);
 
     }
 }

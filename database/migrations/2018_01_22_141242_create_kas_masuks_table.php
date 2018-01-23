@@ -22,6 +22,7 @@ class CreateKasMasuksTable extends Migration
             $table->string('nama_kategori_transaksi');
             $table->decimal('jumlah',15,2);
             $table->string('keterangan')->nullable();
+            $table->auditable();
             $table->timestamps();
             $table->foreign('kas')->references('id')->on('kas');
             $table->foreign('kategori_transaksi')->references('id')->on('kategori_transaksis');

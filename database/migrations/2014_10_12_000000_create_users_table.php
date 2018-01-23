@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->integer('konfirmasi_admin')->default(0);
             $table->string('jabatan');
             $table->rememberToken();
+            $table->auditable();
             $table->timestamps();
         });
     }

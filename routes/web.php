@@ -81,3 +81,7 @@ Route::resource('kas-masuk','KasMasukController')->middleware('auth');
 Route::get('/kas-keluar/view', 'KasKeluarController@index')->middleware('auth');
 Route::get('/kas-keluar/search', 'KasKeluarController@search')->middleware('auth');
 Route::resource('kas-keluar','KasKeluarController')->middleware('auth');
+
+Route::get('/kas-mutasi/view', 'KasMutasiController@index')->middleware('auth');
+Route::get('/kas-mutasi/search', 'KasMutasiController@search')->middleware('auth');
+Route::resource('kas-mutasi','KasMutasiController')->middleware('auth');

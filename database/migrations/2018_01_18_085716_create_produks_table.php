@@ -24,6 +24,7 @@ class CreateProduksTable extends Migration
             $table->float('harga_jual_1')->default(0.00);
             $table->float('harga_jual_2')->nullable();
             $table->float('harga_jual_3')->nullable();
+            $table->auditable();
             $table->timestamps();
             $table->foreign('kategori_produk')->references('id')->on('kategori_produks');
             $table->foreign('satuan')->references('id')->on('satuans');

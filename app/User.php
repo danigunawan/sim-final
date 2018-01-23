@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Yajra\Auditable\AuditableTrait;
 
 class User extends Authenticatable
 {
     use Notifiable;
-
+    use AuditableTrait;
     /**
      * The attributes that are mass assignable.
      *

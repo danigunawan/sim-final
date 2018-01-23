@@ -23,6 +23,7 @@ class CreatePasiensTable extends Migration
             $table->string('no_telp');
             $table->integer('penjamin')->unsigned();
             $table->string('kode_perusahaan');
+            $table->auditable();
             $table->timestamps();
             $table->foreign('penjamin')->references('id')->on('penjamins');
         });

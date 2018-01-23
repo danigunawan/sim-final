@@ -62,6 +62,7 @@
                             <ul class="dropdown-menu">
                                 <li><router-link :to="{name: 'IndexKasMasuk'}" >Kas Masuk</router-link></li>
                                 <li><router-link :to="{name: 'IndexKasKeluar'}" >Kas Keluar</router-link></li>
+                                <li><router-link :to="{name: 'IndexKasMutasi'}" >Kas Mutasi</router-link></li>
                             </ul>
                         </li>
                         @endif

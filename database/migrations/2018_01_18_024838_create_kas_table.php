@@ -17,6 +17,7 @@ class CreateKasTable extends Migration
             $table->increments('id');
             $table->string('kode')->unique();
             $table->string('nama')->unique();
+            $table->auditable();
             $table->timestamps();
 
         });

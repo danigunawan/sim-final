@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Yajra\Auditable\AuditableTrait;
 
-class KasMasuk extends Model
+class KasMutasi extends Model
 {
     //
     use AuditableTrait;
-    protected $fillable = ['no_trans','kas','kategori_transaksi','nama_kas','nama_kategori_transaksi','jumlah','keterangan'];
+    protected $fillable = ['no_trans','dari_kas','ke_kas','nama_dari_kas','nama_ke_kas','jumlah','keterangan'];
     
-    public static function noKasMasuk(){
+    public static function noKasMutasi(){
      $tahunSekarang = date('Y');
      $bulanSekarang = date('m');
      $tahunTerakhir = substr($tahunSekarang,2);
@@ -23,23 +23,23 @@ class KasMasuk extends Model
        $bulanTerakhir = $bulanSekarang;
     }
 
-    $transaksiKasMasuk = KasMasuk::select([DB::raw('MONTH(created_at) bulan'),'no_trans'])
+    $transaksiKasMutasi = KasMutasi::select([DB::raw('MONTH(created_at) bulan'),'no_trans'])
                       ->orderBy('id','DESC')->first();
-    if($transaksiKasMasuk != null){
-      $angkaNoKasMasuk = explode("/",$transaksiKasMasuk->no_trans);
-      $nomor = $angkaNoKasMasuk[0];
-      $bulanAkhir = $transaksiKasMasuk->bulan;
+    if($transaksiKasMutasi != null){
+      $angkaNoKasMutasi = explode("/",$transaksiKasMutasi->no_trans);
+      $nomor = $angkaNoKasMutasi[0];
+      $bulanAkhir = $transaksiKasMutasi->bulan;
     } else {
       $nomor = 1;
       $bulanAkhir = 13;
     }
     if($bulanAkhir != $bulanSekarang ){
-      $noKasMasuk = "1/KM/". $bulanTerakhir . "/".$tahunTerakhir;
+      $noKasMutasi = "1/KMT/". $bulanTerakhir . "/".$tahunTerakhir;
     } else {
       $nomor++;
-      $noKasMasuk = $nomor . "/KM/". $bulanTerakhir ."/". $tahunTerakhir;
+      $noKasMutasi = $nomor . "/KMT/". $bulanTerakhir ."/". $tahunTerakhir;
     }
-    return $noKasMasuk;
+    return $noKasMutasi;
 
    }
 }

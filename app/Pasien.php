@@ -5,10 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use App\Perusahaan;
+use Yajra\Auditable\AuditableTrait;
 
 class Pasien extends Model
 {
     //
+    use AuditableTrait;
     protected $fillable = ['no_rm','nama','jenis_kelamin','alamat',
                            'no_telp','penjamin','kode_perusahaan',
                            'tanggal_lahir'

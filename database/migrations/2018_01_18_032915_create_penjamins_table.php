@@ -19,6 +19,7 @@ class CreatePenjaminsTable extends Migration
             $table->string('alamat');
             $table->integer('no_telp');
             $table->integer('level_harga');
+            $table->auditable();
             $table->timestamps();
         });
     }

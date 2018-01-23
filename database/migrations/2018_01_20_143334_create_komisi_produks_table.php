@@ -22,6 +22,7 @@ class CreateKomisiProduksTable extends Migration
             $table->decimal('jumlah_prosentase',15,2)->nullable();
             $table->decimal('jumlah_uang',15,2)->nullable();
             $table->string('jabatan');
+            $table->auditable();
             $table->timestamps();
             $table->foreign('produk_id')->references('id')->on('produks');
             $table->foreign('user_id')->references('id')->on('users');

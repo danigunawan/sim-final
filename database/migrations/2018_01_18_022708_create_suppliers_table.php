@@ -18,6 +18,7 @@ class CreateSuppliersTable extends Migration
             $table->string('nama')->unique();
             $table->string('alamat');
             $table->string('no_telp');
+            $table->auditable();
             $table->timestamps();
         });
     }

@@ -4,10 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Yajra\Auditable\AuditableTrait;
 
 class KasKeluar extends Model
 {
     //
+    use AuditableTrait;
     protected $fillable = ['no_trans','kas','kategori_transaksi','nama_kas','nama_kategori_transaksi','jumlah','keterangan'];
     
     public static function noKasKeluar(){

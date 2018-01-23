@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKasKeluarsTable extends Migration
+class CreateKasMutasisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,19 @@ class CreateKasKeluarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kas_keluars', function (Blueprint $table) {
+        Schema::create('kas_mutasis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('no_trans')->unique();
-            $table->integer('kas')->unsigned();
-            $table->integer('kategori_transaksi')->unsigned();
-            $table->string('nama_kas');
-            $table->string('nama_kategori_transaksi');
+            $table->integer('dari_kas')->unsigned();
+            $table->integer('ke_kas')->unsigned();
+            $table->string('nama_dari_kas');
+            $table->string('nama_ke_kas');
             $table->decimal('jumlah',15,2);
             $table->string('keterangan')->nullable();
             $table->auditable();
             $table->timestamps();
-            $table->foreign('kas')->references('id')->on('kas');
-            $table->foreign('kategori_transaksi')->references('id')->on('kategori_transaksis');
+            $table->foreign('dari_kas')->references('id')->on('kas');
+            $table->foreign('ke_kas')->references('id')->on('kas');
         });
     }
 
@@ -36,6 +36,6 @@ class CreateKasKeluarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kas_keluars');
+        Schema::dropIfExists('kas_mutasis');
     }
 }

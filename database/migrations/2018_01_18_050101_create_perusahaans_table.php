@@ -19,6 +19,7 @@ class CreatePerusahaansTable extends Migration
             $table->string('nama');
             $table->string('alamat');
             $table->string('no_telp');
+            $table->auditable();
             $table->timestamps();
         });
     }
