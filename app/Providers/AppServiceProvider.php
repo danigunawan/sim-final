@@ -9,7 +9,11 @@ use App\Observers\KasMasukObserver;
 use App\KasKeluar;
 use App\Observers\KasKeluarObserver;
 use App\KasMutasi;
-use App\Observers\KasMutasiObserver;
+use App\observers\KasMutasiObserver;
+use App\ItemMasuk;
+use App\observers\ItemMasukObserver;
+use App\ItemKeluar;
+use App\observers\ItemKeluarObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
           Schema::defaultStringLength(191);
+          ItemMasuk::observe(ItemMasukObserver::class);
+          ItemKeluar::observe(ItemKeluarObserver::class);
           KasMasuk::observe(KasMasukObserver::class);
           KasKeluar::observe(KasKeluarObserver::class);
           KasMutasi::observe(KasMutasiObserver::class);

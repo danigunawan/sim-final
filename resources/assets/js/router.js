@@ -33,6 +33,8 @@ import ProdukCreate from './components/produk/ProdukCreate.vue';
 import ProdukEdit from './components/produk/ProdukEdit.vue';
 import ProdukIndex from './components/produk/ProdukIndex.vue';
 
+import LaporanKasIndex from './components/laporan-kas/LaporanKasIndex.vue';
+
 import KasMasukCreate from './components/kas-masuk/KasMasukCreate.vue';
 import KasMasukEdit from './components/kas-masuk/KasMasukEdit.vue';
 import KasMasukIndex from './components/kas-masuk/KasMasukIndex.vue';
@@ -49,6 +51,14 @@ import KomisiProdukCreate from './components/komisi-produk/KomisiProdukCreate.vu
 import KomisiProdukEdit from './components/komisi-produk/KomisiProdukEdit.vue';
 import KomisiProdukIndex from './components/komisi-produk/KomisiProdukIndex.vue';
 import Page404 from './components/error/Page404.vue';
+
+import ItemMasukCreate from './components/item-masuk/ItemMasukCreate.vue';
+import ItemMasukEdit from './components/item-masuk/ItemMasukEdit.vue';
+import ItemMasukIndex from './components/item-masuk/ItemMasukIndex.vue';
+
+import ItemKeluarCreate from './components/item-keluar/ItemKeluarCreate.vue';
+import ItemKeluarEdit from './components/item-keluar/ItemKeluarEdit.vue';
+import ItemKeluarIndex from './components/item-keluar/ItemKeluarIndex.vue';
 
  const routes = [
      {
@@ -80,6 +90,12 @@ import Page404 from './components/error/Page404.vue';
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
+     { path: '/item-masuk', component: ItemMasukIndex,name: 'IndexItemMasuk' },
+     { path: '/item-masuk/create', component: ItemMasukCreate,name: 'CreateItemMasuk' },
+     { path: '/item-masuk/edit/:id', component: ItemMasukEdit,name: 'EditItemMasuk' },
+     { path: '/item-keluar', component: ItemKeluarIndex,name: 'IndexItemKeluar' },
+     { path: '/item-keluar/create', component: ItemKeluarCreate,name: 'CreateItemKeluar' },
+     { path: '/item-keluar/edit/:id', component: ItemKeluarEdit,name: 'EditItemKeluar' },
      { path: '/kas-masuk', component: KasMasukIndex,name: 'IndexKasMasuk' },
      { path: '/kas-masuk/create', component: KasMasukCreate,name: 'CreateKasMasuk' },
      { path: '/kas-masuk/edit/:id', component: KasMasukEdit,name: 'EditKasMasuk' },
@@ -93,6 +109,7 @@ import Page404 from './components/error/Page404.vue';
      { path: '/komisi-produk/create', component: KomisiProdukCreate,name: 'CreateKomisiProduk' },
      { path: '/komisi-produk/edit/:id', component: KomisiProdukEdit,name: 'EditKomisiProduk' },
      { path: '/perusahaan', component: PerusahaanIndex,name: 'IndexPerusahaan' },
+     { path: '/laporan-kas', component: LaporanKasIndex,name: 'IndexLaporanKas' },
      { path: '/perusahaan/edit/:id', component: PerusahaanEdit,name: 'EditPerusahaan' },
      { path: '/kategori-produk', component: KategoriProdukIndex,name: 'IndexKategoriProduk' },
      { path: '/kategori-produk/create', component: KategoriProdukCreate,name: 'CreateKategoriProduk' },

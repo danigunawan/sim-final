@@ -74,6 +74,11 @@ Route::get('/produk/all', 'ProdukController@all')->middleware('auth');
 Route::get('/produk/search', 'ProdukController@search')->middleware('auth');
 Route::resource('produk','ProdukController')->middleware('auth');
 
+Route::get('/transaksi-kas/view', 'TransaksiKasController@index')->middleware('auth');
+Route::get('/transaksi-kas/laporan', 'TransaksiKasController@laporan')->middleware('auth');
+Route::get('/transaksi-kas/search', 'TransaksiKasController@search')->middleware('auth');
+Route::resource('transaksi-kas','TransaksiKasController')->middleware('auth');
+
 Route::get('/kas-masuk/view', 'KasMasukController@index')->middleware('auth');
 Route::get('/kas-masuk/search', 'KasMasukController@search')->middleware('auth');
 Route::resource('kas-masuk','KasMasukController')->middleware('auth');
@@ -85,3 +90,11 @@ Route::resource('kas-keluar','KasKeluarController')->middleware('auth');
 Route::get('/kas-mutasi/view', 'KasMutasiController@index')->middleware('auth');
 Route::get('/kas-mutasi/search', 'KasMutasiController@search')->middleware('auth');
 Route::resource('kas-mutasi','KasMutasiController')->middleware('auth');
+
+Route::get('/item-masuk/view', 'ItemMasukController@index')->middleware('auth');
+Route::get('/item-masuk/search', 'ItemMasukController@search')->middleware('auth');
+Route::resource('item-masuk','ItemMasukController')->middleware('auth');
+
+Route::get('/item-keluar/view', 'ItemKeluarController@index')->middleware('auth');
+Route::get('/item-keluar/search', 'ItemKeluarController@search')->middleware('auth');
+Route::resource('item-keluar','ItemKeluarController')->middleware('auth');
