@@ -17,6 +17,11 @@ class SupplierController extends Controller
         //
         return Supplier::paginate(10);
     }
+    public function all()
+    {
+        //
+        return Supplier::all();
+    }
 
     /**
      * Show the form for creating a new resource.

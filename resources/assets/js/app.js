@@ -24,7 +24,7 @@ Vue.component('vue-spinner', require('vue-simple-spinner'));
 Vue.component('vue-datepicker', require('vue-simple-datepicker'));
 Vue.component('vue-selectize', Selectize);
 
-Vue.use(VueSwal)
+Vue.use(VueSwal);
 Vue.use(VueRouter);
 // 3. Create the router instance and pass the `routes` option
 // You can pass in additional options here, but let's

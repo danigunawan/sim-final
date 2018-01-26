@@ -60,6 +60,10 @@ import ItemKeluarCreate from './components/item-keluar/ItemKeluarCreate.vue';
 import ItemKeluarEdit from './components/item-keluar/ItemKeluarEdit.vue';
 import ItemKeluarIndex from './components/item-keluar/ItemKeluarIndex.vue';
 
+import PembelianCreate from './components/pembelian/PembelianCreate.vue';
+import PembelianEdit from './components/pembelian/PembelianEdit.vue';
+import PembelianIndex from './components/pembelian/PembelianIndex.vue';
+
  const routes = [
      {
         path: '/',
@@ -90,6 +94,9 @@ import ItemKeluarIndex from './components/item-keluar/ItemKeluarIndex.vue';
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
+     { path: '/pembelian', component: PembelianIndex,name: 'IndexPembelian' },
+     { path: '/pembelian/create', component: PembelianCreate,name: 'CreatePembelian' },
+     { path: '/pembelian/edit/:id', component: PembelianEdit,name: 'EditPembelian' },
      { path: '/item-masuk', component: ItemMasukIndex,name: 'IndexItemMasuk' },
      { path: '/item-masuk/create', component: ItemMasukCreate,name: 'CreateItemMasuk' },
      { path: '/item-masuk/edit/:id', component: ItemMasukEdit,name: 'EditItemMasuk' },

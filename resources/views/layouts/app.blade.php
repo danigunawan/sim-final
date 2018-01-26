@@ -76,8 +76,10 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Persediaan
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
+                                <li><router-link :to="{name: 'IndexPembelian'}" >Pembelian</router-link></li>
                                 <li><router-link :to="{name: 'IndexItemMasuk'}" >Item Masuk</router-link></li>
                                 <li><router-link :to="{name: 'IndexItemKeluar'}" >Item Keluar</router-link></li>
+                            </ul>
                             </ul>
                         </li>
                         @endif

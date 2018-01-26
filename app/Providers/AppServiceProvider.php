@@ -14,6 +14,10 @@ use App\ItemMasuk;
 use App\observers\ItemMasukObserver;
 use App\ItemKeluar;
 use App\observers\ItemKeluarObserver;
+use App\Pembelian;
+use App\observers\PembelianObserver;
+use App\DetailPembelian;
+use App\observers\DetailPembelianObserver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
           Schema::defaultStringLength(191);
+          Pembelian::observe(PembelianObserver::class);
+          DetailPembelian::observe(DetailPembelianObserver::class);
           ItemMasuk::observe(ItemMasukObserver::class);
           ItemKeluar::observe(ItemKeluarObserver::class);
           KasMasuk::observe(KasMasukObserver::class);

@@ -44,6 +44,7 @@ Route::get('/kategori-transaksi/search', 'KategoriTransaksiController@search')->
 Route::resource('kategori-transaksi','KategoriTransaksiController')->middleware('auth');
 
 Route::get('/supplier/view', 'SupplierController@index')->middleware('auth');
+Route::get('/supplier/all', 'SupplierController@all')->middleware('auth');
 Route::get('/supplier/search', 'SupplierController@search')->middleware('auth');
 Route::resource('supplier','SupplierController')->middleware('auth');
 
@@ -98,3 +99,14 @@ Route::resource('item-masuk','ItemMasukController')->middleware('auth');
 Route::get('/item-keluar/view', 'ItemKeluarController@index')->middleware('auth');
 Route::get('/item-keluar/search', 'ItemKeluarController@search')->middleware('auth');
 Route::resource('item-keluar','ItemKeluarController')->middleware('auth');
+
+Route::get('/pembelian/view', 'PembelianController@index')->middleware('auth');
+Route::get('/pembelian/search', 'PembelianController@search')->middleware('auth');
+Route::post('/pembelian/store-tbs-pembelian', 'PembelianController@storeTbsPembelian')->middleware('auth');
+Route::post('/pembelian/{id}/store-tbs-edit-pembelian', 'PembelianController@storeTbsEditPembelian')->middleware('auth');
+Route::delete('/pembelian/{id}/delete-tbs-pembelian', 'PembelianController@deleteTbsPembelian')->middleware('auth');
+Route::delete('/pembelian/{id}/delete-tbs-edit-pembelian', 'PembelianController@deleteTbsEditPembelian')->middleware('auth');
+Route::get('/pembelian/create-detail-pembelian', 'PembelianController@createDetailPembelian')->middleware('auth');
+Route::get('/pembelian/{id}/edit-detail-pembelian', 'PembelianController@editDetailPembelian')->middleware('auth');
+Route::get('/pembelian/{id}/edit-tbs-pembelian', 'PembelianController@editTbsPembelian')->middleware('auth');
+Route::resource('pembelian','PembelianController')->middleware('auth');
