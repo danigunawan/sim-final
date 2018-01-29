@@ -9,6 +9,9 @@ import SatuanEdit from './components/satuan/SatuanEdit.vue';
 import PoliIndex from './components/poli/PoliIndex.vue';
 import PoliCreate from './components/poli/PoliCreate.vue';
 import PoliEdit from './components/poli/PoliEdit.vue';
+import RuanganIndex from './components/ruangan/RuanganIndex.vue';
+import RuanganCreate from './components/ruangan/RuanganCreate.vue';
+import RuanganEdit from './components/ruangan/RuanganEdit.vue';
 import KategoriProdukIndex from './components/kategori-produk/KategoriProdukIndex.vue';
 import KategoriProdukCreate from './components/kategori-produk/KategoriProdukCreate.vue';
 import KategoriProdukEdit from './components/kategori-produk/KategoriProdukEdit.vue';
@@ -84,6 +87,9 @@ import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/Regis
      { path: '/poli', component: PoliIndex,name: 'IndexPoli' },
      { path: '/poli/create', component: PoliCreate,name: 'CreatePoli' },
      { path: '/poli/edit/:id', component: PoliEdit,name: 'EditPoli' },
+     { path: '/ruangan', component: RuanganIndex,name: 'IndexRuangan' },
+     { path: '/ruangan/create', component: RuanganCreate,name: 'CreateRuangan' },
+     { path: '/ruangan/edit/:id', component: RuanganEdit,name: 'EditRuangan' },
      { path: '/supplier', component: SupplierIndex,name: 'IndexSupplier' },
      { path: '/supplier/create', component: SupplierCreate,name: 'CreateSupplier' },
      { path: '/supplier/edit/:id', component: SupplierEdit,name: 'EditSupplier' },

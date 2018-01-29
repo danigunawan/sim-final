@@ -35,6 +35,11 @@ Route::get('/poli/all', 'PoliController@all')->middleware('auth');
 Route::get('/poli/search', 'PoliController@search')->middleware('auth');
 Route::resource('poli','PoliController')->middleware('auth');
 
+Route::get('/ruangan/view', 'RuanganController@index')->middleware('auth');
+Route::get('/ruangan/all', 'RuanganController@all')->middleware('auth');
+Route::get('/ruangan/search', 'RuanganController@search')->middleware('auth');
+Route::resource('ruangan','RuanganController')->middleware('auth');
+
 Route::get('/kategori-produk/view', 'KategoriProdukController@index')->middleware('auth');
 Route::get('/kategori-produk/all', 'KategoriProdukController@all')->middleware('auth');
 Route::get('/kategori-produk/search', 'KategoriProdukController@search')->middleware('auth');
