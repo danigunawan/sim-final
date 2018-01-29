@@ -19,6 +19,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "bootstrap-vue": "^2.0.0-rc.1",
         "laravel-vue-pagination": "^1.0.6",
         "vue-router": "^3.0.1",
         "vue-simple-datepicker": "^1.1.0",

@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user/view', 'UserController@index')->middleware('auth');
 Route::get('/user/all', 'UserController@all')->middleware('auth');
+Route::get('/user/dokter', 'UserController@dokter')->middleware('auth');
 Route::get('/user/search', 'UserController@search')->middleware('auth');
 Route::get('/user/{id}/konfirmasi', 'UserController@konfirmasiUser')->middleware('auth');
 Route::resource('user','UserController')->middleware('auth');
@@ -30,6 +31,7 @@ Route::get('/satuan/search', 'SatuanController@search')->middleware('auth');
 Route::resource('satuan','SatuanController')->middleware('auth');
 
 Route::get('/poli/view', 'PoliController@index')->middleware('auth');
+Route::get('/poli/all', 'PoliController@all')->middleware('auth');
 Route::get('/poli/search', 'PoliController@search')->middleware('auth');
 Route::resource('poli','PoliController')->middleware('auth');
 
@@ -68,6 +70,7 @@ Route::resource('perusahaan','PerusahaanController')->middleware('auth');
 
 Route::get('/pasien/view', 'PasienController@index')->middleware('auth');
 Route::get('/pasien/search', 'PasienController@search')->middleware('auth');
+Route::get('/pasien/pencarian-registrasi', 'PasienController@pencarianRegistrasi')->middleware('auth');
 Route::resource('pasien','PasienController')->middleware('auth');
 
 Route::get('/produk/view', 'ProdukController@index')->middleware('auth');
@@ -99,6 +102,13 @@ Route::resource('item-masuk','ItemMasukController')->middleware('auth');
 Route::get('/item-keluar/view', 'ItemKeluarController@index')->middleware('auth');
 Route::get('/item-keluar/search', 'ItemKeluarController@search')->middleware('auth');
 Route::resource('item-keluar','ItemKeluarController')->middleware('auth');
+
+Route::get('/registrasi-rawat-jalan/view', 'RegistrasiRawatJalanController@index')->middleware('auth');
+Route::get('/registrasi-rawat-jalan/search', 'RegistrasiRawatJalanController@search')->middleware('auth');
+Route::get('/registrasi-rawat-jalan/{id}/rawat', 'RegistrasiRawatJalanController@rawat')->middleware('auth');
+Route::post('/registrasi-rawat-jalan/lama', 'RegistrasiRawatJalanController@storeLama')->middleware('auth');
+Route::post('/registrasi-rawat-jalan/baru', 'RegistrasiRawatJalanController@storeBaru')->middleware('auth');
+Route::resource('registrasi-rawat-jalan','RegistrasiRawatJalanController')->middleware('auth');
 
 Route::get('/pembelian/view', 'PembelianController@index')->middleware('auth');
 Route::get('/pembelian/search', 'PembelianController@search')->middleware('auth');

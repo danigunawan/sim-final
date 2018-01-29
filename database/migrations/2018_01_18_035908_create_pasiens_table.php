@@ -21,6 +21,7 @@ class CreatePasiensTable extends Migration
             $table->string('tanggal_lahir');
             $table->string('alamat');
             $table->string('no_telp');
+            $table->string('alergi_obat')->nullable();
             $table->integer('penjamin')->unsigned();
             $table->string('kode_perusahaan');
             $table->auditable();

@@ -64,6 +64,10 @@ import PembelianCreate from './components/pembelian/PembelianCreate.vue';
 import PembelianEdit from './components/pembelian/PembelianEdit.vue';
 import PembelianIndex from './components/pembelian/PembelianIndex.vue';
 
+import RegistrasiRawatJalanCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanCreate.vue';
+import RegistrasiRawatJalanLamaCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanLamaCreate.vue';
+import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/RegistrasiRawatJalanIndex.vue';
+
  const routes = [
      {
         path: '/',
@@ -91,6 +95,9 @@ import PembelianIndex from './components/pembelian/PembelianIndex.vue';
      { path: '/pasien', component: PasienIndex,name: 'IndexPasien' },
      { path: '/pasien/create', component: PasienCreate,name: 'CreatePasien' },
      { path: '/pasien/edit/:id', component: PasienEdit,name: 'EditPasien' },
+     { path: '/registrasi-rawat-jalan', component: RegistrasiRawatJalanIndex,name: 'IndexRegistrasiRawatJalan' },
+     { path: '/registrasi-rawat-jalan/create', component: RegistrasiRawatJalanCreate,name: 'CreateRegistrasiRawatJalan' },
+     { path: '/registrasi-rawat-jalan-lama/create', component: RegistrasiRawatJalanLamaCreate,name: 'CreateRegistrasiRawatJalanLama' },
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },

@@ -23,6 +23,13 @@ class UserController extends Controller
         //
        return  User::all();
     }
+    
+   
+    public function dokter()
+    {
+        //
+       return  User::where('jabatan','dokter')->get();
+    }
     /**
      * Show the form for creating a new resource.
      *

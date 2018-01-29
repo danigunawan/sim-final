@@ -13,7 +13,7 @@ class Pasien extends Model
     use AuditableTrait;
     protected $fillable = ['no_rm','nama','jenis_kelamin','alamat',
                            'no_telp','penjamin','kode_perusahaan',
-                           'tanggal_lahir'
+                           'tanggal_lahir', 'alergi_obat'
                            ];
 
     public static function noRm(){

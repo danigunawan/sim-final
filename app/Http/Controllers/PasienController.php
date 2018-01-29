@@ -70,6 +70,37 @@ class PasienController extends Controller
                      ->orWhere('alamat','LIKE',"%$request->q%")
                      ->paginate(10);
     }
+    //pencarian ini digunakan di registrasi pasien
+    public function pencarianRegistrasi(Request $request){
+       if(isset($request->nama) && isset($request->no_rm) && isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('nama','LIKE',"%$request->nama%")
+                     ->where('no_rm',$request->no_rm)
+                     ->where('tanggal_lahir',$request->tanggal_lahir)
+                     ->paginate(10);
+       } else if(isset($request->nama) && isset($request->no_rm) && !isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('nama','LIKE',"%$request->nama%")
+                     ->where('no_rm',$request->no_rm)
+                     ->paginate(10);
+       } else if(isset($request->nama) && !isset($request->no_rm) && !isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('nama','LIKE',"%$request->nama%")
+                     ->paginate(10);
+       } else if(!isset($request->nama) && isset($request->no_rm) && !isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('no_rm',$request->no_rm)
+                     ->paginate(10);
+       } else if(!isset($request->nama) && !isset($request->no_rm) && isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('tanggal_lahir',$request->tanggal_lahir)
+                     ->paginate(10);
+       } else if(!isset($request->nama) && isset($request->no_rm) && isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('tanggal_lahir',$request->tanggal_lahir)
+                     ->where('no_rm',$request->no_rm)
+                     ->paginate(10);
+       } else if(isset($request->nama) && !isset($request->no_rm) && isset($request->tanggal_lahir)){
+           $pasien = Pasien::where('nama','LIKE',"%$request->nama%")
+                     ->where('tanggal_lahir',$request->tanggal_lahir)
+                     ->paginate(10);
+       }
+       return $pasien;
+    }
 
     /**
      * Display the specified resource.

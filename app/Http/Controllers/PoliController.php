@@ -12,10 +12,14 @@ class PoliController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         //
         return Poli::paginate(10);
+    }
+
+    public function all() {
+        //
+        return Poli::all();
     }
 
     /**
