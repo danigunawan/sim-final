@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\RegistrasiPasien;
 use App\RekamMedik;
+use App\Pasien;
+use App\Perusahaan;
 
 class RegistrasiRawatJalanController extends Controller
 {
@@ -41,6 +43,49 @@ class RegistrasiRawatJalanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function storeBaru(Request $request)
+    {
+        //
+
+        $request->validate([
+            'nama' => 'required',
+            'jenis_kelamin' => 'required',
+            'tanggal_lahir' => 'required',
+            'alamat' => 'required',
+            'no_telp' => 'required',
+            'penjamin' => 'required|numeric',
+            'poli' => 'required|numeric',
+            'dokter' => 'required|numeric',
+        ]);
+        $noRm = Pasien::noRm();
+        $perusahaan = Perusahaan::find(1);
+        $pasien = Pasien::create(['no_rm' => $noRm,'nama' => $request->nama,
+                                  'alamat' => $request->alamat,'no_telp' => $request->no_telp,
+                                  'penjamin' => $request->penjamin,
+                                  'jenis_kelamin' => $request->jenis_kelamin,
+                                  'kode_perusahaan' => $perusahaan->kode,
+                                  'tanggal_lahir' => $request->tanggal_lahir]);
+
+        $noReg = RegistrasiPasien::noRegistrasiPasien();
+        $request->request->add(['no_reg' => $noReg]);
+        $request->request->add(['pasien' => $noRm]);
+        $request->request->add(['jenis_registrasi' => 'rawat_jalan']);
+        $request->request->add(['status_registrasi' => 'menunggu']);
+        $registrasi = RegistrasiPasien::create($request->all());
+        $rekamMedik = RekamMedik::create(['registrasi' => $registrasi->id,
+                                           'sistole_diastole' => $request->sistole_diastole,
+                                           'frekuensi_pernapasan' => $request->frekuensi_pernapasan,
+                                           'suhu' => $request->suhu,
+                                           'nadi' => $request->nadi,
+                                           'berat_badan' => $request->berat_badan,
+                                           'tinggi_badan' => $request->tinggi_badan,
+                                        ]);
+        if($registrasi){
+           return response(200);  
+         } else {
+           return response(500);
+         }
+    }
     public function storeLama(Request $request)
     {
         //

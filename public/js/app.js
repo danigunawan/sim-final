@@ -54642,9 +54642,12 @@ exports.version = version;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_registrasi_rawat_jalan_RegistrasiRawatJalanCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_56__components_registrasi_rawat_jalan_RegistrasiRawatJalanCreate_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_59__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__);
 //DASHBOARD
+
 
 
 
@@ -54718,7 +54721,7 @@ var routes = [{
    path: '/',
    component: __WEBPACK_IMPORTED_MODULE_0__components_dashboard_DashboardIndex_vue___default.a,
    name: 'IndexDashboard'
-}, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_4__components_satuan_SatuanIndex_vue___default.a, name: 'IndexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_5__components_satuan_SatuanCreate_vue___default.a, name: 'CreateSatuan' }, { path: '/satuan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_satuan_SatuanEdit_vue___default.a, name: 'EditSatuan' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliIndex_vue___default.a, name: 'IndexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliCreate_vue___default.a, name: 'CreatePoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_poli_PoliEdit_vue___default.a, name: 'EditPoli' }, { path: '/supplier', component: __WEBPACK_IMPORTED_MODULE_16__components_supplier_SupplierIndex_vue___default.a, name: 'IndexSupplier' }, { path: '/supplier/create', component: __WEBPACK_IMPORTED_MODULE_17__components_supplier_SupplierCreate_vue___default.a, name: 'CreateSupplier' }, { path: '/supplier/edit/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_supplier_SupplierEdit_vue___default.a, name: 'EditSupplier' }, { path: '/kas', component: __WEBPACK_IMPORTED_MODULE_21__components_kas_KasIndex_vue___default.a, name: 'IndexKas' }, { path: '/kas/create', component: __WEBPACK_IMPORTED_MODULE_19__components_kas_KasCreate_vue___default.a, name: 'CreateKas' }, { path: '/kas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_20__components_kas_KasEdit_vue___default.a, name: 'EditKas' }, { path: '/penjamin', component: __WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue___default.a, name: 'IndexPenjamin' }, { path: '/penjamin/create', component: __WEBPACK_IMPORTED_MODULE_22__components_penjamin_PenjaminCreate_vue___default.a, name: 'CreatePenjamin' }, { path: '/penjamin/edit/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_penjamin_PenjaminEdit_vue___default.a, name: 'EditPenjamin' }, { path: '/pasien', component: __WEBPACK_IMPORTED_MODULE_29__components_pasien_PasienIndex_vue___default.a, name: 'IndexPasien' }, { path: '/pasien/create', component: __WEBPACK_IMPORTED_MODULE_27__components_pasien_PasienCreate_vue___default.a, name: 'CreatePasien' }, { path: '/pasien/edit/:id', component: __WEBPACK_IMPORTED_MODULE_28__components_pasien_PasienEdit_vue___default.a, name: 'EditPasien' }, { path: '/registrasi-rawat-jalan', component: __WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default.a, name: 'IndexRegistrasiRawatJalan' }, { path: '/registrasi-rawat-jalan/create', component: __WEBPACK_IMPORTED_MODULE_56__components_registrasi_rawat_jalan_RegistrasiRawatJalanCreate_vue___default.a, name: 'CreateRegistrasiRawatJalan' }, { path: '/registrasi-rawat-jalan-lama/create', component: __WEBPACK_IMPORTED_MODULE_57__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanLama' }, { path: '/produk', component: __WEBPACK_IMPORTED_MODULE_32__components_produk_ProdukIndex_vue___default.a, name: 'IndexProduk' }, { path: '/produk/create', component: __WEBPACK_IMPORTED_MODULE_30__components_produk_ProdukCreate_vue___default.a, name: 'CreateProduk' }, { path: '/produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_31__components_produk_ProdukEdit_vue___default.a, name: 'EditProduk' }, { path: '/pembelian', component: __WEBPACK_IMPORTED_MODULE_55__components_pembelian_PembelianIndex_vue___default.a, name: 'IndexPembelian' }, { path: '/pembelian/create', component: __WEBPACK_IMPORTED_MODULE_53__components_pembelian_PembelianCreate_vue___default.a, name: 'CreatePembelian' }, { path: '/pembelian/edit/:id', component: __WEBPACK_IMPORTED_MODULE_54__components_pembelian_PembelianEdit_vue___default.a, name: 'EditPembelian' }, { path: '/item-masuk', component: __WEBPACK_IMPORTED_MODULE_49__components_item_masuk_ItemMasukIndex_vue___default.a, name: 'IndexItemMasuk' }, { path: '/item-masuk/create', component: __WEBPACK_IMPORTED_MODULE_47__components_item_masuk_ItemMasukCreate_vue___default.a, name: 'CreateItemMasuk' }, { path: '/item-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_48__components_item_masuk_ItemMasukEdit_vue___default.a, name: 'EditItemMasuk' }, { path: '/item-keluar', component: __WEBPACK_IMPORTED_MODULE_52__components_item_keluar_ItemKeluarIndex_vue___default.a, name: 'IndexItemKeluar' }, { path: '/item-keluar/create', component: __WEBPACK_IMPORTED_MODULE_50__components_item_keluar_ItemKeluarCreate_vue___default.a, name: 'CreateItemKeluar' }, { path: '/item-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_51__components_item_keluar_ItemKeluarEdit_vue___default.a, name: 'EditItemKeluar' }, { path: '/kas-masuk', component: __WEBPACK_IMPORTED_MODULE_36__components_kas_masuk_KasMasukIndex_vue___default.a, name: 'IndexKasMasuk' }, { path: '/kas-masuk/create', component: __WEBPACK_IMPORTED_MODULE_34__components_kas_masuk_KasMasukCreate_vue___default.a, name: 'CreateKasMasuk' }, { path: '/kas-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_35__components_kas_masuk_KasMasukEdit_vue___default.a, name: 'EditKasMasuk' }, { path: '/kas-keluar', component: __WEBPACK_IMPORTED_MODULE_39__components_kas_keluar_KasKeluarIndex_vue___default.a, name: 'IndexKasKeluar' }, { path: '/kas-keluar/create', component: __WEBPACK_IMPORTED_MODULE_37__components_kas_keluar_KasKeluarCreate_vue___default.a, name: 'CreateKasKeluar' }, { path: '/kas-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_38__components_kas_keluar_KasKeluarEdit_vue___default.a, name: 'EditKasKeluar' }, { path: '/kas-mutasi', component: __WEBPACK_IMPORTED_MODULE_42__components_kas_mutasi_KasMutasiIndex_vue___default.a, name: 'IndexKasMutasi' }, { path: '/kas-mutasi/create', component: __WEBPACK_IMPORTED_MODULE_40__components_kas_mutasi_KasMutasiCreate_vue___default.a, name: 'CreateKasMutasi' }, { path: '/kas-mutasi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_41__components_kas_mutasi_KasMutasiEdit_vue___default.a, name: 'EditKasMutasi' }, { path: '/komisi-produk', component: __WEBPACK_IMPORTED_MODULE_45__components_komisi_produk_KomisiProdukIndex_vue___default.a, name: 'IndexKomisiProduk' }, { path: '/komisi-produk/create', component: __WEBPACK_IMPORTED_MODULE_43__components_komisi_produk_KomisiProdukCreate_vue___default.a, name: 'CreateKomisiProduk' }, { path: '/komisi-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_44__components_komisi_produk_KomisiProdukEdit_vue___default.a, name: 'EditKomisiProduk' }, { path: '/perusahaan', component: __WEBPACK_IMPORTED_MODULE_26__components_perusahaan_PerusahaanIndex_vue___default.a, name: 'IndexPerusahaan' }, { path: '/laporan-kas', component: __WEBPACK_IMPORTED_MODULE_33__components_laporan_kas_LaporanKasIndex_vue___default.a, name: 'IndexLaporanKas' }, { path: '/perusahaan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_25__components_perusahaan_PerusahaanEdit_vue___default.a, name: 'EditPerusahaan' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'IndexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'CreateKategoriProduk' }, { path: '/kategori-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'EditKategoriProduk' }, { path: '/kategori-transaksi', component: __WEBPACK_IMPORTED_MODULE_13__components_kategori_transaksi_KategoriTransaksiIndex_vue___default.a, name: 'IndexKategoriTransaksi' }, { path: '/kategori-transaksi/create', component: __WEBPACK_IMPORTED_MODULE_14__components_kategori_transaksi_KategoriTransaksiCreate_vue___default.a, name: 'CreateKategoriTransaksi' }, { path: '/kategori-transaksi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_kategori_transaksi_KategoriTransaksiEdit_vue___default.a, name: 'EditKategoriTransaksi' }, { path: '/*', component: __WEBPACK_IMPORTED_MODULE_46__components_error_Page404_vue___default.a, name: 'Page404' }];
+}, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_4__components_satuan_SatuanIndex_vue___default.a, name: 'IndexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_5__components_satuan_SatuanCreate_vue___default.a, name: 'CreateSatuan' }, { path: '/satuan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_satuan_SatuanEdit_vue___default.a, name: 'EditSatuan' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliIndex_vue___default.a, name: 'IndexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliCreate_vue___default.a, name: 'CreatePoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_poli_PoliEdit_vue___default.a, name: 'EditPoli' }, { path: '/supplier', component: __WEBPACK_IMPORTED_MODULE_16__components_supplier_SupplierIndex_vue___default.a, name: 'IndexSupplier' }, { path: '/supplier/create', component: __WEBPACK_IMPORTED_MODULE_17__components_supplier_SupplierCreate_vue___default.a, name: 'CreateSupplier' }, { path: '/supplier/edit/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_supplier_SupplierEdit_vue___default.a, name: 'EditSupplier' }, { path: '/kas', component: __WEBPACK_IMPORTED_MODULE_21__components_kas_KasIndex_vue___default.a, name: 'IndexKas' }, { path: '/kas/create', component: __WEBPACK_IMPORTED_MODULE_19__components_kas_KasCreate_vue___default.a, name: 'CreateKas' }, { path: '/kas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_20__components_kas_KasEdit_vue___default.a, name: 'EditKas' }, { path: '/penjamin', component: __WEBPACK_IMPORTED_MODULE_24__components_penjamin_PenjaminIndex_vue___default.a, name: 'IndexPenjamin' }, { path: '/penjamin/create', component: __WEBPACK_IMPORTED_MODULE_22__components_penjamin_PenjaminCreate_vue___default.a, name: 'CreatePenjamin' }, { path: '/penjamin/edit/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_penjamin_PenjaminEdit_vue___default.a, name: 'EditPenjamin' }, { path: '/pasien', component: __WEBPACK_IMPORTED_MODULE_29__components_pasien_PasienIndex_vue___default.a, name: 'IndexPasien' }, { path: '/pasien/create', component: __WEBPACK_IMPORTED_MODULE_27__components_pasien_PasienCreate_vue___default.a, name: 'CreatePasien' }, { path: '/pasien/edit/:id', component: __WEBPACK_IMPORTED_MODULE_28__components_pasien_PasienEdit_vue___default.a, name: 'EditPasien' }, { path: '/registrasi-rawat-jalan', component: __WEBPACK_IMPORTED_MODULE_59__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default.a, name: 'IndexRegistrasiRawatJalan' }, { path: '/registrasi-rawat-jalan/create', component: __WEBPACK_IMPORTED_MODULE_56__components_registrasi_rawat_jalan_RegistrasiRawatJalanCreate_vue___default.a, name: 'CreateRegistrasiRawatJalan' }, { path: '/registrasi-rawat-jalan-lama/create', component: __WEBPACK_IMPORTED_MODULE_57__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanLama' }, { path: '/registrasi-rawat-jalan-baru/create', component: __WEBPACK_IMPORTED_MODULE_58__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanBaru' }, { path: '/produk', component: __WEBPACK_IMPORTED_MODULE_32__components_produk_ProdukIndex_vue___default.a, name: 'IndexProduk' }, { path: '/produk/create', component: __WEBPACK_IMPORTED_MODULE_30__components_produk_ProdukCreate_vue___default.a, name: 'CreateProduk' }, { path: '/produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_31__components_produk_ProdukEdit_vue___default.a, name: 'EditProduk' }, { path: '/pembelian', component: __WEBPACK_IMPORTED_MODULE_55__components_pembelian_PembelianIndex_vue___default.a, name: 'IndexPembelian' }, { path: '/pembelian/create', component: __WEBPACK_IMPORTED_MODULE_53__components_pembelian_PembelianCreate_vue___default.a, name: 'CreatePembelian' }, { path: '/pembelian/edit/:id', component: __WEBPACK_IMPORTED_MODULE_54__components_pembelian_PembelianEdit_vue___default.a, name: 'EditPembelian' }, { path: '/item-masuk', component: __WEBPACK_IMPORTED_MODULE_49__components_item_masuk_ItemMasukIndex_vue___default.a, name: 'IndexItemMasuk' }, { path: '/item-masuk/create', component: __WEBPACK_IMPORTED_MODULE_47__components_item_masuk_ItemMasukCreate_vue___default.a, name: 'CreateItemMasuk' }, { path: '/item-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_48__components_item_masuk_ItemMasukEdit_vue___default.a, name: 'EditItemMasuk' }, { path: '/item-keluar', component: __WEBPACK_IMPORTED_MODULE_52__components_item_keluar_ItemKeluarIndex_vue___default.a, name: 'IndexItemKeluar' }, { path: '/item-keluar/create', component: __WEBPACK_IMPORTED_MODULE_50__components_item_keluar_ItemKeluarCreate_vue___default.a, name: 'CreateItemKeluar' }, { path: '/item-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_51__components_item_keluar_ItemKeluarEdit_vue___default.a, name: 'EditItemKeluar' }, { path: '/kas-masuk', component: __WEBPACK_IMPORTED_MODULE_36__components_kas_masuk_KasMasukIndex_vue___default.a, name: 'IndexKasMasuk' }, { path: '/kas-masuk/create', component: __WEBPACK_IMPORTED_MODULE_34__components_kas_masuk_KasMasukCreate_vue___default.a, name: 'CreateKasMasuk' }, { path: '/kas-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_35__components_kas_masuk_KasMasukEdit_vue___default.a, name: 'EditKasMasuk' }, { path: '/kas-keluar', component: __WEBPACK_IMPORTED_MODULE_39__components_kas_keluar_KasKeluarIndex_vue___default.a, name: 'IndexKasKeluar' }, { path: '/kas-keluar/create', component: __WEBPACK_IMPORTED_MODULE_37__components_kas_keluar_KasKeluarCreate_vue___default.a, name: 'CreateKasKeluar' }, { path: '/kas-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_38__components_kas_keluar_KasKeluarEdit_vue___default.a, name: 'EditKasKeluar' }, { path: '/kas-mutasi', component: __WEBPACK_IMPORTED_MODULE_42__components_kas_mutasi_KasMutasiIndex_vue___default.a, name: 'IndexKasMutasi' }, { path: '/kas-mutasi/create', component: __WEBPACK_IMPORTED_MODULE_40__components_kas_mutasi_KasMutasiCreate_vue___default.a, name: 'CreateKasMutasi' }, { path: '/kas-mutasi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_41__components_kas_mutasi_KasMutasiEdit_vue___default.a, name: 'EditKasMutasi' }, { path: '/komisi-produk', component: __WEBPACK_IMPORTED_MODULE_45__components_komisi_produk_KomisiProdukIndex_vue___default.a, name: 'IndexKomisiProduk' }, { path: '/komisi-produk/create', component: __WEBPACK_IMPORTED_MODULE_43__components_komisi_produk_KomisiProdukCreate_vue___default.a, name: 'CreateKomisiProduk' }, { path: '/komisi-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_44__components_komisi_produk_KomisiProdukEdit_vue___default.a, name: 'EditKomisiProduk' }, { path: '/perusahaan', component: __WEBPACK_IMPORTED_MODULE_26__components_perusahaan_PerusahaanIndex_vue___default.a, name: 'IndexPerusahaan' }, { path: '/laporan-kas', component: __WEBPACK_IMPORTED_MODULE_33__components_laporan_kas_LaporanKasIndex_vue___default.a, name: 'IndexLaporanKas' }, { path: '/perusahaan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_25__components_perusahaan_PerusahaanEdit_vue___default.a, name: 'EditPerusahaan' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_10__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'IndexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_11__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'CreateKategoriProduk' }, { path: '/kategori-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'EditKategoriProduk' }, { path: '/kategori-transaksi', component: __WEBPACK_IMPORTED_MODULE_13__components_kategori_transaksi_KategoriTransaksiIndex_vue___default.a, name: 'IndexKategoriTransaksi' }, { path: '/kategori-transaksi/create', component: __WEBPACK_IMPORTED_MODULE_14__components_kategori_transaksi_KategoriTransaksiCreate_vue___default.a, name: 'CreateKategoriTransaksi' }, { path: '/kategori-transaksi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_kategori_transaksi_KategoriTransaksiEdit_vue___default.a, name: 'EditKategoriTransaksi' }, { path: '/*', component: __WEBPACK_IMPORTED_MODULE_46__components_error_Page404_vue___default.a, name: 'Page404' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (routes);
 
@@ -80604,7 +80607,7 @@ var render = function() {
                 "router-link",
                 {
                   staticClass: "btn btn-md btn-primary",
-                  attrs: { to: { name: "CreateRegistrasiRawatJalanLama" } }
+                  attrs: { to: { name: "CreateRegistrasiRawatJalanBaru" } }
                 },
                 [
                   _vm._v(
@@ -91866,6 +91869,1198 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(412)
+/* template */
+var __vue_template__ = __webpack_require__(413)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/registrasi-rawat-jalan/RegistrasiRawatJalanBaruCreate.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-09e8786c", Component.options)
+  } else {
+    hotAPI.reload("data-v-09e8786c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 412 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      registrasi: {
+        nama: '',
+        jenis_kelamin: '',
+        tanggal_lahir: '',
+        alamat: '',
+        no_telp: '',
+        penjamin: '',
+        dokter: '',
+        poli: '',
+        keadaan_umum: '',
+        alergi_obat: '',
+        sistole_diastole: '',
+        registrasi: '',
+        frekuensi_pernapasan: '',
+        suhu: '',
+        nadi: '',
+        berat_badan: '',
+        tinggi_badan: ''
+      },
+      polis: [],
+      penjamins: [],
+      dokters: [],
+      url: window.location.origin + window.location.pathname.replace("home", "registrasi-rawat-jalan"),
+      errors: [],
+      message: '',
+      loading: false
+    };
+  },
+  mounted: function mounted() {
+    var app = this;
+    app.getPolis();
+    app.getDokter();
+    app.getPenjamins();
+  },
+
+  methods: {
+    getDokter: function getDokter() {
+
+      var app = this;
+      axios.get(app.url.replace('registrasi-rawat-jalan', 'user/dokter')).then(function (resp) {
+        app.dokters = resp.data;
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    getPenjamins: function getPenjamins() {
+
+      var app = this;
+      axios.get(app.url.replace('registrasi-rawat-jalan', 'penjamin') + '/all').then(function (resp) {
+        app.penjamins = resp.data;
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    getPolis: function getPolis() {
+
+      var app = this;
+      axios.get(app.url.replace('registrasi-rawat-jalan', 'poli') + '/all').then(function (resp) {
+        app.polis = resp.data;
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    alert: function alert(pesan) {
+      this.$swal({
+        title: "Berhasil Menambah Registrasi Rawat Jalan",
+        text: pesan,
+        icon: "success"
+      });
+    },
+    saveForm: function saveForm() {
+      var _this = this;
+
+      var newRegistrasi = this.registrasi;
+      axios.post(this.url + '/baru', newRegistrasi).then(function (resp) {
+        _this.alert('Berhasil Menambah Registrasi Rawat Jalan ' + _this.registrasi.nama);
+        _this.$router.replace('/registrasi-rawat-jalan/');
+      }).catch(function (resp) {
+        if (resp.response.status == 500) alert('Something Goes Wrong');
+        _this.errors = resp.response.data.errors;
+        console.log(resp);
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 413 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+        _c("ul", { staticClass: "breadcrumb" }, [
+          _c("li", [_vm._v("Home")]),
+          _vm._v(" "),
+          _c(
+            "li",
+            [
+              _c(
+                "router-link",
+                { attrs: { to: { name: "IndexRegistrasiRawatJalan" } } },
+                [_vm._v(" Registrasi Rawat Jalan")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [
+            _vm._v("Tambah Registrasi Rawat Jalan")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Tambah Registrasi Rawat Jalan")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c(
+              "form",
+              {
+                staticClass: "form-horizontal",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    _vm.saveForm()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Nama")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.nama,
+                          expression: "registrasi.nama"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "Nama Pasien"
+                      },
+                      domProps: { value: _vm.registrasi.nama },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.registrasi, "nama", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.nama
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.nama[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Jenis Kelamin")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.registrasi.jenis_kelamin,
+                            expression: "registrasi.jenis_kelamin"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { required: "" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.registrasi,
+                              "jenis_kelamin",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Pilih Jenis Kelamin")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "laki-laki" } }, [
+                          _vm._v("Laki-laki")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "perempuan" } }, [
+                          _vm._v("Perempuan")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.errors.jenis_kelamin
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.jenis_kelamin[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Tanggal Lahir")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.tanggal_lahir,
+                          expression: "registrasi.tanggal_lahir"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "date",
+                        required: "",
+                        placeholder: "Tanggal Lahir Pasien"
+                      },
+                      domProps: { value: _vm.registrasi.tanggal_lahir },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "tanggal_lahir",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.tanggal_lahir
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.tanggal_lahir[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Alamat")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.alamat,
+                          expression: "registrasi.alamat"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "Alamat Pasien"
+                      },
+                      domProps: { value: _vm.registrasi.alamat },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "alamat",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.alamat
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.alamat[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("No Telp")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.no_telp,
+                          expression: "registrasi.no_telp"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        required: "",
+                        placeholder: "No Telp Pasien"
+                      },
+                      domProps: { value: _vm.registrasi.no_telp },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "no_telp",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.no_telp
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.no_telp[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Penjamin")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          attrs: { required: "", id: "penjamin" },
+                          model: {
+                            value: _vm.registrasi.penjamin,
+                            callback: function($$v) {
+                              _vm.$set(_vm.registrasi, "penjamin", $$v)
+                            },
+                            expression: "registrasi.penjamin"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("Pilih Penjamin ")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.penjamins, function(penjamin) {
+                            return _c(
+                              "option",
+                              { domProps: { value: penjamin.id } },
+                              [_vm._v(_vm._s(penjamin.nama))]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.penjamin
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.penjamin[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Poli")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          attrs: { required: "", id: "poli" },
+                          model: {
+                            value: _vm.registrasi.poli,
+                            callback: function($$v) {
+                              _vm.$set(_vm.registrasi, "poli", $$v)
+                            },
+                            expression: "registrasi.poli"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("Pilih Poli")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.polis, function(poli) {
+                            return _c(
+                              "option",
+                              { domProps: { value: poli.id } },
+                              [_vm._v(_vm._s(poli.nama))]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.poli
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.poli[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Dokter")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          attrs: { required: "" },
+                          model: {
+                            value: _vm.registrasi.dokter,
+                            callback: function($$v) {
+                              _vm.$set(_vm.registrasi, "dokter", $$v)
+                            },
+                            expression: "registrasi.dokter"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("Pilih Dokter")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.dokters, function(dokter) {
+                            return _c(
+                              "option",
+                              { domProps: { value: dokter.id } },
+                              [_vm._v(_vm._s(dokter.name))]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.dokter
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.dokter[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Keadaan Umum")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          attrs: { required: "" },
+                          model: {
+                            value: _vm.registrasi.keadaan_umum,
+                            callback: function($$v) {
+                              _vm.$set(_vm.registrasi, "keadaan_umum", $$v)
+                            },
+                            expression: "registrasi.keadaan_umum"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("Pilih Keadaan Umum ")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Tampak Normal ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Pucat dan Lemas ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Sadar dan Cidera ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Pingsan atau tidak sadar ")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("Meninggal Sebelum Tiba ")])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.keadaan_umum
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.keadaan_umum[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Alergi Obat")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.alergi_obat,
+                          expression: "registrasi.alergi_obat"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", placeholder: "Alergi Obat" },
+                      domProps: { value: _vm.registrasi.alergi_obat },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "alergi_obat",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.alergi_obat
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.alergi_obat[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Sistole / Diastole")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.sistole_diastole,
+                          expression: "registrasi.sistole_diastole"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Sistole / Diastole"
+                      },
+                      domProps: { value: _vm.registrasi.sistole_diastole },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "sistole_diastole",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.sistole_diastole
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.sistole_diastole[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Frekuensi Pernapasan")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.frekuensi_pernapasan,
+                          expression: "registrasi.frekuensi_pernapasan"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        placeholder: "Frekuensi Pernapasan"
+                      },
+                      domProps: { value: _vm.registrasi.frekuensi_pernapasan },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "frekuensi_pernapasan",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.frekuensi_pernapasan
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(
+                            " " + _vm._s(_vm.errors.frekuensi_pernapasan[0])
+                          )
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Suhu")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.suhu,
+                          expression: "registrasi.suhu"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", placeholder: "Suhu" },
+                      domProps: { value: _vm.registrasi.suhu },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.registrasi, "suhu", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.suhu
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.suhu[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Nadi")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.nadi,
+                          expression: "registrasi.nadi"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", placeholder: "Nadi" },
+                      domProps: { value: _vm.registrasi.nadi },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.registrasi, "nadi", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.nadi
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.nadi[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Berat Bedan")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.berat_badan,
+                          expression: "registrasi.berat_badan"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", placeholder: "Berat Bedan" },
+                      domProps: { value: _vm.registrasi.berat_badan },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "berat_badan",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.berat_badan
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.berat_badan[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Tinggi Bedan")]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.registrasi.tinggi_badan,
+                          expression: "registrasi.tinggi_badan"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", placeholder: "Tinggi Bedan" },
+                      domProps: { value: _vm.registrasi.tinggi_badan },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.registrasi,
+                            "tinggi_badan",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.errors.tinggi_badan
+                      ? _c("span", { staticClass: "label label-danger" }, [
+                          _vm._v(" " + _vm._s(_vm.errors.tinggi_badan[0]))
+                        ])
+                      : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(0)
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("div", { staticClass: "col-md-4 col-md-offset-2" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          [_vm._v("Submit")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-09e8786c", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

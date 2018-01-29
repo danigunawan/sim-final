@@ -17,7 +17,7 @@
                         Pasien Lama
                     </router-link>
                     <router-link 
-                      :to="{name: 'CreateRegistrasiRawatJalanLama'}" 
+                      :to="{name: 'CreateRegistrasiRawatJalanBaru'}" 
                       class="btn btn-md btn-primary"> 
                         Pasien Baru
                     </router-link>

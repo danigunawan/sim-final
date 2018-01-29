@@ -66,6 +66,7 @@ import PembelianIndex from './components/pembelian/PembelianIndex.vue';
 
 import RegistrasiRawatJalanCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanCreate.vue';
 import RegistrasiRawatJalanLamaCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanLamaCreate.vue';
+import RegistrasiRawatJalanBaruCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanBaruCreate.vue';
 import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/RegistrasiRawatJalanIndex.vue';
 
  const routes = [
@@ -98,6 +99,7 @@ import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/Regis
      { path: '/registrasi-rawat-jalan', component: RegistrasiRawatJalanIndex,name: 'IndexRegistrasiRawatJalan' },
      { path: '/registrasi-rawat-jalan/create', component: RegistrasiRawatJalanCreate,name: 'CreateRegistrasiRawatJalan' },
      { path: '/registrasi-rawat-jalan-lama/create', component: RegistrasiRawatJalanLamaCreate,name: 'CreateRegistrasiRawatJalanLama' },
+     { path: '/registrasi-rawat-jalan-baru/create', component: RegistrasiRawatJalanBaruCreate,name: 'CreateRegistrasiRawatJalanBaru' },
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
