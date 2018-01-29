@@ -66,6 +66,13 @@
                             </ul>
                         </li>
                         <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Registrasi
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><router-link :to="{name: 'IndexRegistrasiRawatJalan'}" >Rawat Jalan</router-link></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Laporan 
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -121,6 +128,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js?v=1.0.1') }}"></script>
 </body>
 </html>
