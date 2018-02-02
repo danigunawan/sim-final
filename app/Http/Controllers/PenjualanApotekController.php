@@ -112,13 +112,13 @@ class PenjualanApotekController extends Controller
         ]);
         $produk = Produk::find($request->produk);
         $penjamin = Penjamin::find($request->penjamin);
-        if($penjamin->level_harga === 1){
+        if($penjamin->level_harga === '1'){
           $totalNilai = $request->jumlah * $produk->harga_jual_1;
           $request->request->add(['harga_jual' => $produk->harga_jual_1]);
-        } else if($penjamin->level_harga === 2){
+        } else if($penjamin->level_harga === '2'){
           $totalNilai = $request->jumlah * $produk->harga_jual_2;
           $request->request->add(['harga_jual' => $produk->harga_jual_2]);
-        } else if($penjamin->level_harga === 3){
+        } else if($penjamin->level_harga === '3'){
           $totalNilai = $request->jumlah * $produk->harga_jual_3;
           $request->request->add(['harga_jual' => $produk->harga_jual_3]);
         }
@@ -147,13 +147,13 @@ class PenjualanApotekController extends Controller
         ]);
         $produk = Produk::find($request->produk);
         $penjamin = Penjamin::find($request->penjamin);
-        if($penjamin->level_harga === 1){
+        if($penjamin->level_harga === '1'){
           $totalNilai = $request->jumlah * $produk->harga_jual_1;
           $request->request->add(['harga_jual' => $produk->harga_jual_1]);
-        } else if($penjamin->level_harga === 2){
+        } else if($penjamin->level_harga === '2'){
           $totalNilai = $request->jumlah * $produk->harga_jual_2;
           $request->request->add(['harga_jual' => $produk->harga_jual_2]);
-        } else if($penjamin->level_harga === 3){
+        } else if($penjamin->level_harga === '3'){
           $totalNilai = $request->jumlah * $produk->harga_jual_3;
           $request->request->add(['harga_jual' => $produk->harga_jual_3]);
         }
