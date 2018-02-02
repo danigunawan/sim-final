@@ -52,6 +52,7 @@
                                 <li><router-link :to="{name: 'IndexPasien'}" >Pasien</router-link></li>
                                 <li><router-link :to="{name: 'IndexKas'}" >Kas</router-link></li>
                                 <li><router-link :to="{name: 'IndexPoli'}" >Poli</router-link></li>
+                                <li><router-link :to="{name: 'IndexRuangan'}" >Ruangan</router-link></li>
                                 <li><router-link :to="{name: 'IndexKategoriProduk'}" >Kategori Produk</router-link></li>
                                 <li><router-link :to="{name: 'IndexKategoriTransaksi'}" >Kategori Transaksi</router-link></li>
                             </ul>
@@ -70,6 +71,7 @@
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><router-link :to="{name: 'IndexRegistrasiRawatJalan'}" >Rawat Jalan</router-link></li>
+                                <li><router-link :to="{name: 'IndexRegistrasiRawatInap'}" >Rawat Inap</router-link></li>
                             </ul>
                         </li>
                         <li class="dropdown">

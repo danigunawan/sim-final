@@ -7,8 +7,9 @@ use App\RegistrasiPasien;
 use App\RekamMedik;
 use App\Pasien;
 use App\Perusahaan;
+use App\RuanganTerpakai;
 
-class RegistrasiRawatJalanController extends Controller
+class RegistrasiRawatInapController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +22,7 @@ class RegistrasiRawatJalanController extends Controller
         return RegistrasiPasien::leftJoin('polis','polis.id','registrasi_pasiens.poli')
                     ->leftJoin('pasiens','pasiens.no_rm','registrasi_pasiens.pasien')
                     ->select('registrasi_pasiens.*','pasiens.nama AS nama_pasien', 'polis.nama AS nama_poli')
-                    ->where('jenis_registrasi','rawat_jalan')
+                    ->where('jenis_registrasi','rawat_inap')
                     ->where('status_registrasi','menunggu')
                     ->orderBy('id','desc')
                     ->paginate(10);
@@ -33,7 +34,7 @@ class RegistrasiRawatJalanController extends Controller
         return RegistrasiPasien::leftJoin('polis','polis.id','registrasi_pasiens.poli')
                     ->leftJoin('pasiens','pasiens.no_rm','registrasi_pasiens.pasien')
                     ->select('registrasi_pasiens.*','pasiens.nama AS nama_pasien', 'polis.nama AS nama_poli')
-                    ->where('jenis_registrasi','rawat_jalan')
+                    ->where('jenis_registrasi','rawat_inap')
                     ->where('status_registrasi',$status)
                     ->orderBy('id','desc')
                     ->paginate(10);
@@ -67,6 +68,7 @@ class RegistrasiRawatJalanController extends Controller
             'penjamin' => 'required|numeric',
             'poli' => 'required|numeric',
             'dokter' => 'required|numeric',
+            'ruangan' => 'required|numeric',
         ]);
         $noRm = Pasien::noRm();
         $perusahaan = Perusahaan::find(1);
@@ -80,7 +82,7 @@ class RegistrasiRawatJalanController extends Controller
         $noReg = RegistrasiPasien::noRegistrasiPasien();
         $request->request->add(['no_reg' => $noReg]);
         $request->request->add(['pasien' => $noRm]);
-        $request->request->add(['jenis_registrasi' => 'rawat_jalan']);
+        $request->request->add(['jenis_registrasi' => 'rawat_inap']);
         $request->request->add(['status_registrasi' => 'menunggu']);
         $registrasi = RegistrasiPasien::create($request->all());
         $rekamMedik = RekamMedik::create(['registrasi' => $registrasi->id,
@@ -91,6 +93,8 @@ class RegistrasiRawatJalanController extends Controller
                                            'berat_badan' => $request->berat_badan,
                                            'tinggi_badan' => $request->tinggi_badan,
                                         ]);
+        $ruangan = RuanganTerpakai::create(['ruangan' => $request->ruangan,
+                                    'no_reg' => $noReg, 'status_ruangan' => 1]);
         if($registrasi){
            return response(200);  
          } else {
@@ -106,11 +110,12 @@ class RegistrasiRawatJalanController extends Controller
             'penjamin' => 'required|numeric',
             'poli' => 'required|numeric',
             'dokter' => 'required|numeric',
+            'ruangan' => 'required|numeric',
         ]);
         $noReg = RegistrasiPasien::noRegistrasiPasien();
         $request->request->add(['no_reg' => $noReg]);
         $request->request->add(['pasien' => $request->no_rm]);
-        $request->request->add(['jenis_registrasi' => 'rawat_jalan']);
+        $request->request->add(['jenis_registrasi' => 'rawat_inap']);
         $request->request->add(['status_registrasi' => 'menunggu']);
         $registrasi = RegistrasiPasien::create($request->all());
         $rekamMedik = RekamMedik::create(['registrasi' => $registrasi->id,
@@ -121,6 +126,8 @@ class RegistrasiRawatJalanController extends Controller
                                            'berat_badan' => $request->berat_badan,
                                            'tinggi_badan' => $request->tinggi_badan,
                                         ]);
+        $ruangan = RuanganTerpakai::create(['ruangan' => $request->ruangan,
+                                    'no_reg' => $noReg, 'status_ruangan' => 1]);
         if($registrasi){
            return response(200);  
          } else {
@@ -175,30 +182,6 @@ class RegistrasiRawatJalanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-        $request->validate([
-            'produk' => 'required|numeric',
-            'harga_pokok' => 'nullable|numeric',
-            'jumlah' => 'required|numeric',
-        ]);
-        $produk = Produk::find($request->produk);
-        if($request->harga_pokok != ''){
-          $totalNilai = $request->harga_pokok * $request->jumlah;
-        } else {
-          $totalNilai = $request->jumlah * $produk->harga_beli;    
-        }
-        $request->request->add(['nama_produk' => $produk->nama]);
-        $request->request->add(['total_nilai' => $totalNilai]);
-        $itemMasuk = RegistrasiPasien::find($id)->update($request->all());
-        if($itemMasuk) {
-           return response(200);
-        } else {
-           return response(500);
-        }
-    }
-
     /**
      * Remove the specified resource from storage.
      *

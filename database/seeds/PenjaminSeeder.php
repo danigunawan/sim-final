@@ -13,7 +13,7 @@ class PenjaminSeeder extends Seeder
     public function run()
     {
         //
-        Penjamin::create(['nama' => 'afif','alamat' => 'jakarta','no_telp' => '081222' ,'level_harga' => 1]);
-        Penjamin::create(['nama' => 'dalfi','alamat' => 'jakarta','no_telp' => '081222' ,'level_harga' => 2]);
+        Penjamin::create(['nama' => 'UMUM','alamat' => 'jakarta','no_telp' => '081222' ,'level_harga' => 1]);
+        Penjamin::create(['nama' => 'BPJS','alamat' => 'jakarta','no_telp' => '081222' ,'level_harga' => 2]);
     }
 }

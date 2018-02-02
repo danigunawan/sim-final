@@ -24,6 +24,8 @@ import SupplierEdit from './components/supplier/SupplierEdit.vue';
 import KasCreate from './components/kas/KasCreate.vue';
 import KasEdit from './components/kas/KasEdit.vue';
 import KasIndex from './components/kas/KasIndex.vue';
+import SettingDefaultEdit from './components/setting-default/SettingDefaultEdit.vue';
+import SettingDefaultIndex from './components/setting-default/SettingDefaultIndex.vue';
 import PenjaminCreate from './components/penjamin/PenjaminCreate.vue';
 import PenjaminEdit from './components/penjamin/PenjaminEdit.vue';
 import PenjaminIndex from './components/penjamin/PenjaminIndex.vue';
@@ -67,10 +69,16 @@ import PembelianCreate from './components/pembelian/PembelianCreate.vue';
 import PembelianEdit from './components/pembelian/PembelianEdit.vue';
 import PembelianIndex from './components/pembelian/PembelianIndex.vue';
 
-import RegistrasiRawatJalanCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanCreate.vue';
+import PenjualanApotekCreate from './components/penjualan-apotek/PenjualanApotekCreate.vue';
+import PenjualanApotekEdit from './components/penjualan-apotek/PenjualanApotekEdit.vue';
+import PenjualanApotekIndex from './components/penjualan-apotek/PenjualanApotekIndex.vue';
+
 import RegistrasiRawatJalanLamaCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanLamaCreate.vue';
 import RegistrasiRawatJalanBaruCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanBaruCreate.vue';
 import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/RegistrasiRawatJalanIndex.vue';
+import RegistrasiRawatInapLamaCreate from './components/registrasi-rawat-inap/RegistrasiRawatInapLamaCreate.vue';
+import RegistrasiRawatInapBaruCreate from './components/registrasi-rawat-inap/RegistrasiRawatInapBaruCreate.vue';
+import RegistrasiRawatInapIndex from './components/registrasi-rawat-inap/RegistrasiRawatInapIndex.vue';
 
  const routes = [
      {
@@ -96,6 +104,8 @@ import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/Regis
      { path: '/kas', component: KasIndex,name: 'IndexKas' },
      { path: '/kas/create', component: KasCreate,name: 'CreateKas' },
      { path: '/kas/edit/:id', component: KasEdit,name: 'EditKas' },
+     { path: '/setting-default', component: SettingDefaultIndex,name: 'IndexSettingDefault' },
+     { path: '/setting-default/edit/:id', component: SettingDefaultEdit,name: 'EditSettingDefault' },
      { path: '/penjamin', component: PenjaminIndex,name: 'IndexPenjamin' },
      { path: '/penjamin/create', component: PenjaminCreate,name: 'CreatePenjamin' },
      { path: '/penjamin/edit/:id', component: PenjaminEdit,name: 'EditPenjamin' },
@@ -103,15 +113,20 @@ import RegistrasiRawatJalanIndex from './components/registrasi-rawat-jalan/Regis
      { path: '/pasien/create', component: PasienCreate,name: 'CreatePasien' },
      { path: '/pasien/edit/:id', component: PasienEdit,name: 'EditPasien' },
      { path: '/registrasi-rawat-jalan', component: RegistrasiRawatJalanIndex,name: 'IndexRegistrasiRawatJalan' },
-     { path: '/registrasi-rawat-jalan/create', component: RegistrasiRawatJalanCreate,name: 'CreateRegistrasiRawatJalan' },
      { path: '/registrasi-rawat-jalan-lama/create', component: RegistrasiRawatJalanLamaCreate,name: 'CreateRegistrasiRawatJalanLama' },
      { path: '/registrasi-rawat-jalan-baru/create', component: RegistrasiRawatJalanBaruCreate,name: 'CreateRegistrasiRawatJalanBaru' },
+     { path: '/registrasi-rawat-inap', component: RegistrasiRawatInapIndex,name: 'IndexRegistrasiRawatInap' },
+     { path: '/registrasi-rawat-inap-lama/create', component: RegistrasiRawatInapLamaCreate,name: 'CreateRegistrasiRawatInapLama' },
+     { path: '/registrasi-rawat-inap-baru/create', component: RegistrasiRawatInapBaruCreate,name: 'CreateRegistrasiRawatInapBaru' },
      { path: '/produk', component: ProdukIndex,name: 'IndexProduk' },
      { path: '/produk/create', component: ProdukCreate,name: 'CreateProduk' },
      { path: '/produk/edit/:id', component: ProdukEdit,name: 'EditProduk' },
      { path: '/pembelian', component: PembelianIndex,name: 'IndexPembelian' },
      { path: '/pembelian/create', component: PembelianCreate,name: 'CreatePembelian' },
      { path: '/pembelian/edit/:id', component: PembelianEdit,name: 'EditPembelian' },
+     { path: '/penjualan-apotek', component: PenjualanApotekIndex,name: 'IndexPenjualanApotek' },
+     { path: '/penjualan-apotek/create', component: PenjualanApotekCreate,name: 'CreatePenjualanApotek' },
+     { path: '/penjualan-apotek/edit/:id', component: PenjualanApotekEdit,name: 'EditPenjualanApotek' },
      { path: '/item-masuk', component: ItemMasukIndex,name: 'IndexItemMasuk' },
      { path: '/item-masuk/create', component: ItemMasukCreate,name: 'CreateItemMasuk' },
      { path: '/item-masuk/edit/:id', component: ItemMasukEdit,name: 'EditItemMasuk' },

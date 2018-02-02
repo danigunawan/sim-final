@@ -64,6 +64,9 @@ Route::get('/kas/all', 'KasController@all')->middleware('auth');
 Route::get('/kas/search', 'KasController@search')->middleware('auth');
 Route::resource('kas','KasController')->middleware('auth');
 
+Route::get('/setting-default/view', 'SettingDefaultController@index')->middleware('auth');
+Route::resource('setting-default','SettingDefaultController')->middleware('auth');
+
 Route::get('/penjamin/view', 'PenjaminController@index')->middleware('auth');
 Route::get('/penjamin/all', 'PenjaminController@all')->middleware('auth');
 Route::get('/penjamin/search', 'PenjaminController@search')->middleware('auth');
@@ -110,10 +113,19 @@ Route::resource('item-keluar','ItemKeluarController')->middleware('auth');
 
 Route::get('/registrasi-rawat-jalan/view', 'RegistrasiRawatJalanController@index')->middleware('auth');
 Route::get('/registrasi-rawat-jalan/search', 'RegistrasiRawatJalanController@search')->middleware('auth');
+Route::get('/registrasi-rawat-jalan/status/{status}', 'RegistrasiRawatJalanController@status')->middleware('auth');
 Route::get('/registrasi-rawat-jalan/{id}/rawat', 'RegistrasiRawatJalanController@rawat')->middleware('auth');
 Route::post('/registrasi-rawat-jalan/lama', 'RegistrasiRawatJalanController@storeLama')->middleware('auth');
 Route::post('/registrasi-rawat-jalan/baru', 'RegistrasiRawatJalanController@storeBaru')->middleware('auth');
 Route::resource('registrasi-rawat-jalan','RegistrasiRawatJalanController')->middleware('auth');
+
+Route::get('/registrasi-rawat-inap/view', 'RegistrasiRawatInapController@index')->middleware('auth');
+Route::get('/registrasi-rawat-inap/search', 'RegistrasiRawatInapController@search')->middleware('auth');
+Route::get('/registrasi-rawat-inap/status/{status}', 'RegistrasiRawatInapController@status')->middleware('auth');
+Route::get('/registrasi-rawat-inap/{id}/rawat', 'RegistrasiRawatInapController@rawat')->middleware('auth');
+Route::post('/registrasi-rawat-inap/lama', 'RegistrasiRawatInapController@storeLama')->middleware('auth');
+Route::post('/registrasi-rawat-inap/baru', 'RegistrasiRawatInapController@storeBaru')->middleware('auth');
+Route::resource('registrasi-rawat-inap','RegistrasiRawatInapController')->middleware('auth');
 
 Route::get('/pembelian/view', 'PembelianController@index')->middleware('auth');
 Route::get('/pembelian/search', 'PembelianController@search')->middleware('auth');
@@ -125,3 +137,14 @@ Route::get('/pembelian/create-detail-pembelian', 'PembelianController@createDeta
 Route::get('/pembelian/{id}/edit-detail-pembelian', 'PembelianController@editDetailPembelian')->middleware('auth');
 Route::get('/pembelian/{id}/edit-tbs-pembelian', 'PembelianController@editTbsPembelian')->middleware('auth');
 Route::resource('pembelian','PembelianController')->middleware('auth');
+///// penjualan apotek
+Route::get('/penjualan-apotek/view', 'PenjualanApotekController@index')->middleware('auth');
+Route::get('/penjualan-apotek/search', 'PenjualanApotekController@search')->middleware('auth');
+Route::post('/penjualan-apotek/store-tbs-penjualan-apotek', 'PenjualanApotekController@storeTbsPenjualan')->middleware('auth');
+Route::post('/penjualan-apotek/{id}/store-tbs-edit-penjualan-apotek', 'PenjualanApotekController@storeTbsEditPenjualan')->middleware('auth');
+Route::delete('/penjualan-apotek/{id}/delete-tbs-penjualan-apotek', 'PenjualanApotekController@deleteTbsPenjualan')->middleware('auth');
+Route::delete('/penjualan-apotek/{id}/delete-tbs-edit-penjualan-apotek', 'PenjualanApotekController@deleteTbsEditPenjualan')->middleware('auth');
+Route::get('/penjualan-apotek/create-detail-penjualan-apotek', 'PenjualanApotekController@createDetailPenjualan')->middleware('auth');
+Route::get('/penjualan-apotek/{id}/edit-detail-penjualan-apotek', 'PenjualanApotekController@editDetailPenjualan')->middleware('auth');
+Route::get('/penjualan-apotek/{id}/edit-tbs-penjualan-apotek', 'PenjualanApotekController@editTbsPenjualan')->middleware('auth');
+Route::resource('penjualan-apotek','PenjualanApotekController')->middleware('auth');

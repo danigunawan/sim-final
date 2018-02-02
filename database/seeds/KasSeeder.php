@@ -13,7 +13,7 @@ class KasSeeder extends Seeder
     public function run()
     {
         //
-        Kas::create(['kode' => '1' ,'nama' => 'bri']);
-        Kas::create(['kode' => '2' ,'nama' => 'bni']);
+        Kas::create(['kode' => '1' ,'nama' => 'Kas Kecil']);
+        Kas::create(['kode' => '2' ,'nama' => 'BANK BNI']);
     }
 }
