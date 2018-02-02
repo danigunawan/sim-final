@@ -40,6 +40,13 @@
                            @if(Auth::check())
                         <li><router-link :to="{name: 'IndexDashboard'}" >Home</router-link></li>
                         <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Penjualan
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><router-link :to="{name: 'IndexPenjualanApotek'}" >Apotek</router-link></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master Data
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
