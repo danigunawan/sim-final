@@ -12,6 +12,7 @@ use App\TbsPembelian;
 use App\TbsEditPembelian;
 use App\DetailPembelian;
 use Auth;
+use App\Persediaan;
 
 class PembelianController extends Controller
 {
@@ -283,8 +284,11 @@ class PembelianController extends Controller
     public function destroy($id)
     {
         //
-        $itemMasuk = Pembelian::destroy($id);
-        if($itemMasuk){
+        $pembelian = Pembelian::find($id);
+        $pembelianDestroy = Pembelian::destroy($id);
+        Persediaan::where('no_trans',$pembelian->no_trans)->delete();
+           
+        if($pembelianDestroy){
           return response(200);
         } else {
           return response(500);    
