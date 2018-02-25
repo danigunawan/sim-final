@@ -44,6 +44,7 @@
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><router-link :to="{name: 'IndexPenjualanApotek'}" >Apotek</router-link></li>
+                                <li><router-link :to="{name: 'IndexPenjualanJalanInap'}" >Rawat Jalan / Inap</router-link></li>
                             </ul>
                         </li>
                         <li class="dropdown">

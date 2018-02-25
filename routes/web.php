@@ -112,6 +112,7 @@ Route::get('/item-keluar/search', 'ItemKeluarController@search')->middleware('au
 Route::resource('item-keluar','ItemKeluarController')->middleware('auth');
 
 Route::get('/registrasi-rawat-jalan/view', 'RegistrasiRawatJalanController@index')->middleware('auth');
+Route::get('/registrasi/all', 'RegistrasiRawatJalanController@all')->middleware('auth');
 Route::get('/registrasi-rawat-jalan/search', 'RegistrasiRawatJalanController@search')->middleware('auth');
 Route::get('/registrasi-rawat-jalan/status/{status}', 'RegistrasiRawatJalanController@status')->middleware('auth');
 Route::get('/registrasi-rawat-jalan/{id}/rawat', 'RegistrasiRawatJalanController@rawat')->middleware('auth');
@@ -148,3 +149,14 @@ Route::get('/penjualan-apotek/create-detail-penjualan-apotek', 'PenjualanApotekC
 Route::get('/penjualan-apotek/{id}/edit-detail-penjualan-apotek', 'PenjualanApotekController@editDetailPenjualan')->middleware('auth');
 Route::get('/penjualan-apotek/{id}/edit-tbs-penjualan-apotek', 'PenjualanApotekController@editTbsPenjualan')->middleware('auth');
 Route::resource('penjualan-apotek','PenjualanApotekController')->middleware('auth');
+///// penjualan rawat jalan inap
+Route::get('/penjualan-jalan-inap/view', 'PenjualanJalanInapController@index')->middleware('auth');
+Route::get('/penjualan-jalan-inap/search', 'PenjualanJalanInapController@search')->middleware('auth');
+Route::post('/penjualan-jalan-inap/store-tbs-penjualan-jalan-inap', 'PenjualanJalanInapController@storeTbsPenjualan')->middleware('auth');
+Route::post('/penjualan-jalan-inap/{id}/store-tbs-edit-penjualan-jalan-inap', 'PenjualanJalanInapController@storeTbsEditPenjualan')->middleware('auth');
+Route::delete('/penjualan-jalan-inap/{id}/delete-tbs-penjualan-jalan-inap', 'PenjualanJalanInapController@deleteTbsPenjualan')->middleware('auth');
+Route::delete('/penjualan-jalan-inap/{id}/delete-tbs-edit-penjualan-jalan-inap', 'PenjualanJalanInapController@deleteTbsEditPenjualan')->middleware('auth');
+Route::get('/penjualan-jalan-inap/create-detail-penjualan-jalan-inap/{no_reg}', 'PenjualanJalanInapController@createDetailPenjualan')->middleware('auth');
+Route::get('/penjualan-jalan-inap/{id}/edit-detail-penjualan-jalan-inap', 'PenjualanJalanInapController@editDetailPenjualan')->middleware('auth');
+Route::get('/penjualan-jalan-inap/{id}/edit-tbs-penjualan-jalan-inap', 'PenjualanJalanInapController@editTbsPenjualan')->middleware('auth');
+Route::resource('penjualan-jalan-inap','PenjualanJalanInapController')->middleware('auth');

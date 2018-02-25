@@ -27,7 +27,7 @@ class RegistrasiPasien extends Model
     $transaksiRegistrasiPasien = RegistrasiPasien::select([DB::raw('MONTH(created_at) bulan'),'no_reg'])
                       ->orderBy('id','DESC')->first();
     if($transaksiRegistrasiPasien != null){
-      $angkaNoRegistrasiPasien = explode("/",$transaksiRegistrasiPasien->no_reg);
+      $angkaNoRegistrasiPasien = explode("-",$transaksiRegistrasiPasien->no_reg);
       $nomor = $angkaNoRegistrasiPasien[0];
       $bulanAkhir = $transaksiRegistrasiPasien->bulan;
     } else {
@@ -35,10 +35,10 @@ class RegistrasiPasien extends Model
       $bulanAkhir = 13;
     }
     if($bulanAkhir != $bulanSekarang ){
-      $noRegistrasiPasien = "1/REG/". $bulanTerakhir . "/".$tahunTerakhir;
+      $noRegistrasiPasien = "1-REG-". $bulanTerakhir . "-".$tahunTerakhir;
     } else {
       $nomor++;
-      $noRegistrasiPasien = $nomor . "/REG/". $bulanTerakhir ."/". $tahunTerakhir;
+      $noRegistrasiPasien = $nomor . "-REG-". $bulanTerakhir ."-". $tahunTerakhir;
     }
     return $noRegistrasiPasien;
 

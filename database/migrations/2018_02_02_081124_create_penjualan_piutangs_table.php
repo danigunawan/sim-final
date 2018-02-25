@@ -22,7 +22,7 @@ class CreatePenjualanPiutangsTable extends Migration
             //table ini sebenernya gak ada gunanya , cuma sebagai tampungan
             $table->auditable();
             $table->timestamps();
-            $table->foreign('no_trans')->references('id')->on('penjualans')->onDelete('cascade');
+            $table->foreign('no_trans')->references('no_trans')->on('penjualans')->onDelete('cascade');
         });
     }
 

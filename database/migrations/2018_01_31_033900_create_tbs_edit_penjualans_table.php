@@ -16,6 +16,7 @@ class CreateTbsEditPenjualansTable extends Migration
         Schema::create('tbs_edit_penjualans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('no_trans');
+            $table->string('no_reg')->nullable();
             $table->integer('penjualan_id')->unsigned();
             $table->integer('produk')->unsigned();
             $table->integer('penjamin')->unsigned();
@@ -32,6 +33,7 @@ class CreateTbsEditPenjualansTable extends Migration
                     ->on('produks');
             $table->foreign('penjamin')->references('id')
                     ->on('penjamins');
+            $table->foreign('no_reg')->references('no_reg') ->on('registrasi_pasiens');
         });
     }
 

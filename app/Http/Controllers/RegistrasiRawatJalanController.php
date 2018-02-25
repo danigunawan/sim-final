@@ -27,6 +27,17 @@ class RegistrasiRawatJalanController extends Controller
                     ->paginate(10);
     }
 
+    public function all()
+    {
+        //
+        return RegistrasiPasien::leftJoin('polis','polis.id','registrasi_pasiens.poli')
+                    ->leftJoin('pasiens','pasiens.no_rm','registrasi_pasiens.pasien')
+                    ->select('registrasi_pasiens.*','pasiens.nama AS nama_pasien', 'polis.nama AS nama_poli')
+                    ->where('status_registrasi','menunggu')
+                    ->orderBy('id','desc')
+                    ->get();
+    }
+
     public function status($status)
     {
         //

@@ -72,6 +72,9 @@ import PembelianIndex from './components/pembelian/PembelianIndex.vue';
 import PenjualanApotekCreate from './components/penjualan-apotek/PenjualanApotekCreate.vue';
 import PenjualanApotekEdit from './components/penjualan-apotek/PenjualanApotekEdit.vue';
 import PenjualanApotekIndex from './components/penjualan-apotek/PenjualanApotekIndex.vue';
+import PenjualanJalanInapCreate from './components/penjualan-jalan-inap/PenjualanJalanInapCreate.vue';
+import PenjualanJalanInapEdit from './components/penjualan-jalan-inap/PenjualanJalanInapEdit.vue';
+import PenjualanJalanInapIndex from './components/penjualan-jalan-inap/PenjualanJalanInapIndex.vue';
 
 import RegistrasiRawatJalanLamaCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanLamaCreate.vue';
 import RegistrasiRawatJalanBaruCreate from './components/registrasi-rawat-jalan/RegistrasiRawatJalanBaruCreate.vue';
@@ -127,6 +130,9 @@ import RegistrasiRawatInapIndex from './components/registrasi-rawat-inap/Registr
      { path: '/penjualan-apotek', component: PenjualanApotekIndex,name: 'IndexPenjualanApotek' },
      { path: '/penjualan-apotek/create', component: PenjualanApotekCreate,name: 'CreatePenjualanApotek' },
      { path: '/penjualan-apotek/edit/:id', component: PenjualanApotekEdit,name: 'EditPenjualanApotek' },
+     { path: '/penjualan-jalan-inap', component: PenjualanJalanInapIndex,name: 'IndexPenjualanJalanInap' },
+     { path: '/penjualan-jalan-inap/create', component: PenjualanJalanInapCreate,name: 'CreatePenjualanJalanInap' },
+     { path: '/penjualan-jalan-inap/edit/:id', component: PenjualanJalanInapEdit,name: 'EditPenjualanJalanInap' },
      { path: '/item-masuk', component: ItemMasukIndex,name: 'IndexItemMasuk' },
      { path: '/item-masuk/create', component: ItemMasukCreate,name: 'CreateItemMasuk' },
      { path: '/item-masuk/edit/:id', component: ItemMasukEdit,name: 'EditItemMasuk' },

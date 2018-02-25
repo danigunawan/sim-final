@@ -16,6 +16,7 @@ class CreateTbsPenjualansTable extends Migration
         Schema::create('tbs_penjualans', function (Blueprint $table) {
             $table->increments('id');
             $table->string('no_trans')->nullable();
+            $table->string('no_reg')->nullable();
             $table->integer('penjualan_id')->nullable();
             $table->integer('produk')->unsigned();
             $table->integer('penjamin')->unsigned();
@@ -30,16 +31,12 @@ class CreateTbsPenjualansTable extends Migration
                     ->on('produks');
             $table->foreign('penjamin')->references('id')
                     ->on('penjamins');
-        });
+            $table->foreign('no_reg')->references('no_reg') ->on('registrasi_pasiens');
+        
+        }); 
     }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('tbs_detail_penjualans');
-    }
+        /** * Reverse the migrations.  * * @return void */ 
+    public function down() { 
+      Schema::dropIfExists('tbs_detail_penjualans'); 
+    } 
 }

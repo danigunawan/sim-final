@@ -11,5 +11,5 @@ class TbsPenjualan extends Model
     use AuditableTrait;
     protected $fillable = ['produk','nama_produk',
                             'penjamin',
-                           'harga_jual','jumlah','potongan','total'];
+                           'harga_jual','jumlah','potongan','total','no_reg'];
 }

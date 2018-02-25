@@ -13,8 +13,12 @@ use App\TbsEditPenjualan;
 use App\DetailPenjualan;
 use App\Persediaan;
 use Auth;
+use App\KomisiProduk;
+use App\TbsKomisiProduk;
+use App\DetailKomisiProduk;
+use App\RegistrasiPasien;
 
-class PenjualanApotekController extends Controller
+class PenjualanJalanInapController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +28,7 @@ class PenjualanApotekController extends Controller
     public function index()
     {
         //
-        return Penjualan::paginate(10);
+        return Penjualan::where('jenis_penjualan','jalan_inap')->paginate(10);
     }
 
     /**
@@ -36,14 +40,15 @@ class PenjualanApotekController extends Controller
     {
         //
     }
-    public function createDetailPenjualan(){
-        return TbsPenjualan::where('created_by',Auth::user()->id)->get();
+    public function createDetailPenjualan($no_reg){
+      $komisiProduk = TbsKomisiProduk::select('users.name AS user_name','produks.nama AS produk_name','nominal_komisi')
+                                        ->leftJoin('users','tbs_komisi_produks.user_id','users.id')
+                                        ->leftJoin('produks','tbs_komisi_produks.produk_id','produks.id')
+                                        ->where('no_reg',$no_reg)->get();
+      $tbsPenjualan = TbsPenjualan::where('no_reg',$no_reg)->get();
+      $objetToReturn = ['komisi_produk' => $komisiProduk,'tbs_penjualan' => $tbsPenjualan];
+      return $objetToReturn;
     }
-
-
-
-
-
     /**
      * Store a newly created resource in storage.
      *
@@ -64,9 +69,9 @@ class PenjualanApotekController extends Controller
         if($request->piutang_awal > 0){
           $statusBeliAwal = 'piutang';
         } else {
-          $statusBeliAwal = 'tunai';    
+          $statusBeliAwal = 'tunai';
         }
-        $jumlahProduk = count($request->detailPenjualanApotek);
+        $jumlahProduk = count($request->detailPenjualanJalanInap);
         $kas = Kas::find($request->kas);
         $penjamin = Penjamin::find($request->penjamin);
         $noTrans = Penjualan::noPenjualan();
@@ -75,13 +80,15 @@ class PenjualanApotekController extends Controller
         $request->request->add(['jumlah_produk' => $jumlahProduk]);
         $request->request->add(['nama_kas' => $kas->nama]);
         $request->request->add(['nama_penjamin' => $penjamin->nama]);
-        $request->request->add(['jenis_penjualan' => 'apotek']);
+        $request->request->add(['jenis_penjualan' => 'jalan_inap']);
         $penjualan = Penjualan::create($request->all());
         $detailPenjualan = $this->storeDetailPenjualan($request,$noTrans,$penjualan->id);
+        $detailKomisiProduk = $this->storeDetailKomisiProduk($request->no_reg,$noTrans);
+        RegistrasiPasien::where('no_reg',$request->no_reg)->update(['status_registrasi' => 'selesai']);
         if($penjualan){
-          return response(200);    
+          return response(200);
         } else {
-          return response(500);    
+          return response(500);
         }
 
     }
@@ -89,10 +96,10 @@ class PenjualanApotekController extends Controller
        $detailPenjualanSebelumnya = DetailPenjualan::where('penjualan_id',$id);
        if($detailPenjualanSebelumnya->count() > 0){
          foreach($detailPenjualanSebelumnya->get() as $detailDelete){
-            DetailPenjualan::destroy($detailDelete->id);    
+            DetailPenjualan::destroy($detailDelete->id);
          }
        }
-        $detailPenjualan = $request->detailPenjualanApotek;
+        $detailPenjualan = $request->detailPenjualanJalanInap;
         foreach($detailPenjualan as $detail ){
            $detail['no_trans'] = $noTrans;
            $detail['penjualan_id'] = $id;
@@ -100,11 +107,11 @@ class PenjualanApotekController extends Controller
         }
         TbsPenjualan::where('created_by',Auth::user()->id)->delete();
         return true;
-        
+
     }
 
     public function storeTbsPenjualan(Request $request){
-        
+
         $request->validate([
             'produk' => 'required|numeric',
             'jumlah' => 'required|numeric',
@@ -124,22 +131,53 @@ class PenjualanApotekController extends Controller
         }
         $request->request->add(['nama_produk' => $produk->nama]);
         $request->request->add(['total' => $totalNilai]);
-        $getTbsPenjualan = TbsPenjualan::where('produk',$request->produk)->count();
+        $getTbsPenjualan = TbsPenjualan::where('produk',$request->produk)
+                                        ->where('no_reg',$request->no_reg)->count();
         if($getTbsPenjualan > 0){
           $tbsPenjualan = $this->updateTbsPenjualan($request);
-        } else {    
+        } else {
           $tbsPenjualan = TbsPenjualan::create($request->all());
+          $this->storeTbsKomisiProduk($request->dokter,$request->produk,$request->no_reg);
+          $this->storeTbsKomisiProduk($request->paramedik,$request->produk,$request->no_reg);
+          $this->storeTbsKomisiProduk($request->farmasi,$request->produk,$request->no_reg);
         }
 
         if($tbsPenjualan){
-          return response(200) ;    
+          return response(200) ;
         } else {
-          return response(500);    
+          return response(500);
         }
+    }
+    private function storeTbsKomisiProduk($petugas,$produk,$no_reg){
+      if($produk != ''){
+        $komisiProduk = KomisiProduk::where('produk_id',$produk)
+                        ->where('user_id',$petugas);
+        if($komisiProduk->count() > 0) {
+          $komisiProduk = $komisiProduk->first();
+          TbsKomisiProduk::create(['no_reg' => $no_reg,
+                                   'komisi_id' => $komisiProduk->id,
+                                   'user_id'=> $petugas,
+                                   'produk_id' => $produk,
+                                   'nominal_komisi' => $komisiProduk->jumlah_uang]);
+        }
+      }
+    }
+
+    private function storeDetailKomisiProduk($no_reg,$no_trans){
+      $tbsKomisiProduks = TbsKomisiProduk::where('no_reg',$no_reg)->get();
+      foreach ($tbsKomisiProduks as $tbsKomisiProduk) {
+        DetailKomisiProduk::create(['no_reg' => $tbsKomisiProduk->no_reg,
+                                 'no_trans' => $no_trans,
+                                 'komisi_id' => $tbsKomisiProduk->komisi_id,
+                                 'user_id'=> $tbsKomisiProduk->user_id,
+                                 'produk_id' => $tbsKomisiProduk->produk_id,
+                                 'nominal_komisi' => $tbsKomisiProduk->nominal_komisi]);
+      }
+      TbsKomisiProduk::where('no_reg',$no_reg)->delete();
     }
 
     public function storeTbsEditPenjualan(Request $request,$id){
-        
+
         $request->validate([
             'produk' => 'required|numeric',
             'jumlah' => 'required|numeric',
@@ -167,30 +205,31 @@ class PenjualanApotekController extends Controller
                                 ->where('created_by',Auth::user()->id)->count();
         if($getTbsEditPenjualan > 0){
           $tbsEditPenjualan = $this->updateTbsEditPenjualan($request);
-        } else {    
+        } else {
           $tbsEditPenjualan = TbsEditPenjualan::create($request->all());
         }
 
         if($tbsEditPenjualan){
-          return response(200) ;    
+          return response(200) ;
         } else {
-          return response(500);    
+          return response(500);
         }
     }
 
     public function updateTbsPenjualan($request){
-        
+
         $updateTbsPenjualan = TbsPenjualan::where('produk',$request->produk)
-                                ->update($request->all());
+                                ->where('no_reg',$request->no_reg)
+                                ->update(['jumlah' => $request->jumlah]);
         if($updateTbsPenjualan){
           return true;
         } else {
-          return false;    
+          return false;
         }
     }
 
     public function updateTbsEditPenjualan($request,$id){
-        
+
         $updateTbsEditPenjualan = TbsEditPenjualan::where('produk',$request->produk)
                                 ->where('penjualan_id',$id)
                                 ->where('created_by',Auth::user()->id)
@@ -198,7 +237,7 @@ class PenjualanApotekController extends Controller
         if($updateTbsEditPenjualan){
           return true;
         } else {
-          return false;    
+          return false;
         }
     }
 
@@ -241,17 +280,17 @@ class PenjualanApotekController extends Controller
            $detailPenjualan = DetailPenjualan::where('penjualan_id',$id)->get()->toArray();
            foreach($detailPenjualan as $detail){
 
-             TbsEditPenjualan::create($detail);    
+             TbsEditPenjualan::create($detail);
            }
 
            return TbsEditPenjualan::where('penjualan_id',$id)->get();
-         
+
     }
     // function editTbsPenjualan ini dijalankan ketika ada penambahkan produk, dan penghapusan produk
     public function editTbsPenjualan($id){
-        
+
            return TbsEditPenjualan::where('penjualan_id',$id)->get();
-        
+
     }
 
 
@@ -275,9 +314,9 @@ class PenjualanApotekController extends Controller
         if($request->piutang_awal > 0){
           $statusBeliAwal = 'piutang';
         } else {
-          $statusBeliAwal = 'tunai';    
+          $statusBeliAwal = 'tunai';
         }
-        $jumlahProduk = count($request->detailPenjualanApotek);
+        $jumlahProduk = count($request->detailPenjualanJalanInap);
         $kas = Kas::find($request->kas);
         $penjamin = Penjamin::find($request->penjamin);
 
@@ -310,26 +349,28 @@ class PenjualanApotekController extends Controller
         if($penjualanDestroy){
           return response(200);
         } else {
-          return response(500);    
+          return response(500);
         }
     }
-    
+
     public function deleteTbsPenjualan($id){
-      $tbsPenjualan = TbsPenjualan::destroy($id);    
+      $tbsPenjualan = TbsPenjualan::find($id);
+      TbsKomisiProduk::where('produk_id',$tbsPenjualan->produk)->delete();
+      $tbsPenjualan->delete();
+
         if($tbsPenjualan){
           return response(200);
         } else {
-          return response(500);    
+          return response(500);
         }
     }
 
     public function deleteTbsEditPenjualan($id){
-      $tbsEditPenjualan = TbsEditPenjualan::destroy($id);    
+      $tbsEditPenjualan = TbsEditPenjualan::destroy($id);
         if($tbsEditPenjualan){
           return response(200);
         } else {
-          return response(500);    
+          return response(500);
         }
     }
 }
-
