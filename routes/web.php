@@ -68,6 +68,7 @@ Route::get('/setting-default/view', 'SettingDefaultController@index')->middlewar
 Route::resource('setting-default','SettingDefaultController')->middleware('auth');
 
 Route::get('/setting-petugas/view', 'SettingPetugasController@index')->middleware('auth');
+Route::get('/setting-petugas/all', 'SettingPetugasController@all')->middleware('auth');
 Route::resource('setting-petugas','SettingPetugasController')->middleware('auth');
 
 Route::get('/penjamin/view', 'PenjaminController@index')->middleware('auth');

@@ -82891,6 +82891,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       dokters: [],
       paramediks: [],
       farmasis: [],
+      settingPetugas: null,
       url: window.location.origin + window.location.pathname.replace("home", "penjualan-jalan-inap"),
       errors: [],
       loading: false,
@@ -82941,6 +82942,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     app.getPenjamin();
     app.getRegistrasi();
     app.getPetugas();
+    app.getSetttingPetugas();
   },
 
   methods: {
@@ -83016,6 +83018,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             app.farmasis.push(resp.data[i]);
           }
         }
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    getSetttingPetugas: function getSetttingPetugas() {
+
+      var app = this;
+      axios.get(app.url.replace('penjualan-jalan-inap', 'setting-petugas') + '/all').then(function (resp) {
+
+        app.settingPetugas = resp.data[0];
+        app.inputPenjualanJalanInap.dokter = app.settingPetugas.dokter;
+        app.inputPenjualanJalanInap.paramedik = app.settingPetugas.perawat;
+        app.inputPenjualanJalanInap.farmasi = app.settingPetugas.farmasi;
       }).catch(function (resp) {
         console.log(resp);
       });
