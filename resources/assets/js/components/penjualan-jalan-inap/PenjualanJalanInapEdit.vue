@@ -212,15 +212,22 @@
           total_nilai: 0,
           kas: 1,
           penjamin: 1,
+          no_reg: '',
           potongan: 0,
           jumlah_bayar: '',
           piutang_awal: 0,
-          detailPenjualanJalanInap: []
+          kembalian: 0,
+          detailPenjualanJalanInap: [],
+          detailKomisiProduk: []
         },
         inputPenjualanJalanInap: {
           produk: '',
           jumlah: '',
-          penjamin: 1
+          penjamin: 1,
+          no_reg: '',
+          dokter: '',
+          paramedik: '',
+          farmasi: '',
         },
         produks: [],
         penjamins: [],
