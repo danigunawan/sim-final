@@ -26,6 +26,8 @@ import KasEdit from './components/kas/KasEdit.vue';
 import KasIndex from './components/kas/KasIndex.vue';
 import SettingDefaultEdit from './components/setting-default/SettingDefaultEdit.vue';
 import SettingDefaultIndex from './components/setting-default/SettingDefaultIndex.vue';
+import SettingPetugasEdit from './components/setting-petugas/SettingPetugasEdit.vue';
+import SettingPetugasIndex from './components/setting-petugas/SettingPetugasIndex.vue';
 import PenjaminCreate from './components/penjamin/PenjaminCreate.vue';
 import PenjaminEdit from './components/penjamin/PenjaminEdit.vue';
 import PenjaminIndex from './components/penjamin/PenjaminIndex.vue';
@@ -109,6 +111,8 @@ import RegistrasiRawatInapIndex from './components/registrasi-rawat-inap/Registr
      { path: '/kas/edit/:id', component: KasEdit,name: 'EditKas' },
      { path: '/setting-default', component: SettingDefaultIndex,name: 'IndexSettingDefault' },
      { path: '/setting-default/edit/:id', component: SettingDefaultEdit,name: 'EditSettingDefault' },
+     { path: '/setting-petugas', component: SettingPetugasIndex,name: 'IndexSettingPetugas' },
+     { path: '/setting-petugas/edit/:id', component: SettingPetugasEdit,name: 'EditSettingPetugas' },
      { path: '/penjamin', component: PenjaminIndex,name: 'IndexPenjamin' },
      { path: '/penjamin/create', component: PenjaminCreate,name: 'CreatePenjamin' },
      { path: '/penjamin/edit/:id', component: PenjaminEdit,name: 'EditPenjamin' },

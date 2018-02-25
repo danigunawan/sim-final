@@ -67,6 +67,9 @@ Route::resource('kas','KasController')->middleware('auth');
 Route::get('/setting-default/view', 'SettingDefaultController@index')->middleware('auth');
 Route::resource('setting-default','SettingDefaultController')->middleware('auth');
 
+Route::get('/setting-petugas/view', 'SettingPetugasController@index')->middleware('auth');
+Route::resource('setting-petugas','SettingPetugasController')->middleware('auth');
+
 Route::get('/penjamin/view', 'PenjaminController@index')->middleware('auth');
 Route::get('/penjamin/all', 'PenjaminController@all')->middleware('auth');
 Route::get('/penjamin/search', 'PenjaminController@search')->middleware('auth');

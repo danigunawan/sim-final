@@ -54580,99 +54580,105 @@ exports.version = version;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_setting_default_SettingDefaultEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25__components_setting_default_SettingDefaultEdit_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_setting_default_SettingDefaultIndex_vue__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_setting_default_SettingDefaultIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26__components_setting_default_SettingDefaultIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_penjamin_PenjaminCreate_vue__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_penjamin_PenjaminCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27__components_penjamin_PenjaminCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_penjamin_PenjaminEdit_vue__ = __webpack_require__(189);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_penjamin_PenjaminEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28__components_penjamin_PenjaminEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminIndex_vue__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_perusahaan_PerusahaanEdit_vue__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_perusahaan_PerusahaanEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30__components_perusahaan_PerusahaanEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_perusahaan_PerusahaanIndex_vue__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_perusahaan_PerusahaanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31__components_perusahaan_PerusahaanIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_pasien_PasienCreate_vue__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_pasien_PasienCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32__components_pasien_PasienCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_pasien_PasienEdit_vue__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_pasien_PasienEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33__components_pasien_PasienEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienIndex_vue__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_produk_ProdukCreate_vue__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_produk_ProdukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35__components_produk_ProdukCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_produk_ProdukEdit_vue__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_produk_ProdukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_36__components_produk_ProdukEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukIndex_vue__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_laporan_kas_LaporanKasIndex_vue__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_laporan_kas_LaporanKasIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_38__components_laporan_kas_LaporanKasIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_kas_masuk_KasMasukCreate_vue__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_kas_masuk_KasMasukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_39__components_kas_masuk_KasMasukCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_kas_masuk_KasMasukEdit_vue__ = __webpack_require__(225);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_kas_masuk_KasMasukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_40__components_kas_masuk_KasMasukEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukIndex_vue__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_kas_keluar_KasKeluarCreate_vue__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_kas_keluar_KasKeluarCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_42__components_kas_keluar_KasKeluarCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_kas_keluar_KasKeluarEdit_vue__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_kas_keluar_KasKeluarEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_43__components_kas_keluar_KasKeluarEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarIndex_vue__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_kas_mutasi_KasMutasiCreate_vue__ = __webpack_require__(240);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_kas_mutasi_KasMutasiCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_45__components_kas_mutasi_KasMutasiCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_kas_mutasi_KasMutasiEdit_vue__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_kas_mutasi_KasMutasiEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_46__components_kas_mutasi_KasMutasiEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiIndex_vue__ = __webpack_require__(246);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_komisi_produk_KomisiProdukCreate_vue__ = __webpack_require__(249);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_komisi_produk_KomisiProdukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_48__components_komisi_produk_KomisiProdukCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_komisi_produk_KomisiProdukEdit_vue__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_komisi_produk_KomisiProdukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_49__components_komisi_produk_KomisiProdukEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukIndex_vue__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_error_Page404_vue__ = __webpack_require__(258);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_error_Page404_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_51__components_error_Page404_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_item_masuk_ItemMasukCreate_vue__ = __webpack_require__(263);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_item_masuk_ItemMasukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_52__components_item_masuk_ItemMasukCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_item_masuk_ItemMasukEdit_vue__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_item_masuk_ItemMasukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_53__components_item_masuk_ItemMasukEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukIndex_vue__ = __webpack_require__(269);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_item_keluar_ItemKeluarCreate_vue__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_item_keluar_ItemKeluarCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_55__components_item_keluar_ItemKeluarCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_item_keluar_ItemKeluarEdit_vue__ = __webpack_require__(275);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_item_keluar_ItemKeluarEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_56__components_item_keluar_ItemKeluarEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarIndex_vue__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_pembelian_PembelianCreate_vue__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_pembelian_PembelianCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_58__components_pembelian_PembelianCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_pembelian_PembelianEdit_vue__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_pembelian_PembelianEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_59__components_pembelian_PembelianEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianIndex_vue__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_penjualan_apotek_PenjualanApotekCreate_vue__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_penjualan_apotek_PenjualanApotekCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_61__components_penjualan_apotek_PenjualanApotekCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_penjualan_apotek_PenjualanApotekEdit_vue__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_penjualan_apotek_PenjualanApotekEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_62__components_penjualan_apotek_PenjualanApotekEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekIndex_vue__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_64__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_65__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue__ = __webpack_require__(305);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_67__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_68__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue__ = __webpack_require__(320);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue__ = __webpack_require__(323);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_setting_petugas_SettingPetugasEdit_vue__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_setting_petugas_SettingPetugasEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27__components_setting_petugas_SettingPetugasEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_setting_petugas_SettingPetugasIndex_vue__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_setting_petugas_SettingPetugasIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28__components_setting_petugas_SettingPetugasIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminCreate_vue__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_penjamin_PenjaminEdit_vue__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_penjamin_PenjaminEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30__components_penjamin_PenjaminEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_penjamin_PenjaminIndex_vue__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_penjamin_PenjaminIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31__components_penjamin_PenjaminIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_perusahaan_PerusahaanEdit_vue__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_perusahaan_PerusahaanEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32__components_perusahaan_PerusahaanEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_perusahaan_PerusahaanIndex_vue__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_perusahaan_PerusahaanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33__components_perusahaan_PerusahaanIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienCreate_vue__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_pasien_PasienEdit_vue__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_pasien_PasienEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_35__components_pasien_PasienEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_pasien_PasienIndex_vue__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_pasien_PasienIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_36__components_pasien_PasienIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukCreate_vue__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_produk_ProdukEdit_vue__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_produk_ProdukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_38__components_produk_ProdukEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_produk_ProdukIndex_vue__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_produk_ProdukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_39__components_produk_ProdukIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_laporan_kas_LaporanKasIndex_vue__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_laporan_kas_LaporanKasIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_40__components_laporan_kas_LaporanKasIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukCreate_vue__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_kas_masuk_KasMasukEdit_vue__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_kas_masuk_KasMasukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_42__components_kas_masuk_KasMasukEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_kas_masuk_KasMasukIndex_vue__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_kas_masuk_KasMasukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_43__components_kas_masuk_KasMasukIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarCreate_vue__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_kas_keluar_KasKeluarEdit_vue__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_kas_keluar_KasKeluarEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_45__components_kas_keluar_KasKeluarEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_kas_keluar_KasKeluarIndex_vue__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_kas_keluar_KasKeluarIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_46__components_kas_keluar_KasKeluarIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiCreate_vue__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_kas_mutasi_KasMutasiEdit_vue__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_kas_mutasi_KasMutasiEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_48__components_kas_mutasi_KasMutasiEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_kas_mutasi_KasMutasiIndex_vue__ = __webpack_require__(246);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_kas_mutasi_KasMutasiIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_49__components_kas_mutasi_KasMutasiIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukCreate_vue__ = __webpack_require__(249);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_komisi_produk_KomisiProdukEdit_vue__ = __webpack_require__(252);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_komisi_produk_KomisiProdukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_51__components_komisi_produk_KomisiProdukEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_komisi_produk_KomisiProdukIndex_vue__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_komisi_produk_KomisiProdukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_52__components_komisi_produk_KomisiProdukIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_error_Page404_vue__ = __webpack_require__(258);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_error_Page404_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_53__components_error_Page404_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukCreate_vue__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_item_masuk_ItemMasukEdit_vue__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_item_masuk_ItemMasukEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_55__components_item_masuk_ItemMasukEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_item_masuk_ItemMasukIndex_vue__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_item_masuk_ItemMasukIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_56__components_item_masuk_ItemMasukIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarCreate_vue__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_item_keluar_ItemKeluarEdit_vue__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_item_keluar_ItemKeluarEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_58__components_item_keluar_ItemKeluarEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_item_keluar_ItemKeluarIndex_vue__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_item_keluar_ItemKeluarIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_59__components_item_keluar_ItemKeluarIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianCreate_vue__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_pembelian_PembelianEdit_vue__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_pembelian_PembelianEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_61__components_pembelian_PembelianEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_pembelian_PembelianIndex_vue__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_pembelian_PembelianIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_62__components_pembelian_PembelianIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekCreate_vue__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__components_penjualan_apotek_PenjualanApotekEdit_vue__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__components_penjualan_apotek_PenjualanApotekEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_64__components_penjualan_apotek_PenjualanApotekEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__components_penjualan_apotek_PenjualanApotekIndex_vue__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__components_penjualan_apotek_PenjualanApotekIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_65__components_penjualan_apotek_PenjualanApotekIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_67__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_68__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_73__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_73__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_73__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_74__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_74__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_74__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue__);
 //DASHBOARD
+
+
 
 
 
@@ -54761,7 +54767,7 @@ var routes = [{
    path: '/',
    component: __WEBPACK_IMPORTED_MODULE_0__components_dashboard_DashboardIndex_vue___default.a,
    name: 'IndexDashboard'
-}, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_4__components_satuan_SatuanIndex_vue___default.a, name: 'IndexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_5__components_satuan_SatuanCreate_vue___default.a, name: 'CreateSatuan' }, { path: '/satuan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_satuan_SatuanEdit_vue___default.a, name: 'EditSatuan' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliIndex_vue___default.a, name: 'IndexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliCreate_vue___default.a, name: 'CreatePoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_poli_PoliEdit_vue___default.a, name: 'EditPoli' }, { path: '/ruangan', component: __WEBPACK_IMPORTED_MODULE_10__components_ruangan_RuanganIndex_vue___default.a, name: 'IndexRuangan' }, { path: '/ruangan/create', component: __WEBPACK_IMPORTED_MODULE_11__components_ruangan_RuanganCreate_vue___default.a, name: 'CreateRuangan' }, { path: '/ruangan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_ruangan_RuanganEdit_vue___default.a, name: 'EditRuangan' }, { path: '/supplier', component: __WEBPACK_IMPORTED_MODULE_19__components_supplier_SupplierIndex_vue___default.a, name: 'IndexSupplier' }, { path: '/supplier/create', component: __WEBPACK_IMPORTED_MODULE_20__components_supplier_SupplierCreate_vue___default.a, name: 'CreateSupplier' }, { path: '/supplier/edit/:id', component: __WEBPACK_IMPORTED_MODULE_21__components_supplier_SupplierEdit_vue___default.a, name: 'EditSupplier' }, { path: '/kas', component: __WEBPACK_IMPORTED_MODULE_24__components_kas_KasIndex_vue___default.a, name: 'IndexKas' }, { path: '/kas/create', component: __WEBPACK_IMPORTED_MODULE_22__components_kas_KasCreate_vue___default.a, name: 'CreateKas' }, { path: '/kas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_kas_KasEdit_vue___default.a, name: 'EditKas' }, { path: '/setting-default', component: __WEBPACK_IMPORTED_MODULE_26__components_setting_default_SettingDefaultIndex_vue___default.a, name: 'IndexSettingDefault' }, { path: '/setting-default/edit/:id', component: __WEBPACK_IMPORTED_MODULE_25__components_setting_default_SettingDefaultEdit_vue___default.a, name: 'EditSettingDefault' }, { path: '/penjamin', component: __WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminIndex_vue___default.a, name: 'IndexPenjamin' }, { path: '/penjamin/create', component: __WEBPACK_IMPORTED_MODULE_27__components_penjamin_PenjaminCreate_vue___default.a, name: 'CreatePenjamin' }, { path: '/penjamin/edit/:id', component: __WEBPACK_IMPORTED_MODULE_28__components_penjamin_PenjaminEdit_vue___default.a, name: 'EditPenjamin' }, { path: '/pasien', component: __WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienIndex_vue___default.a, name: 'IndexPasien' }, { path: '/pasien/create', component: __WEBPACK_IMPORTED_MODULE_32__components_pasien_PasienCreate_vue___default.a, name: 'CreatePasien' }, { path: '/pasien/edit/:id', component: __WEBPACK_IMPORTED_MODULE_33__components_pasien_PasienEdit_vue___default.a, name: 'EditPasien' }, { path: '/registrasi-rawat-jalan', component: __WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default.a, name: 'IndexRegistrasiRawatJalan' }, { path: '/registrasi-rawat-jalan-lama/create', component: __WEBPACK_IMPORTED_MODULE_67__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanLama' }, { path: '/registrasi-rawat-jalan-baru/create', component: __WEBPACK_IMPORTED_MODULE_68__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanBaru' }, { path: '/registrasi-rawat-inap', component: __WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue___default.a, name: 'IndexRegistrasiRawatInap' }, { path: '/registrasi-rawat-inap-lama/create', component: __WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue___default.a, name: 'CreateRegistrasiRawatInapLama' }, { path: '/registrasi-rawat-inap-baru/create', component: __WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue___default.a, name: 'CreateRegistrasiRawatInapBaru' }, { path: '/produk', component: __WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukIndex_vue___default.a, name: 'IndexProduk' }, { path: '/produk/create', component: __WEBPACK_IMPORTED_MODULE_35__components_produk_ProdukCreate_vue___default.a, name: 'CreateProduk' }, { path: '/produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_36__components_produk_ProdukEdit_vue___default.a, name: 'EditProduk' }, { path: '/pembelian', component: __WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianIndex_vue___default.a, name: 'IndexPembelian' }, { path: '/pembelian/create', component: __WEBPACK_IMPORTED_MODULE_58__components_pembelian_PembelianCreate_vue___default.a, name: 'CreatePembelian' }, { path: '/pembelian/edit/:id', component: __WEBPACK_IMPORTED_MODULE_59__components_pembelian_PembelianEdit_vue___default.a, name: 'EditPembelian' }, { path: '/penjualan-apotek', component: __WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekIndex_vue___default.a, name: 'IndexPenjualanApotek' }, { path: '/penjualan-apotek/create', component: __WEBPACK_IMPORTED_MODULE_61__components_penjualan_apotek_PenjualanApotekCreate_vue___default.a, name: 'CreatePenjualanApotek' }, { path: '/penjualan-apotek/edit/:id', component: __WEBPACK_IMPORTED_MODULE_62__components_penjualan_apotek_PenjualanApotekEdit_vue___default.a, name: 'EditPenjualanApotek' }, { path: '/penjualan-jalan-inap', component: __WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue___default.a, name: 'IndexPenjualanJalanInap' }, { path: '/penjualan-jalan-inap/create', component: __WEBPACK_IMPORTED_MODULE_64__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue___default.a, name: 'CreatePenjualanJalanInap' }, { path: '/penjualan-jalan-inap/edit/:id', component: __WEBPACK_IMPORTED_MODULE_65__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue___default.a, name: 'EditPenjualanJalanInap' }, { path: '/item-masuk', component: __WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukIndex_vue___default.a, name: 'IndexItemMasuk' }, { path: '/item-masuk/create', component: __WEBPACK_IMPORTED_MODULE_52__components_item_masuk_ItemMasukCreate_vue___default.a, name: 'CreateItemMasuk' }, { path: '/item-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_53__components_item_masuk_ItemMasukEdit_vue___default.a, name: 'EditItemMasuk' }, { path: '/item-keluar', component: __WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarIndex_vue___default.a, name: 'IndexItemKeluar' }, { path: '/item-keluar/create', component: __WEBPACK_IMPORTED_MODULE_55__components_item_keluar_ItemKeluarCreate_vue___default.a, name: 'CreateItemKeluar' }, { path: '/item-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_56__components_item_keluar_ItemKeluarEdit_vue___default.a, name: 'EditItemKeluar' }, { path: '/kas-masuk', component: __WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukIndex_vue___default.a, name: 'IndexKasMasuk' }, { path: '/kas-masuk/create', component: __WEBPACK_IMPORTED_MODULE_39__components_kas_masuk_KasMasukCreate_vue___default.a, name: 'CreateKasMasuk' }, { path: '/kas-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_40__components_kas_masuk_KasMasukEdit_vue___default.a, name: 'EditKasMasuk' }, { path: '/kas-keluar', component: __WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarIndex_vue___default.a, name: 'IndexKasKeluar' }, { path: '/kas-keluar/create', component: __WEBPACK_IMPORTED_MODULE_42__components_kas_keluar_KasKeluarCreate_vue___default.a, name: 'CreateKasKeluar' }, { path: '/kas-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_43__components_kas_keluar_KasKeluarEdit_vue___default.a, name: 'EditKasKeluar' }, { path: '/kas-mutasi', component: __WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiIndex_vue___default.a, name: 'IndexKasMutasi' }, { path: '/kas-mutasi/create', component: __WEBPACK_IMPORTED_MODULE_45__components_kas_mutasi_KasMutasiCreate_vue___default.a, name: 'CreateKasMutasi' }, { path: '/kas-mutasi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_46__components_kas_mutasi_KasMutasiEdit_vue___default.a, name: 'EditKasMutasi' }, { path: '/komisi-produk', component: __WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukIndex_vue___default.a, name: 'IndexKomisiProduk' }, { path: '/komisi-produk/create', component: __WEBPACK_IMPORTED_MODULE_48__components_komisi_produk_KomisiProdukCreate_vue___default.a, name: 'CreateKomisiProduk' }, { path: '/komisi-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_49__components_komisi_produk_KomisiProdukEdit_vue___default.a, name: 'EditKomisiProduk' }, { path: '/perusahaan', component: __WEBPACK_IMPORTED_MODULE_31__components_perusahaan_PerusahaanIndex_vue___default.a, name: 'IndexPerusahaan' }, { path: '/laporan-kas', component: __WEBPACK_IMPORTED_MODULE_38__components_laporan_kas_LaporanKasIndex_vue___default.a, name: 'IndexLaporanKas' }, { path: '/perusahaan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_30__components_perusahaan_PerusahaanEdit_vue___default.a, name: 'EditPerusahaan' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_13__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'IndexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_14__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'CreateKategoriProduk' }, { path: '/kategori-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'EditKategoriProduk' }, { path: '/kategori-transaksi', component: __WEBPACK_IMPORTED_MODULE_16__components_kategori_transaksi_KategoriTransaksiIndex_vue___default.a, name: 'IndexKategoriTransaksi' }, { path: '/kategori-transaksi/create', component: __WEBPACK_IMPORTED_MODULE_17__components_kategori_transaksi_KategoriTransaksiCreate_vue___default.a, name: 'CreateKategoriTransaksi' }, { path: '/kategori-transaksi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_kategori_transaksi_KategoriTransaksiEdit_vue___default.a, name: 'EditKategoriTransaksi' }, { path: '/*', component: __WEBPACK_IMPORTED_MODULE_51__components_error_Page404_vue___default.a, name: 'Page404' }];
+}, { path: '/user', component: __WEBPACK_IMPORTED_MODULE_1__components_user_UserIndex_vue___default.a, name: 'IndexUser' }, { path: '/user/create', component: __WEBPACK_IMPORTED_MODULE_2__components_user_UserCreate_vue___default.a, name: 'CreateUser' }, { path: '/user/edit/:id', component: __WEBPACK_IMPORTED_MODULE_3__components_user_UserEdit_vue___default.a, name: 'EditUser' }, { path: '/satuan', component: __WEBPACK_IMPORTED_MODULE_4__components_satuan_SatuanIndex_vue___default.a, name: 'IndexSatuan' }, { path: '/satuan/create', component: __WEBPACK_IMPORTED_MODULE_5__components_satuan_SatuanCreate_vue___default.a, name: 'CreateSatuan' }, { path: '/satuan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_6__components_satuan_SatuanEdit_vue___default.a, name: 'EditSatuan' }, { path: '/poli', component: __WEBPACK_IMPORTED_MODULE_7__components_poli_PoliIndex_vue___default.a, name: 'IndexPoli' }, { path: '/poli/create', component: __WEBPACK_IMPORTED_MODULE_8__components_poli_PoliCreate_vue___default.a, name: 'CreatePoli' }, { path: '/poli/edit/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_poli_PoliEdit_vue___default.a, name: 'EditPoli' }, { path: '/ruangan', component: __WEBPACK_IMPORTED_MODULE_10__components_ruangan_RuanganIndex_vue___default.a, name: 'IndexRuangan' }, { path: '/ruangan/create', component: __WEBPACK_IMPORTED_MODULE_11__components_ruangan_RuanganCreate_vue___default.a, name: 'CreateRuangan' }, { path: '/ruangan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_ruangan_RuanganEdit_vue___default.a, name: 'EditRuangan' }, { path: '/supplier', component: __WEBPACK_IMPORTED_MODULE_19__components_supplier_SupplierIndex_vue___default.a, name: 'IndexSupplier' }, { path: '/supplier/create', component: __WEBPACK_IMPORTED_MODULE_20__components_supplier_SupplierCreate_vue___default.a, name: 'CreateSupplier' }, { path: '/supplier/edit/:id', component: __WEBPACK_IMPORTED_MODULE_21__components_supplier_SupplierEdit_vue___default.a, name: 'EditSupplier' }, { path: '/kas', component: __WEBPACK_IMPORTED_MODULE_24__components_kas_KasIndex_vue___default.a, name: 'IndexKas' }, { path: '/kas/create', component: __WEBPACK_IMPORTED_MODULE_22__components_kas_KasCreate_vue___default.a, name: 'CreateKas' }, { path: '/kas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_23__components_kas_KasEdit_vue___default.a, name: 'EditKas' }, { path: '/setting-default', component: __WEBPACK_IMPORTED_MODULE_26__components_setting_default_SettingDefaultIndex_vue___default.a, name: 'IndexSettingDefault' }, { path: '/setting-default/edit/:id', component: __WEBPACK_IMPORTED_MODULE_25__components_setting_default_SettingDefaultEdit_vue___default.a, name: 'EditSettingDefault' }, { path: '/setting-petugas', component: __WEBPACK_IMPORTED_MODULE_28__components_setting_petugas_SettingPetugasIndex_vue___default.a, name: 'IndexSettingPetugas' }, { path: '/setting-petugas/edit/:id', component: __WEBPACK_IMPORTED_MODULE_27__components_setting_petugas_SettingPetugasEdit_vue___default.a, name: 'EditSettingPetugas' }, { path: '/penjamin', component: __WEBPACK_IMPORTED_MODULE_31__components_penjamin_PenjaminIndex_vue___default.a, name: 'IndexPenjamin' }, { path: '/penjamin/create', component: __WEBPACK_IMPORTED_MODULE_29__components_penjamin_PenjaminCreate_vue___default.a, name: 'CreatePenjamin' }, { path: '/penjamin/edit/:id', component: __WEBPACK_IMPORTED_MODULE_30__components_penjamin_PenjaminEdit_vue___default.a, name: 'EditPenjamin' }, { path: '/pasien', component: __WEBPACK_IMPORTED_MODULE_36__components_pasien_PasienIndex_vue___default.a, name: 'IndexPasien' }, { path: '/pasien/create', component: __WEBPACK_IMPORTED_MODULE_34__components_pasien_PasienCreate_vue___default.a, name: 'CreatePasien' }, { path: '/pasien/edit/:id', component: __WEBPACK_IMPORTED_MODULE_35__components_pasien_PasienEdit_vue___default.a, name: 'EditPasien' }, { path: '/registrasi-rawat-jalan', component: __WEBPACK_IMPORTED_MODULE_71__components_registrasi_rawat_jalan_RegistrasiRawatJalanIndex_vue___default.a, name: 'IndexRegistrasiRawatJalan' }, { path: '/registrasi-rawat-jalan-lama/create', component: __WEBPACK_IMPORTED_MODULE_69__components_registrasi_rawat_jalan_RegistrasiRawatJalanLamaCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanLama' }, { path: '/registrasi-rawat-jalan-baru/create', component: __WEBPACK_IMPORTED_MODULE_70__components_registrasi_rawat_jalan_RegistrasiRawatJalanBaruCreate_vue___default.a, name: 'CreateRegistrasiRawatJalanBaru' }, { path: '/registrasi-rawat-inap', component: __WEBPACK_IMPORTED_MODULE_74__components_registrasi_rawat_inap_RegistrasiRawatInapIndex_vue___default.a, name: 'IndexRegistrasiRawatInap' }, { path: '/registrasi-rawat-inap-lama/create', component: __WEBPACK_IMPORTED_MODULE_72__components_registrasi_rawat_inap_RegistrasiRawatInapLamaCreate_vue___default.a, name: 'CreateRegistrasiRawatInapLama' }, { path: '/registrasi-rawat-inap-baru/create', component: __WEBPACK_IMPORTED_MODULE_73__components_registrasi_rawat_inap_RegistrasiRawatInapBaruCreate_vue___default.a, name: 'CreateRegistrasiRawatInapBaru' }, { path: '/produk', component: __WEBPACK_IMPORTED_MODULE_39__components_produk_ProdukIndex_vue___default.a, name: 'IndexProduk' }, { path: '/produk/create', component: __WEBPACK_IMPORTED_MODULE_37__components_produk_ProdukCreate_vue___default.a, name: 'CreateProduk' }, { path: '/produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_38__components_produk_ProdukEdit_vue___default.a, name: 'EditProduk' }, { path: '/pembelian', component: __WEBPACK_IMPORTED_MODULE_62__components_pembelian_PembelianIndex_vue___default.a, name: 'IndexPembelian' }, { path: '/pembelian/create', component: __WEBPACK_IMPORTED_MODULE_60__components_pembelian_PembelianCreate_vue___default.a, name: 'CreatePembelian' }, { path: '/pembelian/edit/:id', component: __WEBPACK_IMPORTED_MODULE_61__components_pembelian_PembelianEdit_vue___default.a, name: 'EditPembelian' }, { path: '/penjualan-apotek', component: __WEBPACK_IMPORTED_MODULE_65__components_penjualan_apotek_PenjualanApotekIndex_vue___default.a, name: 'IndexPenjualanApotek' }, { path: '/penjualan-apotek/create', component: __WEBPACK_IMPORTED_MODULE_63__components_penjualan_apotek_PenjualanApotekCreate_vue___default.a, name: 'CreatePenjualanApotek' }, { path: '/penjualan-apotek/edit/:id', component: __WEBPACK_IMPORTED_MODULE_64__components_penjualan_apotek_PenjualanApotekEdit_vue___default.a, name: 'EditPenjualanApotek' }, { path: '/penjualan-jalan-inap', component: __WEBPACK_IMPORTED_MODULE_68__components_penjualan_jalan_inap_PenjualanJalanInapIndex_vue___default.a, name: 'IndexPenjualanJalanInap' }, { path: '/penjualan-jalan-inap/create', component: __WEBPACK_IMPORTED_MODULE_66__components_penjualan_jalan_inap_PenjualanJalanInapCreate_vue___default.a, name: 'CreatePenjualanJalanInap' }, { path: '/penjualan-jalan-inap/edit/:id', component: __WEBPACK_IMPORTED_MODULE_67__components_penjualan_jalan_inap_PenjualanJalanInapEdit_vue___default.a, name: 'EditPenjualanJalanInap' }, { path: '/item-masuk', component: __WEBPACK_IMPORTED_MODULE_56__components_item_masuk_ItemMasukIndex_vue___default.a, name: 'IndexItemMasuk' }, { path: '/item-masuk/create', component: __WEBPACK_IMPORTED_MODULE_54__components_item_masuk_ItemMasukCreate_vue___default.a, name: 'CreateItemMasuk' }, { path: '/item-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_55__components_item_masuk_ItemMasukEdit_vue___default.a, name: 'EditItemMasuk' }, { path: '/item-keluar', component: __WEBPACK_IMPORTED_MODULE_59__components_item_keluar_ItemKeluarIndex_vue___default.a, name: 'IndexItemKeluar' }, { path: '/item-keluar/create', component: __WEBPACK_IMPORTED_MODULE_57__components_item_keluar_ItemKeluarCreate_vue___default.a, name: 'CreateItemKeluar' }, { path: '/item-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_58__components_item_keluar_ItemKeluarEdit_vue___default.a, name: 'EditItemKeluar' }, { path: '/kas-masuk', component: __WEBPACK_IMPORTED_MODULE_43__components_kas_masuk_KasMasukIndex_vue___default.a, name: 'IndexKasMasuk' }, { path: '/kas-masuk/create', component: __WEBPACK_IMPORTED_MODULE_41__components_kas_masuk_KasMasukCreate_vue___default.a, name: 'CreateKasMasuk' }, { path: '/kas-masuk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_42__components_kas_masuk_KasMasukEdit_vue___default.a, name: 'EditKasMasuk' }, { path: '/kas-keluar', component: __WEBPACK_IMPORTED_MODULE_46__components_kas_keluar_KasKeluarIndex_vue___default.a, name: 'IndexKasKeluar' }, { path: '/kas-keluar/create', component: __WEBPACK_IMPORTED_MODULE_44__components_kas_keluar_KasKeluarCreate_vue___default.a, name: 'CreateKasKeluar' }, { path: '/kas-keluar/edit/:id', component: __WEBPACK_IMPORTED_MODULE_45__components_kas_keluar_KasKeluarEdit_vue___default.a, name: 'EditKasKeluar' }, { path: '/kas-mutasi', component: __WEBPACK_IMPORTED_MODULE_49__components_kas_mutasi_KasMutasiIndex_vue___default.a, name: 'IndexKasMutasi' }, { path: '/kas-mutasi/create', component: __WEBPACK_IMPORTED_MODULE_47__components_kas_mutasi_KasMutasiCreate_vue___default.a, name: 'CreateKasMutasi' }, { path: '/kas-mutasi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_48__components_kas_mutasi_KasMutasiEdit_vue___default.a, name: 'EditKasMutasi' }, { path: '/komisi-produk', component: __WEBPACK_IMPORTED_MODULE_52__components_komisi_produk_KomisiProdukIndex_vue___default.a, name: 'IndexKomisiProduk' }, { path: '/komisi-produk/create', component: __WEBPACK_IMPORTED_MODULE_50__components_komisi_produk_KomisiProdukCreate_vue___default.a, name: 'CreateKomisiProduk' }, { path: '/komisi-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_51__components_komisi_produk_KomisiProdukEdit_vue___default.a, name: 'EditKomisiProduk' }, { path: '/perusahaan', component: __WEBPACK_IMPORTED_MODULE_33__components_perusahaan_PerusahaanIndex_vue___default.a, name: 'IndexPerusahaan' }, { path: '/laporan-kas', component: __WEBPACK_IMPORTED_MODULE_40__components_laporan_kas_LaporanKasIndex_vue___default.a, name: 'IndexLaporanKas' }, { path: '/perusahaan/edit/:id', component: __WEBPACK_IMPORTED_MODULE_32__components_perusahaan_PerusahaanEdit_vue___default.a, name: 'EditPerusahaan' }, { path: '/kategori-produk', component: __WEBPACK_IMPORTED_MODULE_13__components_kategori_produk_KategoriProdukIndex_vue___default.a, name: 'IndexKategoriProduk' }, { path: '/kategori-produk/create', component: __WEBPACK_IMPORTED_MODULE_14__components_kategori_produk_KategoriProdukCreate_vue___default.a, name: 'CreateKategoriProduk' }, { path: '/kategori-produk/edit/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_kategori_produk_KategoriProdukEdit_vue___default.a, name: 'EditKategoriProduk' }, { path: '/kategori-transaksi', component: __WEBPACK_IMPORTED_MODULE_16__components_kategori_transaksi_KategoriTransaksiIndex_vue___default.a, name: 'IndexKategoriTransaksi' }, { path: '/kategori-transaksi/create', component: __WEBPACK_IMPORTED_MODULE_17__components_kategori_transaksi_KategoriTransaksiCreate_vue___default.a, name: 'CreateKategoriTransaksi' }, { path: '/kategori-transaksi/edit/:id', component: __WEBPACK_IMPORTED_MODULE_18__components_kategori_transaksi_KategoriTransaksiEdit_vue___default.a, name: 'EditKategoriTransaksi' }, { path: '/*', component: __WEBPACK_IMPORTED_MODULE_53__components_error_Page404_vue___default.a, name: 'Page404' }];
 
 /* harmony default export */ __webpack_exports__["a"] = (routes);
 
@@ -102524,6 +102530,703 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(454)
+/* template */
+var __vue_template__ = __webpack_require__(455)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/setting-petugas/SettingPetugasIndex.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2f2306e2", Component.options)
+  } else {
+    hotAPI.reload("data-v-2f2306e2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 454 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      settingPetugas: [],
+      url: window.location.origin + window.location.pathname.replace("home", "setting-petugas"),
+      pencarian: '',
+      loading: true
+    };
+  },
+  mounted: function mounted() {
+    var app = this;
+    app.getResults();
+  },
+
+  watch: {
+    pencarian: function pencarian(newSearch) {
+      this.getHasilPencarian();
+    }
+  },
+  methods: {
+    getResults: function getResults(page) {
+      var app = this;
+      if (typeof page == 'undefined') {
+        page = 1;
+      }
+      axios.get(app.url + '/view?page=' + page).then(function (resp) {
+        app.settingPetugas = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        console.log(resp);
+        app.loading = false;
+      });
+    },
+    getHasilPencarian: function getHasilPencarian(page) {
+
+      var app = this;
+      if (typeof page == 'undefined') {
+        page = 1;
+      }
+      axios.get(app.url + '/search?q=' + app.pencarian + '&page=' + page).then(function (resp) {
+        app.settingPetugas = resp.data;
+        app.loading = false;
+      }).catch(function (resp) {
+        console.log(resp);
+        app.loading = false;
+      });
+    },
+    alert: function alert(title, pesan) {
+      this.$swal({
+        title: title,
+        text: pesan,
+        icon: "success"
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 455 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+        _c("ul", { staticClass: "breadcrumb" }, [
+          _c(
+            "li",
+            [
+              _c("router-link", { attrs: { to: { name: "IndexDashboard" } } }, [
+                _vm._v("Home")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [
+            _vm._v("Kelola Setting Petugas")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Kelola Setting Petugas")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "table-responsive" }, [
+              _c("table", { staticClass: "table table-bordered" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("tbody", [
+                  _c("tr", [
+                    _c("td", [_vm._v(_vm._s(_vm.settingPetugas.nama_dokter))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(_vm.settingPetugas.nama_perawat))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(_vm.settingPetugas.nama_farmasi))]),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "btn btn-xs btn-default",
+                            attrs: {
+                              to: {
+                                name: "EditSettingPetugas",
+                                params: { id: _vm.settingPetugas.id }
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                          Edit\n                       "
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("th", [_vm._v("Dokter")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Perawat")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Farmasi")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("Aksi")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2f2306e2", module.exports)
+  }
+}
+
+/***/ }),
+/* 456 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(457)
+/* template */
+var __vue_template__ = __webpack_require__(458)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/setting-petugas/SettingPetugasEdit.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-58574e46", Component.options)
+  } else {
+    hotAPI.reload("data-v-58574e46", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 457 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      settingPetugas: {
+        text: '',
+        value: ''
+      },
+      settingPetugasId: null,
+      dokters: [],
+      perawats: [],
+      farmasis: [],
+      url: window.location.origin + window.location.pathname.replace("home", "setting-petugas"),
+      errors: [],
+      message: ''
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var app = this;
+    this.settingPetugasId = this.$route.params.id;
+    axios.get(app.url + '/' + this.settingPetugasId + '/edit').then(function (resp) {
+      _this.settingPetugas = resp.data;
+    }).catch(function (resp) {
+      alert("Something Goes Wrong");
+    });
+    app.getPetugas();
+  },
+
+  methods: {
+    alert: function alert(pesan) {
+      this.$swal({
+        title: "Berhasil Mengubah SettingPetugas",
+        text: pesan,
+        icon: "success"
+      });
+    },
+    getPetugas: function getPetugas() {
+      var app = this;
+      axios.get(app.url.replace('setting-petugas', 'user') + '/all').then(function (resp) {
+        for (var i = 0; i < resp.data.length; i++) {
+          if (resp.data[i].jabatan == 'dokter') {
+            app.dokters.push(resp.data[i]);
+          } else if (resp.data[i].jabatan == 'perawat') {
+            app.perawats.push(resp.data[i]);
+          } else if (resp.data[i].jabatan == 'farmasi') {
+            app.farmasis.push(resp.data[i]);
+          }
+        }
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    saveForm: function saveForm() {
+      var _this2 = this;
+
+      var newSettingPetugas = this.settingPetugas;
+      axios.patch(this.url + '/' + this.settingPetugasId, newSettingPetugas).then(function (resp) {
+        _this2.alert('Berhasil Mengubah SettingPetugas ' + _this2.settingPetugas.nama);
+        _this2.$router.replace('/setting-petugas/');
+      }).catch(function (resp) {
+        if (resp.response.status == 500) alert('Something Goes Wrong');
+        _this2.errors = resp.response.data.errors;
+        console.log(resp);
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 458 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+        _c("ul", { staticClass: "breadcrumb" }, [
+          _c("li", [_vm._v("Home")]),
+          _vm._v(" "),
+          _c(
+            "li",
+            [
+              _c(
+                "router-link",
+                { attrs: { to: { name: "IndexSettingPetugas" } } },
+                [_vm._v("Kelola Setting Petugas")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("li", { staticClass: "active" }, [_vm._v("Edit  Setting Petugas")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Edit  Setting Petugas")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "panel-body" }, [
+            _c(
+              "form",
+              {
+                staticClass: "form-horizontal",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    _vm.saveForm()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Dokter ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          model: {
+                            value: _vm.settingPetugas.dokter,
+                            callback: function($$v) {
+                              _vm.$set(_vm.settingPetugas, "dokter", $$v)
+                            },
+                            expression: "settingPetugas.dokter"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("-- Pilih Dokter--")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.dokters, function(petugas) {
+                            return _c(
+                              "option",
+                              { domProps: { value: petugas.id } },
+                              [_vm._v(_vm._s(petugas.name) + " ")]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.dokter
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.dokter[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Perawat ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          model: {
+                            value: _vm.settingPetugas.perawat,
+                            callback: function($$v) {
+                              _vm.$set(_vm.settingPetugas, "perawat", $$v)
+                            },
+                            expression: "settingPetugas.perawat"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("-- Pilih Perawat--")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.perawats, function(petugas) {
+                            return _c(
+                              "option",
+                              { domProps: { value: petugas.id } },
+                              [_vm._v(_vm._s(petugas.name) + " ")]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.perawat
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.perawat[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c(
+                    "label",
+                    {
+                      staticClass: "col-md-2 control-label",
+                      attrs: { for: "name" }
+                    },
+                    [_vm._v("Farmasi ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "col-md-4" },
+                    [
+                      _c(
+                        "vue-selectize",
+                        {
+                          staticClass: "form-control",
+                          model: {
+                            value: _vm.settingPetugas.farmasi,
+                            callback: function($$v) {
+                              _vm.$set(_vm.settingPetugas, "farmasi", $$v)
+                            },
+                            expression: "settingPetugas.farmasi"
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "" } }, [
+                            _vm._v("-- Pilih Farmasi--")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(_vm.farmasis, function(petugas) {
+                            return _c(
+                              "option",
+                              { domProps: { value: petugas.id } },
+                              [_vm._v(_vm._s(petugas.name) + " ")]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _vm.errors.farmasi
+                        ? _c("span", { staticClass: "label label-danger" }, [
+                            _vm._v(" " + _vm._s(_vm.errors.farmasi[0]))
+                          ])
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(0)
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-group" }, [
+      _c("div", { staticClass: "col-md-4 col-md-offset-2" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          [_vm._v("Submit")]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-58574e46", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
