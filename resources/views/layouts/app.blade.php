@@ -83,7 +83,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Laporan 
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Laporan
                             <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><router-link :to="{name: 'IndexLaporanKas'}" >Transaksi Kas</router-link></li>
@@ -97,6 +97,12 @@
                                 <li><router-link :to="{name: 'IndexItemMasuk'}" >Item Masuk</router-link></li>
                                 <li><router-link :to="{name: 'IndexItemKeluar'}" >Item Keluar</router-link></li>
                             </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Setting
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><router-link :to="{name: 'IndexSettingPetugas'}" >Setting Petugas</router-link></li>
                             </ul>
                         </li>
                         @endif
