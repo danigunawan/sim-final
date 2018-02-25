@@ -11,14 +11,14 @@
 
                 <div class="panel-body">
 
-                    <router-link 
-                      :to="{name: 'CreatePenjualanJalanInap'}" 
-                      class="btn btn-md btn-primary"> 
+                    <router-link
+                      :to="{name: 'CreatePenjualanJalanInap'}"
+                      class="btn btn-md btn-primary">
                         Tambah Penjualan Rawat Jalan / Inap
                     </router-link>
                     <br/>
                     <div class="table-responsive">
-                    
+
                     <div align="right">
                     <input type="text" placeholder="Pencarian ..." v-bind:style="{width: '20%' }" v-model="pencarian" class="form-control" />
                     </div>
@@ -38,14 +38,14 @@
                         <td>{{ penjualan.nama_penjamin}}</td>
                         <td>{{ penjualan.total_nilai}}</td>
                         <td>
-                        <router-link 
-                          :to="{name:'EditPenjualanApotek' ,params:{id: penjualan.id}}" 
+                        <router-link
+                          :to="{name:'EditPenjualanJalanInap' ,params:{id: penjualan.id}}"
                           class="btn btn-xs btn-default"
                        >
                           Edit
                        </router-link>
-                        <button 
-                          class="btn btn-xs btn-danger" 
+                        <button
+                          class="btn btn-xs btn-danger"
                           v-on:click="konfirmasiHapus(penjualan.id,index,penjualan.no_trans)"
                         >
                           Hapus
@@ -81,7 +81,7 @@
       return {
         penjualans: [],
         penjualansData: {},
-        url: window.location.origin + (window.location.pathname).replace("home","penjualan-apotek"),
+        url: window.location.origin + (window.location.pathname).replace("home","penjualan-jalan-inap"),
         pencarian: '',
         loading: true
       }
@@ -93,7 +93,7 @@
     watch: {
        pencarian: function(newSearch){
          this.getHasilPencarian();
-       }  
+       }
     },
     methods: {
       getResults(page){
@@ -110,11 +110,11 @@
         .catch(function(resp){
           console.log(resp);
           app.loading = false;
-         
+
         })
       },
       getHasilPencarian(page){
-          
+
         var app = this;
         if(typeof page == 'undefined'){
           page = 1;
@@ -128,7 +128,7 @@
         .catch(function(resp){
           console.log(resp);
           app.loading = false;
-         
+
         })
       },
       deleteEntry(id,index,noTrans){
@@ -143,7 +143,7 @@
           })
       },
       konfirmasiHapus(id,index,noTrans){
-      
+
         this.$swal({
           title: "Yakin Ingin Menghapus Penjualan Rawat Jalan / Inap : " + noTrans + "?",
           text: "Data yang di hapus tidak akan bisa di kembalikan lagi",
@@ -155,7 +155,7 @@
           if (willDelete) {
             this.deleteEntry(id,index,noTrans);
           }
-        })  
+        })
       },
       alert(title,pesan){
         this.$swal({
@@ -168,4 +168,3 @@
   }
 
 </script>
-

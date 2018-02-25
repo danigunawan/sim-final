@@ -154,11 +154,12 @@ class PenjualanJalanInapController extends Controller
                         ->where('user_id',$petugas);
         if($komisiProduk->count() > 0) {
           $komisiProduk = $komisiProduk->first();
-          TbsKomisiProduk::create(['no_reg' => $no_reg,
-                                   'komisi_id' => $komisiProduk->id,
-                                   'user_id'=> $petugas,
-                                   'produk_id' => $produk,
-                                   'nominal_komisi' => $komisiProduk->jumlah_uang]);
+          TbsKomisiProduk::create([
+            'no_reg' => $no_reg,
+            'komisi_id' => $komisiProduk->id,
+            'user_id'=> $petugas,
+            'produk_id' => $produk,
+            'nominal_komisi' => $komisiProduk->jumlah_uang]);
         }
       }
     }
@@ -166,12 +167,13 @@ class PenjualanJalanInapController extends Controller
     private function storeDetailKomisiProduk($no_reg,$no_trans){
       $tbsKomisiProduks = TbsKomisiProduk::where('no_reg',$no_reg)->get();
       foreach ($tbsKomisiProduks as $tbsKomisiProduk) {
-        DetailKomisiProduk::create(['no_reg' => $tbsKomisiProduk->no_reg,
-                                 'no_trans' => $no_trans,
-                                 'komisi_id' => $tbsKomisiProduk->komisi_id,
-                                 'user_id'=> $tbsKomisiProduk->user_id,
-                                 'produk_id' => $tbsKomisiProduk->produk_id,
-                                 'nominal_komisi' => $tbsKomisiProduk->nominal_komisi]);
+        DetailKomisiProduk::create([
+          'no_reg' => $tbsKomisiProduk->no_reg,
+          'no_trans' => $no_trans,
+          'komisi_id' => $tbsKomisiProduk->komisi_id,
+          'user_id'=> $tbsKomisiProduk->user_id,
+          'produk_id' => $tbsKomisiProduk->produk_id,
+          'nominal_komisi' => $tbsKomisiProduk->nominal_komisi]);
       }
       TbsKomisiProduk::where('no_reg',$no_reg)->delete();
     }
@@ -355,7 +357,7 @@ class PenjualanJalanInapController extends Controller
 
     public function deleteTbsPenjualan($id){
       $tbsPenjualan = TbsPenjualan::find($id);
-      TbsKomisiProduk::where('produk_id',$tbsPenjualan->produk)->delete();
+      TbsKomisiProduk::where('produk_id',$tbsPenjualan->produk)->where('no_reg',$tbsPenjualan->no_reg)->delete();
       $tbsPenjualan->delete();
 
         if($tbsPenjualan){

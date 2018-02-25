@@ -84257,20 +84257,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      penjualanApotek: {
+      penjualanJalanInap: {
         total_nilai: 0,
         kas: 1,
         penjamin: 1,
         potongan: 0,
         jumlah_bayar: '',
         piutang_awal: 0,
-        detailPenjualanApotek: []
+        detailPenjualanJalanInap: []
       },
-      inputPenjualanApotek: {
+      inputPenjualanJalanInap: {
         produk: '',
         jumlah: '',
         penjamin: 1
@@ -84278,24 +84314,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       produks: [],
       penjamins: [],
       kasKas: [],
+      dokters: [],
+      paramediks: [],
+      farmasis: [],
       penjualanId: null,
-      url: window.location.origin + window.location.pathname.replace("home", "penjualan-apotek"),
+      settingPetugas: null,
+      url: window.location.origin + window.location.pathname.replace("home", "penjualan-jalan-inap"),
       errors: [],
       loading: false,
       message: ''
     };
   },
   watch: {
-    'penjualanApotek.detailPenjualanApotek': {
+    'penjualanJalanInap.detailPenjualanJalanInap': {
       handler: function handler(val) {
-        this.getTotalPenjualanApotek();
+        this.getTotalPenjualanJalanInap();
       },
 
       deep: true
     },
-    'penjualanApotek.jumlah_bayar': {
+    'penjualanJalanInap.jumlah_bayar': {
       handler: function handler(val) {
-        this.getTotalPenjualanApotek();
+        this.getTotalPenjualanJalanInap();
       }
     }
   },
@@ -84305,14 +84345,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     app.getProduk();
     app.getKas();
     app.getPenjamin();
+    app.getPetugas();
+    app.getSetttingPetugas();
   },
 
   methods: {
-    deleteDetailPenjualanApotek: function deleteDetailPenjualanApotek(id) {
+    getSetttingPetugas: function getSetttingPetugas() {
+
+      var app = this;
+      axios.get(app.url.replace('penjualan-jalan-inap', 'setting-petugas') + '/all').then(function (resp) {
+
+        app.settingPetugas = resp.data[0];
+        app.inputPenjualanJalanInap.dokter = app.settingPetugas.dokter;
+        app.inputPenjualanJalanInap.paramedik = app.settingPetugas.perawat;
+        app.inputPenjualanJalanInap.farmasi = app.settingPetugas.farmasi;
+        console.log(app.settingPetugas);
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    getPetugas: function getPetugas() {
+      var app = this;
+      axios.get(app.url.replace('penjualan-jalan-inap', 'user') + '/all').then(function (resp) {
+        for (var i = 0; i < resp.data.length; i++) {
+          if (resp.data[i].jabatan == 'dokter') {
+            app.dokters.push(resp.data[i]);
+          } else if (resp.data[i].jabatan == 'perawat') {
+            app.paramediks.push(resp.data[i]);
+          } else if (resp.data[i].jabatan == 'farmasi') {
+            app.farmasis.push(resp.data[i]);
+          }
+        }
+      }).catch(function (resp) {
+        console.log(resp);
+      });
+    },
+    deleteDetailPenjualanJalanInap: function deleteDetailPenjualanJalanInap(id) {
       var _this = this;
 
-      axios.delete(this.url + '/' + id + '/delete-tbs-edit-penjualan-apotek').then(function (resp) {
-        _this.getDetailPenjualanApotek();
+      axios.delete(this.url + '/' + id + '/delete-tbs-edit-penjualan-jalan-inap').then(function (resp) {
+        _this.getDetailPenjualanJalanInap();
       }).catch(function (resp) {
         alert("Something Goes Wrong");
         console.log(resp);
@@ -84324,53 +84396,53 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var app = this;
       this.penjualanId = this.$route.params.id;
       axios.get(app.url + '/' + this.penjualanId + '/edit').then(function (resp) {
-        _this2.penjualanApotek.jumlah_bayar = resp.data.jumlah_bayar;
-        _this2.penjualanApotek.penjamin = resp.data.penjamin;
-        _this2.penjualanApotek.kas = resp.data.kas;
-        _this2.penjualanApotek.no_faktur_penjamin = resp.data.no_faktur_penjamin;
-        _this2.penjualanApotek.no_trans = resp.data.no_trans;
+        _this2.penjualanJalanInap.jumlah_bayar = resp.data.jumlah_bayar;
+        _this2.penjualanJalanInap.penjamin = resp.data.penjamin;
+        _this2.penjualanJalanInap.kas = resp.data.kas;
+        _this2.penjualanJalanInap.no_faktur_penjamin = resp.data.no_faktur_penjamin;
+        _this2.penjualanJalanInap.no_trans = resp.data.no_trans;
       }).catch(function (resp) {
         alert("Something Goes Wrong");
       });
-      axios.get(app.url + '/' + this.penjualanId + '/edit-detail-penjualan-apotek').then(function (resp) {
-        _this2.penjualanApotek.detailPenjualanApotek = resp.data;
-        _this2.getTotalPenjualanApotek();
+      axios.get(app.url + '/' + this.penjualanId + '/edit-detail-penjualan-jalan-inap').then(function (resp) {
+        _this2.penjualanJalanInap.detailPenjualanJalanInap = resp.data;
+        _this2.getTotalPenjualanJalanInap();
       }).catch(function (resp) {
         alert("Something Goes Wrong");
       });
     },
-    getDetailPenjualanApotek: function getDetailPenjualanApotek() {
+    getDetailPenjualanJalanInap: function getDetailPenjualanJalanInap() {
 
       var app = this;
       this.penjualanId = this.$route.params.id;
       app.loading = true;
-      axios.get(app.url + '/' + this.penjualanId + '/edit-tbs-penjualan-apotek').then(function (resp) {
-        app.penjualanApotek.detailPenjualanApotek = resp.data;
+      axios.get(app.url + '/' + this.penjualanId + '/edit-tbs-penjualan-jalan-inap').then(function (resp) {
+        app.penjualanJalanInap.detailPenjualanJalanInap = resp.data;
         app.loading = false;
-        app.getTotalPenjualanApotek();
+        app.getTotalPenjualanJalanInap();
       }).catch(function (resp) {
         console.log(resp);
         app.loading = false;
       });
     },
-    getTotalPenjualanApotek: function getTotalPenjualanApotek() {
+    getTotalPenjualanJalanInap: function getTotalPenjualanJalanInap() {
       var app = this;
-      var detailPenjualanApotek = app.penjualanApotek.detailPenjualanApotek;
-      var totalPenjualanApotek = 0;
-      for (var i = 0; i < detailPenjualanApotek.length; i++) {
-        var hargaJual = detailPenjualanApotek[i].harga_jual;
-        var jumlah = detailPenjualanApotek[i].jumlah;
-        var potongan = detailPenjualanApotek[i].potongan;
-        totalPenjualanApotek += hargaJual * jumlah - potongan;
+      var detailPenjualanJalanInap = app.penjualanJalanInap.detailPenjualanJalanInap;
+      var totalPenjualanJalanInap = 0;
+      for (var i = 0; i < detailPenjualanJalanInap.length; i++) {
+        var hargaJual = detailPenjualanJalanInap[i].harga_jual;
+        var jumlah = detailPenjualanJalanInap[i].jumlah;
+        var potongan = detailPenjualanJalanInap[i].potongan;
+        totalPenjualanJalanInap += hargaJual * jumlah - potongan;
       }
-      totalPenjualanApotek = totalPenjualanApotek - app.penjualanApotek.potongan;
-      app.penjualanApotek.total_nilai = totalPenjualanApotek;
-      app.penjualanApotek.piutang_awal = totalPenjualanApotek - app.penjualanApotek.jumlah_bayar;
+      totalPenjualanJalanInap = totalPenjualanJalanInap - app.penjualanJalanInap.potongan;
+      app.penjualanJalanInap.total_nilai = totalPenjualanJalanInap;
+      app.penjualanJalanInap.piutang_awal = totalPenjualanJalanInap - app.penjualanJalanInap.jumlah_bayar;
     },
     getProduk: function getProduk() {
 
       var app = this;
-      axios.get(app.url.replace('penjualan-apotek', 'produk') + '/all').then(function (resp) {
+      axios.get(app.url.replace('penjualan-jalan-inap', 'produk') + '/all').then(function (resp) {
         app.produks = resp.data;
         document.getElementById("inputProduk-selectized").focus();
       }).catch(function (resp) {
@@ -84381,7 +84453,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getKas: function getKas() {
 
       var app = this;
-      axios.get(app.url.replace('penjualan-apotek', 'kas') + '/all').then(function (resp) {
+      axios.get(app.url.replace('penjualan-jalan-inap', 'kas') + '/all').then(function (resp) {
         app.kasKas = resp.data;
       }).catch(function (resp) {
         console.log(resp);
@@ -84390,7 +84462,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getPenjamin: function getPenjamin() {
 
       var app = this;
-      axios.get(app.url.replace('penjualan-apotek', 'penjamin') + '/all').then(function (resp) {
+      axios.get(app.url.replace('penjualan-jalan-inap', 'penjamin') + '/all').then(function (resp) {
         app.penjamins = resp.data;
       }).catch(function (resp) {
         console.log(resp);
@@ -84398,7 +84470,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     alert: function alert(pesan) {
       this.$swal({
-        title: "Berhasil Mengubah PenjualanApotek",
+        title: "Berhasil Mengubah PenjualanJalanInap",
         text: pesan,
         icon: "success"
       });
@@ -84406,25 +84478,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     saveForm: function saveForm() {
       var _this3 = this;
 
-      var newPenjualanApotek = this.penjualanApotek;
-      axios.patch(this.url + '/' + this.penjualanId, newPenjualanApotek).then(function (resp) {
-        _this3.alert('Berhasil Mengubah PenjualanApotek ' + _this3.penjualanApotek.no_trans);
-        _this3.$router.replace('/penjualan-apotek/');
+      var newPenjualanJalanInap = this.penjualanJalanInap;
+      axios.patch(this.url + '/' + this.penjualanId, newPenjualanJalanInap).then(function (resp) {
+        _this3.alert('Berhasil Mengubah PenjualanJalanInap ' + _this3.penjualanJalanInap.no_trans);
+        _this3.$router.replace('/penjualan-jalan-inap/');
       }).catch(function (resp) {
         if (resp.response.status == 500) alert('Something Goes Wrong');
         _this3.errors = resp.response.data.errors;
         console.log(resp);
       });
     },
-    saveFormInputDetailPenjualanApotek: function saveFormInputDetailPenjualanApotek() {
+    saveFormInputDetailPenjualanJalanInap: function saveFormInputDetailPenjualanJalanInap() {
       var _this4 = this;
 
-      var newDetailPenjualanApotek = this.inputPenjualanApotek;
+      var newDetailPenjualanJalanInap = this.inputPenjualanJalanInap;
       this.penjualanId = this.$route.params.id;
-      axios.post(this.url + '/' + this.penjualanId + '/store-tbs-edit-penjualan-apotek', newDetailPenjualanApotek).then(function (resp) {
-        _this4.inputPenjualanApotek.produk = '';
-        _this4.inputPenjualanApotek.jumlah = '';
-        _this4.getDetailPenjualanApotek();
+      axios.post(this.url + '/' + this.penjualanId + '/store-tbs-edit-penjualan-jalan-inap', newDetailPenjualanJalanInap).then(function (resp) {
+        _this4.inputPenjualanJalanInap.produk = '';
+        _this4.inputPenjualanJalanInap.jumlah = '';
+        _this4.getDetailPenjualanJalanInap();
         document.getElementById("inputProduk-selectized").focus();
       }).catch(function (resp) {
         if (resp.response.status == 500) alert('Something Goes Wrong');
@@ -84454,24 +84526,165 @@ var render = function() {
             [
               _c(
                 "router-link",
-                { attrs: { to: { name: "IndexPenjualanApotek" } } },
-                [_vm._v("Kelola Penjualan Apotek")]
+                { attrs: { to: { name: "IndexPenjualanJalanInap" } } },
+                [_vm._v("Kelola Penjualan JalanInap")]
               )
             ],
             1
           ),
           _vm._v(" "),
           _c("li", { staticClass: "active" }, [
-            _vm._v("Edit  Penjualan Apotek")
+            _vm._v("Edit  Penjualan JalanInap")
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "panel panel-default" }, [
           _c("div", { staticClass: "panel-heading" }, [
-            _vm._v("Edit  Penjualan Apotek")
+            _vm._v("Edit  Penjualan JalanInap")
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "panel-body" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.inputPenjualanJalanInap.no_reg,
+                      expression: "inputPenjualanJalanInap.no_reg"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "inputRegistrasi", required: "", readonly: "" },
+                  domProps: { value: _vm.inputPenjualanJalanInap.no_reg },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.inputPenjualanJalanInap,
+                        "no_reg",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-2" },
+                [
+                  _c(
+                    "vue-selectize",
+                    {
+                      staticClass: "form-control",
+                      model: {
+                        value: _vm.inputPenjualanJalanInap.dokter,
+                        callback: function($$v) {
+                          _vm.$set(_vm.inputPenjualanJalanInap, "dokter", $$v)
+                        },
+                        expression: "inputPenjualanJalanInap.dokter"
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("-- Pilih Dokter--")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.dokters, function(dokter) {
+                        return _c(
+                          "option",
+                          { domProps: { value: dokter.id } },
+                          [_vm._v(_vm._s(dokter.name) + " ")]
+                        )
+                      })
+                    ],
+                    2
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-2" },
+                [
+                  _c(
+                    "vue-selectize",
+                    {
+                      staticClass: "form-control",
+                      model: {
+                        value: _vm.inputPenjualanJalanInap.paramedik,
+                        callback: function($$v) {
+                          _vm.$set(
+                            _vm.inputPenjualanJalanInap,
+                            "paramedik",
+                            $$v
+                          )
+                        },
+                        expression: "inputPenjualanJalanInap.paramedik"
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("-- Pilih Paramedik--")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.paramediks, function(paramedik) {
+                        return _c(
+                          "option",
+                          { domProps: { value: paramedik.id } },
+                          [_vm._v(_vm._s(paramedik.name) + " ")]
+                        )
+                      })
+                    ],
+                    2
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-md-2" },
+                [
+                  _c(
+                    "vue-selectize",
+                    {
+                      staticClass: "form-control",
+                      model: {
+                        value: _vm.inputPenjualanJalanInap.farmasi,
+                        callback: function($$v) {
+                          _vm.$set(_vm.inputPenjualanJalanInap, "farmasi", $$v)
+                        },
+                        expression: "inputPenjualanJalanInap.farmasi"
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("-- Pilih Farmasi--")
+                      ]),
+                      _vm._v(" "),
+                      _vm._l(_vm.farmasis, function(farmasi) {
+                        return _c(
+                          "option",
+                          { domProps: { value: farmasi.id } },
+                          [_vm._v(_vm._s(farmasi.name) + " ")]
+                        )
+                      })
+                    ],
+                    2
+                  )
+                ],
+                1
+              )
+            ]),
+            _vm._v(" "),
+            _c("hr"),
+            _vm._v(" "),
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-md-8" }, [
                 _c(
@@ -84481,7 +84694,7 @@ var render = function() {
                     on: {
                       submit: function($event) {
                         $event.preventDefault()
-                        _vm.saveFormInputDetailPenjualanApotek()
+                        _vm.saveFormInputDetailPenjualanJalanInap()
                       }
                     }
                   },
@@ -84496,15 +84709,15 @@ var render = function() {
                             staticClass: "form-control",
                             attrs: { id: "inputProduk", required: "" },
                             model: {
-                              value: _vm.inputPenjualanApotek.produk,
+                              value: _vm.inputPenjualanJalanInap.produk,
                               callback: function($$v) {
                                 _vm.$set(
-                                  _vm.inputPenjualanApotek,
+                                  _vm.inputPenjualanJalanInap,
                                   "produk",
                                   $$v
                                 )
                               },
-                              expression: "inputPenjualanApotek.produk"
+                              expression: "inputPenjualanJalanInap.produk"
                             }
                           },
                           [
@@ -84544,20 +84757,20 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.inputPenjualanApotek.jumlah,
-                            expression: "inputPenjualanApotek.jumlah"
+                            value: _vm.inputPenjualanJalanInap.jumlah,
+                            expression: "inputPenjualanJalanInap.jumlah"
                           }
                         ],
                         staticClass: "form-control",
                         attrs: { type: "number", placeholder: "Jumlah Jual" },
-                        domProps: { value: _vm.inputPenjualanApotek.jumlah },
+                        domProps: { value: _vm.inputPenjualanJalanInap.jumlah },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.inputPenjualanApotek,
+                              _vm.inputPenjualanJalanInap,
                               "jumlah",
                               $event.target.value
                             )
@@ -84584,11 +84797,11 @@ var render = function() {
                     _c("table", { staticClass: "table table-bordered" }, [
                       _vm._m(1),
                       _vm._v(" "),
-                      _vm.penjualanApotek.detailPenjualanApotek.length
+                      _vm.penjualanJalanInap.detailPenjualanJalanInap.length
                         ? _c(
                             "tbody",
                             _vm._l(
-                              _vm.penjualanApotek.detailPenjualanApotek,
+                              _vm.penjualanJalanInap.detailPenjualanJalanInap,
                               function(detail) {
                                 return _c("tr", [
                                   _c("td", [
@@ -84688,7 +84901,7 @@ var render = function() {
                                         staticClass: "btn btn-xs btn-danger",
                                         on: {
                                           click: function($event) {
-                                            _vm.deleteDetailPenjualanApotek(
+                                            _vm.deleteDetailPenjualanJalanInap(
                                               detail.id
                                             )
                                           }
@@ -84743,7 +84956,7 @@ var render = function() {
                           staticClass: "col-md-4 control-label",
                           attrs: { for: "name" }
                         },
-                        [_vm._v("Total PenjualanApotek")]
+                        [_vm._v("Total ")]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-md-8" }, [
@@ -84752,24 +84965,26 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.penjualanApotek.total_nilai,
-                              expression: "penjualanApotek.total_nilai"
+                              value: _vm.penjualanJalanInap.total_nilai,
+                              expression: "penjualanJalanInap.total_nilai"
                             }
                           ],
                           staticClass: "form-control",
                           attrs: {
                             type: "text",
-                            placeholder: "Total PenjualanApotek",
+                            placeholder: "Total PenjualanJalanInap",
                             readonly: ""
                           },
-                          domProps: { value: _vm.penjualanApotek.total_nilai },
+                          domProps: {
+                            value: _vm.penjualanJalanInap.total_nilai
+                          },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
                               _vm.$set(
-                                _vm.penjualanApotek,
+                                _vm.penjualanJalanInap,
                                 "total_nilai",
                                 $event.target.value
                               )
@@ -84801,20 +85016,20 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.penjualanApotek.potongan,
-                              expression: "penjualanApotek.potongan"
+                              value: _vm.penjualanJalanInap.potongan,
+                              expression: "penjualanJalanInap.potongan"
                             }
                           ],
                           staticClass: "form-control",
                           attrs: { type: "text", placeholder: "Potongan" },
-                          domProps: { value: _vm.penjualanApotek.potongan },
+                          domProps: { value: _vm.penjualanJalanInap.potongan },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
                               _vm.$set(
-                                _vm.penjualanApotek,
+                                _vm.penjualanJalanInap,
                                 "potongan",
                                 $event.target.value
                               )
@@ -84850,11 +85065,15 @@ var render = function() {
                               staticClass: "form-control",
                               attrs: { required: "" },
                               model: {
-                                value: _vm.penjualanApotek.penjamin,
+                                value: _vm.penjualanJalanInap.penjamin,
                                 callback: function($$v) {
-                                  _vm.$set(_vm.penjualanApotek, "penjamin", $$v)
+                                  _vm.$set(
+                                    _vm.penjualanJalanInap,
+                                    "penjamin",
+                                    $$v
+                                  )
                                 },
-                                expression: "penjualanApotek.penjamin"
+                                expression: "penjualanJalanInap.penjamin"
                               }
                             },
                             [
@@ -84910,11 +85129,11 @@ var render = function() {
                             {
                               staticClass: "form-control",
                               model: {
-                                value: _vm.penjualanApotek.kas,
+                                value: _vm.penjualanJalanInap.kas,
                                 callback: function($$v) {
-                                  _vm.$set(_vm.penjualanApotek, "kas", $$v)
+                                  _vm.$set(_vm.penjualanJalanInap, "kas", $$v)
                                 },
-                                expression: "penjualanApotek.kas"
+                                expression: "penjualanJalanInap.kas"
                               }
                             },
                             [
@@ -84952,7 +85171,7 @@ var render = function() {
                           staticClass: "col-md-4 control-label",
                           attrs: { for: "name" }
                         },
-                        [_vm._v("Dibayar / Uang Muka")]
+                        [_vm._v("Dibayar ")]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-md-8" }, [
@@ -84961,20 +85180,22 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.penjualanApotek.jumlah_bayar,
-                              expression: "penjualanApotek.jumlah_bayar"
+                              value: _vm.penjualanJalanInap.jumlah_bayar,
+                              expression: "penjualanJalanInap.jumlah_bayar"
                             }
                           ],
                           staticClass: "form-control",
                           attrs: { type: "text", placeholder: "Dibayar" },
-                          domProps: { value: _vm.penjualanApotek.jumlah_bayar },
+                          domProps: {
+                            value: _vm.penjualanJalanInap.jumlah_bayar
+                          },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
                               _vm.$set(
-                                _vm.penjualanApotek,
+                                _vm.penjualanJalanInap,
                                 "jumlah_bayar",
                                 $event.target.value
                               )
@@ -85006,8 +85227,8 @@ var render = function() {
                             {
                               name: "model",
                               rawName: "v-model",
-                              value: _vm.penjualanApotek.piutang_awal,
-                              expression: "penjualanApotek.piutang_awal"
+                              value: _vm.penjualanJalanInap.piutang_awal,
+                              expression: "penjualanJalanInap.piutang_awal"
                             }
                           ],
                           staticClass: "form-control",
@@ -85016,14 +85237,16 @@ var render = function() {
                             placeholder: "Piutang",
                             readonly: ""
                           },
-                          domProps: { value: _vm.penjualanApotek.piutang_awal },
+                          domProps: {
+                            value: _vm.penjualanJalanInap.piutang_awal
+                          },
                           on: {
                             input: function($event) {
                               if ($event.target.composing) {
                                 return
                               }
                               _vm.$set(
-                                _vm.penjualanApotek,
+                                _vm.penjualanJalanInap,
                                 "piutang_awal",
                                 $event.target.value
                               )
@@ -85245,7 +85468,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     return {
       penjualans: [],
       penjualansData: {},
-      url: window.location.origin + window.location.pathname.replace("home", "penjualan-apotek"),
+      url: window.location.origin + window.location.pathname.replace("home", "penjualan-jalan-inap"),
       pencarian: '',
       loading: true
     };
@@ -85370,7 +85593,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    " \n                        Tambah Penjualan Rawat Jalan / Inap\n                    "
+                    "\n                        Tambah Penjualan Rawat Jalan / Inap\n                    "
                   )
                 ]
               ),
@@ -85435,7 +85658,7 @@ var render = function() {
                                       staticClass: "btn btn-xs btn-default",
                                       attrs: {
                                         to: {
-                                          name: "EditPenjualanApotek",
+                                          name: "EditPenjualanJalanInap",
                                           params: { id: penjualan.id }
                                         }
                                       }
