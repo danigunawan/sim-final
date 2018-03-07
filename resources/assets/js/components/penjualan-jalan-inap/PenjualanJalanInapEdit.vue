@@ -74,6 +74,7 @@
                     </form>
                     <br/>
                     <div>
+                    <h4>Detail Penjualan</h4>
                     <table class="table table-bordered">
                       <thead>
                         <th>Produk</th>
@@ -104,6 +105,26 @@
                                 Hapus
                               </button>
                             </td>
+                          </tr>
+                      </tbody>
+                      <tbody v-else>
+                        <tr>
+                          <td colspan="6"><center>Tidak Ada Data</center></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <h4>Detail Komisi</h4>
+                    <table class="table table-bordered">
+                      <thead>
+                        <th>Produk</th>
+                        <th>Petugas</th>
+                        <th>Nominal</th>
+                      </thead>
+                      <tbody v-if="penjualanJalanInap.detailKomisiProduk.length">
+                          <tr v-for="detail in penjualanJalanInap.detailKomisiProduk">
+                            <td>{{ detail.user_name}}</td>
+                            <td>{{ detail.produk_name}}</td>
+                            <td>{{ detail.nominal_komisi}}</td>
                           </tr>
                       </tbody>
                       <tbody v-else>
@@ -277,7 +298,6 @@
           app.inputPenjualanJalanInap.dokter = app.settingPetugas.dokter;
           app.inputPenjualanJalanInap.paramedik = app.settingPetugas.perawat;
           app.inputPenjualanJalanInap.farmasi = app.settingPetugas.farmasi;
-          console.log(app.settingPetugas);
         })
         .catch(function(resp){
           console.log(resp);
@@ -325,6 +345,8 @@
            this.penjualanJalanInap.kas =  resp.data.kas;
            this.penjualanJalanInap.no_faktur_penjamin =  resp.data.no_faktur_penjamin;
            this.penjualanJalanInap.no_trans = resp.data.no_trans;
+           this.penjualanJalanInap.no_reg = resp.data.no_reg;
+           this.inputPenjualanJalanInap.no_reg = resp.data.no_reg;
 
          })
          .catch((resp) => {
@@ -332,11 +354,12 @@
          });
          axios.get(app.url+'/'+this.penjualanId+ '/edit-detail-penjualan-jalan-inap')
          .then((resp) => {
-           this.penjualanJalanInap.detailPenjualanJalanInap=  resp.data;
+           this.penjualanJalanInap.detailPenjualanJalanInap=  resp.data.tbsEditPenjualan;
+           this.penjualanJalanInap.detailKomisiProduk = resp.data.tbsEditKomisiProduk;
            this.getTotalPenjualanJalanInap();
          })
          .catch((resp) => {
-            alert("Something Goes Wrong");
+            alert("Something Goes Wrong : Detail Penjualan ");
          });
 
       },
@@ -347,7 +370,8 @@
      app.loading = true;
         axios.get(app.url + '/' + this.penjualanId + '/edit-tbs-penjualan-jalan-inap')
         .then(function(resp){
-          app.penjualanJalanInap.detailPenjualanJalanInap = resp.data;
+          app.penjualanJalanInap.detailPenjualanJalanInap = resp.data.tbsEditPenjualan;
+          app.penjualanJalanInap.detailKomisiProduk = resp.data.tbsEditKomisiProduk;
           app.loading = false;
           app.getTotalPenjualanJalanInap();
         })

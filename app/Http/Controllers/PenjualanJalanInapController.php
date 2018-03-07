@@ -15,6 +15,7 @@ use App\Persediaan;
 use Auth;
 use App\KomisiProduk;
 use App\TbsKomisiProduk;
+use App\TbsEditKomisiProduk;
 use App\DetailKomisiProduk;
 use App\RegistrasiPasien;
 
@@ -164,6 +165,22 @@ class PenjualanJalanInapController extends Controller
       }
     }
 
+    private function storeTbsEditKomisiProduk($petugas,$produk,$no_reg){
+      if($produk != ''){
+        $komisiProduk = KomisiProduk::where('produk_id',$produk)
+                        ->where('user_id',$petugas);
+        if($komisiProduk->count() > 0) {
+          $komisiProduk = $komisiProduk->first();
+          TbsEditKomisiProduk::create([
+            'no_reg' => $no_reg,
+            'komisi_id' => $komisiProduk->id,
+            'user_id'=> $petugas,
+            'produk_id' => $produk,
+            'nominal_komisi' => $komisiProduk->jumlah_uang]);
+        }
+      }
+    }
+
     private function storeDetailKomisiProduk($no_reg,$no_trans){
       $tbsKomisiProduks = TbsKomisiProduk::where('no_reg',$no_reg)->get();
       foreach ($tbsKomisiProduks as $tbsKomisiProduk) {
@@ -178,6 +195,21 @@ class PenjualanJalanInapController extends Controller
       TbsKomisiProduk::where('no_reg',$no_reg)->delete();
     }
 
+    private function storeDetailEditKomisiProduk($no_reg,$no_trans){
+      DetailKomisiProduk::where('no_reg',$no_reg)->delete();
+      $tbsKomisiProduks = TbsEditKomisiProduk::where('no_reg',$no_reg)->get();
+      foreach ($tbsKomisiProduks as $tbsKomisiProduk) {
+        DetailKomisiProduk::create([
+          'no_reg' => $tbsKomisiProduk->no_reg,
+          'no_trans' => $no_trans,
+          'komisi_id' => $tbsKomisiProduk->komisi_id,
+          'user_id'=> $tbsKomisiProduk->user_id,
+          'produk_id' => $tbsKomisiProduk->produk_id,
+          'nominal_komisi' => $tbsKomisiProduk->nominal_komisi]);
+      }
+      TbsEditKomisiProduk::where('no_reg',$no_reg)->delete();
+    }
+
     public function storeTbsEditPenjualan(Request $request,$id){
 
         $request->validate([
@@ -187,13 +219,13 @@ class PenjualanJalanInapController extends Controller
         ]);
         $produk = Produk::find($request->produk);
         $penjamin = Penjamin::find($request->penjamin);
-        if($penjamin->level_harga === '1'){
+        if($penjamin->level_harga == '1'){
           $totalNilai = $request->jumlah * $produk->harga_jual_1;
           $request->request->add(['harga_jual' => $produk->harga_jual_1]);
-        } else if($penjamin->level_harga === '2'){
+        } else if($penjamin->level_harga == '2'){
           $totalNilai = $request->jumlah * $produk->harga_jual_2;
           $request->request->add(['harga_jual' => $produk->harga_jual_2]);
-        } else if($penjamin->level_harga === '3'){
+        } else if($penjamin->level_harga == '3'){
           $totalNilai = $request->jumlah * $produk->harga_jual_3;
           $request->request->add(['harga_jual' => $produk->harga_jual_3]);
         }
@@ -209,6 +241,9 @@ class PenjualanJalanInapController extends Controller
           $tbsEditPenjualan = $this->updateTbsEditPenjualan($request);
         } else {
           $tbsEditPenjualan = TbsEditPenjualan::create($request->all());
+          $this->storeTbsEditKomisiProduk($request->dokter,$request->produk,$request->no_reg);
+          $this->storeTbsEditKomisiProduk($request->paramedik,$request->produk,$request->no_reg);
+          $this->storeTbsEditKomisiProduk($request->farmasi,$request->produk,$request->no_reg);
         }
 
         if($tbsEditPenjualan){
@@ -278,21 +313,35 @@ class PenjualanJalanInapController extends Controller
     data dari detail dimasukan ke edit tbs
    */
     public function editDetailPenjualan($id){
-           TbsEditPenjualan::where('penjualan_id',$id)->where('created_by',Auth::user()->id)->delete();
-           $detailPenjualan = DetailPenjualan::where('penjualan_id',$id)->get()->toArray();
-           foreach($detailPenjualan as $detail){
-
-             TbsEditPenjualan::create($detail);
-           }
-
-           return TbsEditPenjualan::where('penjualan_id',$id)->get();
-
+      $penjualan = Penjualan::find($id);
+      TbsEditKomisiProduk::where('created_by',Auth::user()->id)->delete();
+      $detailKomisiProduk = DetailKomisiProduk::where('no_reg',$penjualan->no_reg)->get()->toArray();
+      foreach ($detailKomisiProduk as $detail) {
+        TbsEditKomisiProduk::create($detail);
+      }
+      TbsEditPenjualan::where('penjualan_id',$id)->where('created_by',Auth::user()->id)->delete();
+      $detailPenjualan = DetailPenjualan::where('penjualan_id',$id)->get()->toArray();
+      foreach($detailPenjualan as $detail){
+        TbsEditPenjualan::create($detail);
+      }
+      $tbsEditKomisiProduk = TbsEditKomisiProduk::select('users.name AS user_name','produks.nama AS produk_name','nominal_komisi')
+                                        ->leftJoin('users','tbs_edit_komisi_produks.user_id','users.id')
+                                        ->leftJoin('produks','tbs_edit_komisi_produks.produk_id','produks.id')
+                                        ->where('no_reg',$penjualan->no_reg)->get();
+      $tbsEditPenjualan = TbsEditPenjualan::where('penjualan_id',$id)->get();
+      return ['tbsEditPenjualan' => $tbsEditPenjualan,'tbsEditKomisiProduk' => $tbsEditKomisiProduk];
     }
     // function editTbsPenjualan ini dijalankan ketika ada penambahkan produk, dan penghapusan produk
     public function editTbsPenjualan($id){
+      // $tbsKomisiProduk
+      $penjualan = Penjualan::find($id);
+      $tbsEditPenjualan = TbsEditPenjualan::where('penjualan_id',$id)->get();
+      $tbsEditKomisiProduk = TbsEditKomisiProduk::select('users.name AS user_name','produks.nama AS produk_name','nominal_komisi')
+                                        ->leftJoin('users','tbs_edit_komisi_produks.user_id','users.id')
+                                        ->leftJoin('produks','tbs_edit_komisi_produks.produk_id','produks.id')
+                                        ->where('no_reg',$penjualan->no_reg)->get();
 
-           return TbsEditPenjualan::where('penjualan_id',$id)->get();
-
+      return ['tbsEditPenjualan' => $tbsEditPenjualan,'tbsEditKomisiProduk' => $tbsEditKomisiProduk];
     }
 
 
@@ -329,6 +378,7 @@ class PenjualanJalanInapController extends Controller
 
         $penjualan = Penjualan::find($id)->update($request->all());
         $detailPenjualan = $this->storeDetailPenjualan($request,$request->no_trans,$id);
+        $detailKomisiProduk = $this->storeDetailEditKomisiProduk($request->no_reg, $request->no_trans);
         if($penjualan) {
            return response(200);
         } else {
@@ -368,8 +418,10 @@ class PenjualanJalanInapController extends Controller
     }
 
     public function deleteTbsEditPenjualan($id){
-      $tbsEditPenjualan = TbsEditPenjualan::destroy($id);
-        if($tbsEditPenjualan){
+      $tbsPenjualan = TbsEditPenjualan::find($id);
+      TbsEditKomisiProduk::where('produk_id',$tbsPenjualan->produk)->where('no_reg',$tbsPenjualan->no_reg)->delete();
+      $tbsPenjualan->delete();
+        if($tbsPenjualan){
           return response(200);
         } else {
           return response(500);
